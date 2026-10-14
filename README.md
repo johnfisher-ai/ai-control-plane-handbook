@@ -11,7 +11,7 @@ The handbook sets out what an enterprise AI control plane is, why it has become 
 | Part | Status |
 |---|---|
 | Landing page | Published |
-| Handbook chapters (Sections 1–13, Appendices A–E) | Being converted from the Word edition to web pages |
+| Handbook chapters (Sections 1–13, Appendices A–E) | Published, one page per section and appendix |
 | Executive briefing deck and assessment toolkit | Planned, after the handbook |
 
 ## What's in this repository
@@ -23,8 +23,8 @@ The handbook sets out what an enterprise AI control plane is, why it has become 
 | `assets/css/site.css` | Site styles (the design system of the companion deck) |
 | `assets/fonts/` | Plus Jakarta Sans, self-hosted, with its license (`OFL.txt`) |
 | `assets/img/` | Icons and the social-sharing image |
-| `handbook/` | The chapters, once converted (to come) |
-| `tools/` | The script that converts the Word edition to HTML (to come) |
+| `handbook/` | The handbook: an introduction, the executive summary, Sections 1–13 and Appendices A–E, one page each, with the figures in `handbook/img/` |
+| `tools/build_handbook.py` | The script that converts the public Word edition to the `handbook/` pages (the Word file itself is not kept here) |
 | `sitemap.xml` | Site map for search engines |
 | `.nojekyll` | Tells GitHub Pages to publish the files as they are |
 

@@ -15,3 +15,8 @@ node_modules/
 __pycache__/
 *.pyc
 tools/out/
+
+# Word files never go in this repository; the site offers no downloads
+*.docx
+*.doc
+*.pdf
