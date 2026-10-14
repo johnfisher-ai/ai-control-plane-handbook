@@ -1,0 +1,17 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Office lock and temporary files
+~$*
+*.tmp
+
+# Editors
+.vscode/
+.idea/
+
+# Tooling (the converter in tools/ runs locally; its caches stay out of the repository)
+node_modules/
+__pycache__/
+*.pyc
+tools/out/

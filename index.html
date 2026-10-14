@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The AI Control Plane Handbook · John Fisher</title>
+  <meta name="description" content="A vendor-neutral handbook for CTOs and CIOs on the enterprise AI control plane: architecture, orchestration, trust and security, a north-star reference architecture, and a 12- to 24-month plan with value at every phase.">
+  <meta name="author" content="John Fisher">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0F172A">
+  <link rel="canonical" href="https://johnfisher-ai.github.io/ai-control-plane-handbook/">
+  <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The AI Control Plane Handbook">
+  <meta property="og:title" content="The AI Control Plane Handbook">
+  <meta property="og:description" content="Architecture, orchestration, and zero-trust security for the agentic enterprise. A vendor-neutral handbook for CTOs and CIOs by John Fisher, 2026 edition.">
+  <meta property="og:url" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/">
+  <meta property="og:image" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/assets/img/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The AI Control Plane Handbook, by John Fisher, 2026 edition">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Control Plane Handbook">
+  <meta name="twitter:description" content="Architecture, orchestration, and zero-trust security for the agentic enterprise. By John Fisher, 2026 edition.">
+  <meta name="twitter:image" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/assets/img/social-card.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "The AI Control Plane Handbook",
+    "alternativeHeadline": "Architecture, orchestration, and zero-trust security for the agentic enterprise",
+    "bookEdition": "Executive Edition, 2026",
+    "author": { "@type": "Person", "name": "John Fisher", "url": "https://www.linkedin.com/in/johnrfisher" },
+    "copyrightYear": 2026,
+    "inLanguage": "en",
+    "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "url": "https://johnfisher-ai.github.io/ai-control-plane-handbook/"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="7" fill="#1E293B"/>
+          <g stroke="#64748B" stroke-width="1.6">
+            <line x1="9" y1="9" x2="19" y2="15"/><line x1="8" y1="23" x2="19" y2="15"/><line x1="25" y1="25" x2="19" y2="15"/><line x1="24" y1="7" x2="19" y2="15"/>
+          </g>
+          <g fill="#0F172A" stroke="#94A3B8" stroke-width="1.4">
+            <circle cx="9" cy="9" r="2.6"/><circle cx="8" cy="23" r="2.6"/><circle cx="25" cy="25" r="2.6"/><circle cx="24" cy="7" r="2.6"/>
+          </g>
+          <circle cx="19" cy="15" r="4.6" fill="#38BDF8"/>
+        </svg>
+        <span>The AI Control Plane Handbook</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#inside">What’s inside</a></li>
+          <li><a href="#author">About the author</a></li>
+          <li><a href="#license">License</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="title">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Executive Edition <span aria-hidden="true">·</span> 2026</p>
+          <h1 id="title">The AI Control Plane Handbook</h1>
+          <p class="lede">Architecture, orchestration, and zero-trust security for the agentic enterprise</p>
+          <p class="byline">John Fisher</p>
+          <div class="actions">
+            <span class="btn btn-primary is-disabled">Read the handbook <span class="tag">Coming soon</span></span>
+            <a class="btn btn-ghost" href="#inside">See what’s inside</a>
+          </div>
+        </div>
+        <svg class="hero-graphic" viewBox="0 0 400 360" aria-hidden="true" focusable="false">
+          <circle cx="226" cy="176" r="74" fill="none" stroke="#1E293B" stroke-width="2"/>
+          <circle cx="226" cy="176" r="138" fill="none" stroke="#1E293B" stroke-width="1.5" stroke-dasharray="3 7"/>
+          <g stroke="#334155" stroke-width="2">
+            <line x1="226" y1="176" x2="112" y2="70"/>
+            <line x1="226" y1="176" x2="330" y2="58"/>
+            <line x1="226" y1="176" x2="364" y2="214"/>
+            <line x1="226" y1="176" x2="290" y2="320"/>
+            <line x1="226" y1="176" x2="110" y2="292"/>
+            <line x1="226" y1="176" x2="60" y2="182"/>
+            <line x1="112" y1="70" x2="60" y2="182"/>
+            <line x1="330" y1="58" x2="364" y2="214"/>
+          </g>
+          <g fill="#0F172A" stroke="#475569" stroke-width="2.5">
+            <circle cx="112" cy="70" r="15"/>
+            <circle cx="330" cy="58" r="13"/>
+            <circle cx="364" cy="214" r="15"/>
+            <circle cx="290" cy="320" r="13"/>
+            <circle cx="110" cy="292" r="15"/>
+            <circle cx="60" cy="182" r="12"/>
+          </g>
+          <circle cx="226" cy="176" r="40" fill="#0284C7" opacity="0.25"/>
+          <circle cx="226" cy="176" r="27" fill="#38BDF8"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="about-handbook">
+      <div class="wrap narrow">
+        <h2 id="about-handbook">About this handbook</h2>
+        <p>This handbook sets out what an enterprise AI control plane is, why it has become the next infrastructure advantage, how to architect one, the vendor-neutral target reference architecture to steer by, one way to realize it with MuleSoft Agent Fabric and Informatica, and how to sequence the work over the next 12 to 24 months with strategic wins at every milestone.</p>
+        <p>Sections 11 to 13 apply the architecture to three reference use cases: a professional services firm, a capital markets firm and a natural gas pipeline operator.</p>
+        <p class="text-2">It is written for CTOs, CIOs and the architects who work with them. Each chapter combines the architectural framework with the research behind it, and every source is listed in the endnotes.</p>
+      </div>
+    </section>
+
+    <section class="section alt" aria-labelledby="takeaways">
+      <div class="wrap">
+        <h2 id="takeaways">Key takeaways</h2>
+        <ol class="cards">
+          <li class="card">
+            <h3>The control plane is the new infrastructure advantage</h3>
+            <p>Advantage will come from a governed system that decides which model runs which task under which constraints, not from any single model.</p>
+          </li>
+          <li class="card">
+            <h3>It rests on three capabilities</h3>
+            <p>Architecture exposes enterprise capabilities securely; orchestration coordinates models, agents, workloads and decisions; trust, security and resilience verify every actor and output continuously.</p>
+          </li>
+          <li class="card">
+            <h3>Choose the paradigm before the platform</h3>
+            <p>Embedded, dedicated and hybrid/federated patterns carry different trade-offs. Most large multi-vendor enterprises converge on central policy with distributed execution.</p>
+          </li>
+          <li class="card">
+            <h3>MuleSoft can realize both halves</h3>
+            <p>Its API-led connectivity unlocks enterprise applications as governed APIs and MCP tools. Agent Fabric discovers, governs, orchestrates and meters agents from any vendor.</p>
+          </li>
+          <li class="card">
+            <h3>Build foundations in phases, with value in every phase</h3>
+            <p>Over the next 12–24 months: inventory agents, route all model and tool traffic through one gateway, tier autonomy, give agents their own identities, and start post-quantum migration ahead of the 2030–2031 federal deadlines, while each phase puts a slice of a real use case into production.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="inside" aria-labelledby="inside-heading">
+      <div class="wrap">
+        <h2 id="inside-heading">What’s inside</h2>
+        <p class="section-intro">The chapters are being converted to web pages and will be published here. Until then, this is the table of contents.</p>
+        <div class="toc-grid">
+          <div class="toc-col">
+            <div class="toc-group">
+              <h3>Start here</h3>
+              <ul class="toc">
+                <li><span class="num" aria-hidden="true">•</span><span>Executive summary</span></li>
+              </ul>
+            </div>
+            <div class="toc-group">
+              <h3>Foundations</h3>
+              <ul class="toc">
+                <li><span class="num">1</span><span>Why intelligence orchestration is the next infrastructure advantage</span></li>
+                <li><span class="num">2</span><span>What an enterprise AI control plane is</span></li>
+                <li><span class="num">3</span><span>Architecture: exposing enterprise capabilities securely</span></li>
+                <li><span class="num">4</span><span>Orchestration: coordinating models, agents and workloads</span></li>
+                <li><span class="num">5</span><span>Trust, security and resilience</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="toc-col">
+            <div class="toc-group">
+              <h3>From architecture to plan</h3>
+              <ul class="toc">
+                <li><span class="num">6</span><span>Target reference architecture: a north star for the AI control plane</span></li>
+                <li><span class="num">7</span><span>Realizing the north star with MuleSoft and Informatica</span></li>
+                <li><span class="num">8</span><span>The 12- to 24-month plan: value at every phase</span></li>
+                <li><span class="num">9</span><span>Measuring success</span></li>
+                <li><span class="num">10</span><span>Questions for the leadership team and board</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="toc-col">
+            <div class="toc-group">
+              <h3>Reference use cases</h3>
+              <ul class="toc">
+                <li><span class="num">11</span><span>Professional services engagement launch</span></li>
+                <li><span class="num">12</span><span>Capital markets T+1 settlement exceptions</span></li>
+                <li><span class="num">13</span><span>Energy pipeline compressor reliability</span></li>
+              </ul>
+            </div>
+            <div class="toc-group">
+              <h3>Appendices</h3>
+              <ul class="toc">
+                <li><span class="num">A</span><span>Research digest: what the principal sources add</span></li>
+                <li><span class="num">B</span><span>Endnotes</span></li>
+                <li><span class="num">C</span><span>Standards crosswalk for compliance teams</span></li>
+                <li><span class="num">D</span><span>Notices and disclosures</span></li>
+                <li><span class="num">E</span><span>About John Fisher</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="note spaced">An executive briefing deck that follows Sections 1 to 10, and an assessment toolkit for architects and project teams, will follow the handbook here.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="author" aria-labelledby="author-heading">
+      <div class="wrap narrow">
+        <h2 id="author-heading">About John Fisher</h2>
+        <p>I’m John Fisher. At Salesforce, I help enterprises architect the data foundation that AI depends on: MuleSoft for integration and APIs, Informatica for data management, and the MCP and A2A protocols that connect agents to tools, data and each other. Before Salesforce, I spent fourteen years at TIBCO leading solution engineering for enterprise accounts. Across both companies, my work has sat where enterprise architecture, integration and data meet business strategy.</p>
+        <p>My writing is where I work through what happens when AI agents move past experiments and start acting across real enterprise systems. The questions that interest me most are architectural: how an agent proves who it is, what policy decides what it may reach, how its cost is measured and controlled, what evidence it leaves behind, how agents built on different platforms work together, and what it takes to run all of that at scale.</p>
+        <p>Some of what I write names Salesforce, MuleSoft or Informatica technology. It’s the technology I know most deeply, so it’s often the quickest way to make an idea concrete. I use it as one example of a broader pattern, not as the only answer, and the target architectures I start from are vendor-neutral by design.</p>
+        <p class="author-links"><a href="https://www.linkedin.com/in/johnrfisher">Connect with John Fisher on LinkedIn</a></p>
+        <p class="callout"><strong>Disclosure.</strong> John Fisher works for Salesforce. He wrote this handbook independently, on his own time and not as part of his work at Salesforce, using only public information. The views in it are his own, not those of Salesforce or any other company named, and it is not sponsored or endorsed by Salesforce or any of them.</p>
+      </div>
+    </section>
+
+    <section class="section" id="license" aria-labelledby="license-heading">
+      <div class="wrap narrow">
+        <h2 id="license-heading">License</h2>
+        <p>© 2026 John Fisher. This handbook is licensed under the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0)</a>. You may copy and share it, in whole or in part, without changes and for non-commercial purposes, if you credit John Fisher and link to the license.</p>
+        <p><strong>Suggested credit:</strong> John Fisher, The AI Control Plane Handbook (2026), CC BY-NC-ND 4.0.</p>
+        <p class="text-2">The license covers John Fisher’s own text and figures; it does not cover trademarks or the quotations, data and other material of the sources cited, which belong to their owners. The handbook is general information for architecture and technology planning, not legal, regulatory, compliance, financial or investment advice.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 John Fisher · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> · <a href="https://github.com/johnfisher-ai/ai-control-plane-handbook">Source on GitHub</a> · <a href="https://www.linkedin.com/in/johnrfisher">LinkedIn</a></p>
+      <p class="small">Salesforce, MuleSoft, MuleSoft Agent Fabric and Informatica are trademarks of Salesforce, Inc. or its affiliates. Other product, company and organization names may be trademarks of their respective owners; names are used only to identify the products discussed and imply no endorsement. Set in Plus Jakarta Sans, licensed under the SIL Open Font License 1.1.</p>
+    </div>
+  </footer>
+</body>
+</html>
