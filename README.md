@@ -24,11 +24,12 @@ The handbook sets out what an enterprise AI control plane is, why it has become 
 | `assets/fonts/` | Plus Jakarta Sans, self-hosted, with its license (`OFL.txt`) |
 | `assets/img/` | Icons and the social-sharing image |
 | `handbook/` | The handbook: an introduction, the executive summary, Sections 1–13 and Appendices A–E, one page each, with the figures in `handbook/img/` |
-| `tools/build_handbook.py` | The script that converts the public Word edition to the `handbook/` pages (the Word file itself is not kept here) |
 | `sitemap.xml` | Site map for search engines |
 | `.nojekyll` | Tells GitHub Pages to publish the files as they are |
 
 The site is plain HTML and CSS with no build step. GitHub Pages publishes it from the `main` branch, root folder.
+
+The pages in this repository are the master copy of the handbook. Edit them directly. The Word edition the site was first converted from is no longer maintained, and no Word or PDF files are kept here.
 
 ## License
 

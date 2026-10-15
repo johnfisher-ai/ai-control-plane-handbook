@@ -218,6 +218,9 @@ figcaption em { font-style: normal; }
 .table-wrap tbody tr:nth-child(even) td { background: var(--bg-alt); }
 .table-wrap td p { margin: 0 0 0.5em; }
 .table-wrap td ul, .table-wrap td ol { margin: 0; padding-left: 1.1rem; }
+.table-wrap .cell-list li { margin: 0 0 0.3em; }
+.table-wrap .cell-list li:last-child { margin-bottom: 0; }
+.table-wrap th .cell-list li { color: inherit; }
 @media (prefers-color-scheme: dark) { .table-wrap th { background: #1E293B; } }
 
 .callout-box { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--sky); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
