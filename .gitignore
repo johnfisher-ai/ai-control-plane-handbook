@@ -16,8 +16,10 @@ __pycache__/
 *.pyc
 tools/out/
 
-# Word and PDF files never go in this repository. The only downloads are the
-# executive deck's one-slide PowerPoint files in deck/slides/.
+# No Word or PDF files go in this repository, except one download. The only
+# downloads are the executive deck's one-slide PowerPoint files in deck/slides/
+# and the assessment toolkit's templates as one Word document in toolkit/downloads/.
 *.docx
 *.doc
 *.pdf
+!toolkit/downloads/ai-control-plane-assessment-templates.docx

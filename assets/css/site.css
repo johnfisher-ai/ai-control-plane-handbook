@@ -309,3 +309,16 @@ p.guidance + p.guidance { border-top-right-radius: 0; padding-top: 0.45rem; }
 .slide-dl a::before { content: "↓" / ""; display: inline-block; margin-right: 0.35rem; text-decoration: none; }
 .dl-meta { color: var(--muted); font-size: 0.85rem; }
 @media print { .slide-dl { display: none; } }
+/* Word download of the toolkit templates */
+.dl-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin: 0.9rem 0 1.25rem; }
+.callout-box .dl-actions:last-child { margin-bottom: 0; }
+.dl-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; border-radius: 999px; background: var(--navy); color: #FFFFFF; font-weight: 700; text-decoration: none; }
+.dl-btn::before { content: "↓" / ""; }
+.dl-btn:hover { background: var(--navy-2); color: #FFFFFF; text-decoration: underline; }
+.dl-note { font-size: 0.95rem; }
+.dl-note a[download] { font-weight: 700; }
+.dl-note a[download]::before { content: "↓" / ""; display: inline-block; margin-right: 0.35rem; text-decoration: none; }
+@media (prefers-color-scheme: dark) {
+  .dl-btn { background: var(--sky-light); color: var(--navy); }
+  .dl-btn:hover { background: #7DD3FC; color: var(--navy); }
+}
