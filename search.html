@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search · The AI Control Plane Handbook</title>
+  <meta name="description" content="Search the AI Control Plane Handbook, its executive deck, its assessment toolkit and its quantum briefing.">
+  <meta name="author" content="John Fisher">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0F172A">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://johnfisher-ai.github.io/ai-control-plane-handbook/search.html">
+  <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="pagefind/pagefind-ui.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The AI Control Plane Handbook">
+  <meta property="og:title" content="Search">
+  <meta property="og:description" content="Search the AI Control Plane Handbook, its executive deck, its assessment toolkit and its quantum briefing.">
+  <meta property="og:url" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/search.html">
+  <meta property="og:image" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/assets/img/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The AI Control Plane Handbook, by John Fisher, 2026 edition">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="doc-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#1E293B"/><g stroke="#64748B" stroke-width="1.6"><line x1="9" y1="9" x2="19" y2="15"/><line x1="8" y1="23" x2="19" y2="15"/><line x1="25" y1="25" x2="19" y2="15"/><line x1="24" y1="7" x2="19" y2="15"/></g><g fill="#0F172A" stroke="#94A3B8" stroke-width="1.4"><circle cx="9" cy="9" r="2.6"/><circle cx="8" cy="23" r="2.6"/><circle cx="25" cy="25" r="2.6"/><circle cx="24" cy="7" r="2.6"/></g><circle cx="19" cy="15" r="4.6" fill="#38BDF8"/></svg>
+        <span>The AI Control Plane Handbook</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="handbook/index.html">Handbook</a></li><li><a href="deck/index.html">Executive deck</a></li><li><a href="toolkit/index.html">Toolkit</a></li><li><a href="quantum/index.html">Quantum briefing</a></li><li><a href="search.html" aria-current="page">Search</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap single-layout">
+    <main id="main" class="doc-main">
+      <nav class="crumbs" aria-label="Breadcrumb" data-pagefind-ignore><ol><li><a href="index.html">Home</a></li><li><span aria-current="page">Search</span></li></ol></nav>
+      <p class="doc-kicker">The handbook and its companions</p>
+      <h1>Search</h1>
+<p class="doc-sub">Search the handbook, the executive deck, the assessment toolkit and the quantum briefing. Each result links to the page, and to the section or slide where your words appear. Use the filters to narrow the results to one publication.</p>
+<div id="search" class="site-search"></div>
+<noscript><p>Search needs JavaScript. Without it, browse the <a href="handbook/index.html">handbook’s contents</a> or the <a href="index.html#companions">companion materials</a>.</p></noscript>
+<p class="small-print">Search by <a href="https://pagefind.app/">Pagefind</a>, used under the <a href="assets/licenses/pagefind-LICENSE.txt">MIT License</a>. It runs in your browser: nothing you type is sent anywhere.</p>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 John Fisher · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> · <a href="handbook/appendix-d.html">Notices</a> · <a href="whats-new.html">What’s new</a> · <a href="https://github.com/johnfisher-ai/ai-control-plane-handbook">Source on GitHub</a> · <a href="https://www.linkedin.com/in/johnrfisher">LinkedIn</a></p>
+      <p class="small">John Fisher works for Salesforce. The views here are his own, not Salesforce’s, and are drawn from public information; this site is not affiliated with or endorsed by Salesforce. Product names are trademarks of their owners; the handbook’s Appendix D lists them. Set in Plus Jakarta Sans, licensed under the SIL Open Font License 1.1.</p>
+    </div>
+  </footer>
+  <script src="pagefind/pagefind-ui.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      var ui = new PagefindUI({
+        element: '#search',
+        baseUrl: '/ai-control-plane-handbook/',
+        showSubResults: true,
+        showImages: false,
+        autofocus: true,
+        translations: { placeholder: 'Search the handbook and companions' }
+      });
+      (function label() {
+        var input = document.querySelector('#search input');
+        if (input) { input.setAttribute('aria-label', 'Search the handbook and companions'); } else { window.requestAnimationFrame(label); }
+      })();
+      var q = new URLSearchParams(window.location.search).get('q');
+      if (q) { ui.triggerSearch(q); }
+    });
+  </script>
+</body>
+</html>
