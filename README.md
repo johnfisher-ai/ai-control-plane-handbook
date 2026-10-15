@@ -38,7 +38,14 @@ The pages in this repository are the master copy of the handbook and its compani
 
 ## License
 
-© 2026 John Fisher. The handbook and the content of this site are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/); the full text is in [`LICENSE`](LICENSE). You may copy and share the handbook, in whole or in part, without changes and for non-commercial purposes, if you credit John Fisher and link to the license.
+© 2026 John Fisher. Everything in this repository apart from the typeface (see below), including the handbook, its companions, the downloads and the site's own HTML and CSS, is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/); the full text is in [`LICENSE`](LICENSE). You may copy and share the handbook, in whole or in part, without changes and for non-commercial purposes, if you credit John Fisher and link to the license.
+
+Additional permissions, which add to the license without changing it:
+
+- **Slide downloads.** The executive deck's one-slide PowerPoint files may be adapted and the adapted slides presented and shared inside an organization or with clients, including in paid work, with the credit given in the deck's notices ([`deck/notices.html`](deck/notices.html)).
+- **Assessment toolkit.** The toolkit may be used to run AI control plane assessments, and its Word templates may be adapted for other work, inside an organization or with clients, including in paid work, with the credits given in the toolkit's notices ([`toolkit/appendix-e.html`](toolkit/appendix-e.html)).
+
+None of them covers selling the material or publishing changed versions of it.
 
 Suggested credit: John Fisher, The AI Control Plane Handbook (2026), CC BY-NC-ND 4.0.
 
