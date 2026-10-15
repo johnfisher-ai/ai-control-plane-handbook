@@ -304,3 +304,8 @@ p.guidance + p.guidance { border-top-right-radius: 0; padding-top: 0.45rem; }
 .cards.links .card::before { content: none; }
 .cards.links h3 a { text-decoration: none; }
 .cards.links h3 a:hover { text-decoration: underline; }
+.slide-dl { margin: -0.25rem 0 1rem; font-size: 0.92rem; }
+.slide-dl a { font-weight: 700; }
+.slide-dl a::before { content: "↓" / ""; display: inline-block; margin-right: 0.35rem; text-decoration: none; }
+.dl-meta { color: var(--muted); font-size: 0.85rem; }
+@media print { .slide-dl { display: none; } }

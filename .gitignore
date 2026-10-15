@@ -16,7 +16,8 @@ __pycache__/
 *.pyc
 tools/out/
 
-# Word files never go in this repository; the site offers no downloads
+# Word and PDF files never go in this repository. The only downloads are the
+# executive deck's one-slide PowerPoint files in deck/slides/.
 *.docx
 *.doc
 *.pdf
