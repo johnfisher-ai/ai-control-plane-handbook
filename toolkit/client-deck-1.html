@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client deck, Part 1: worked example · AI Control Plane Assessment toolkit</title>
+  <meta name="description" content="Part 1 of the AI Control Plane Assessment client deck: reference use case 1 presented as a finished client readout, with slide text and speaker notes.">
+  <meta name="author" content="John Fisher">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0F172A">
+  <link rel="canonical" href="https://johnfisher-ai.github.io/ai-control-plane-handbook/toolkit/client-deck-1.html">
+  <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The AI Control Plane Handbook">
+  <meta property="og:title" content="Client deck, Part 1: worked example">
+  <meta property="og:description" content="Part 1 of the AI Control Plane Assessment client deck: reference use case 1 presented as a finished client readout, with slide text and speaker notes.">
+  <meta property="og:url" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/toolkit/client-deck-1.html">
+  <meta property="og:image" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/assets/img/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The AI Control Plane Handbook, by John Fisher, 2026 edition">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="doc-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#1E293B"/><g stroke="#64748B" stroke-width="1.6"><line x1="9" y1="9" x2="19" y2="15"/><line x1="8" y1="23" x2="19" y2="15"/><line x1="25" y1="25" x2="19" y2="15"/><line x1="24" y1="7" x2="19" y2="15"/></g><g fill="#0F172A" stroke="#94A3B8" stroke-width="1.4"><circle cx="9" cy="9" r="2.6"/><circle cx="8" cy="23" r="2.6"/><circle cx="25" cy="25" r="2.6"/><circle cx="24" cy="7" r="2.6"/></g><circle cx="19" cy="15" r="4.6" fill="#38BDF8"/></svg>
+        <span>The AI Control Plane Handbook</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../handbook/index.html">Handbook</a></li><li><a href="../deck/index.html">Executive deck</a></li><li><a href="../toolkit/index.html" aria-current="true">Toolkit</a></li><li><a href="../quantum/index.html">Quantum briefing</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap doc-layout">
+    <details class="doc-nav" id="doc-nav">
+      <summary>Toolkit contents</summary>
+      <nav aria-label="Toolkit contents">
+        <ol class="doc-toc"><li><a href="index.html"><span class="n" aria-hidden="true">•</span><span>About this toolkit</span></a></li><li><a href="part-1.html"><span class="n" aria-hidden="true">•</span><span>Part 1: Methodology</span></a></li><li><a href="section-01.html"><span class="n">1</span><span>The assessment at a glance</span></a></li><li><a href="section-02.html"><span class="n">2</span><span>Framing the use case and the value hypothesis</span></a></li><li><a href="section-03.html"><span class="n">3</span><span>Discovering assets and baselining the current state</span></a></li><li><a href="section-04.html"><span class="n">4</span><span>Defining requirements and security</span></a></li><li><a href="section-05.html"><span class="n">5</span><span>Designing the north star and realizing it</span></a></li><li><a href="section-06.html"><span class="n">6</span><span>Phasing for early value</span></a></li><li><a href="part-2.html"><span class="n" aria-hidden="true">•</span><span>Part 2: Templates</span></a></li><li><a href="section-07.html"><span class="n">7</span><span>The templates and how to use them</span></a></li><li><a href="part-3.html"><span class="n" aria-hidden="true">•</span><span>Part 3: Worked example</span></a></li><li><a href="section-08.html"><span class="n">8</span><span>Use case 1 with every template filled in</span></a></li><li><a href="part-4.html"><span class="n" aria-hidden="true">•</span><span>Part 4: Presenting</span></a></li><li><a href="section-09.html"><span class="n">9</span><span>Presenting use case 1 to the client</span></a></li><li><a href="section-10.html"><span class="n">10</span><span>Using the client-facing report template</span></a></li><li><a href="appendix-a.html"><span class="n">A</span><span>Discovery question bank</span></a></li><li><a href="appendix-b.html"><span class="n">B</span><span>Workshop agendas</span></a></li><li><a href="appendix-c.html"><span class="n">C</span><span>Glossary</span></a></li><li><a href="appendix-d.html"><span class="n">D</span><span>Sources</span></a></li><li><a href="appendix-e.html"><span class="n">E</span><span>Notices and disclosures</span></a></li><li><a href="appendix-f.html"><span class="n">F</span><span>About John Fisher</span></a></li><li><a href="template.html"><span class="n" aria-hidden="true">•</span><span>Client report template</span></a></li><li><a href="client-deck-1.html" aria-current="page"><span class="n" aria-hidden="true">•</span><span>Client deck, Part 1: worked example</span></a><ol class="onpage"><li><a href="#slide-1">1. AI Control Plane Assessment</a></li><li><a href="#slide-2">2. How to use this deck</a></li><li><a href="#slide-3">3. AI control plane assessment for engagement launch</a></li><li><a href="#slide-4">4. What this readout covers</a></li><li><a href="#slide-5">5. Taking an engagement from verbal win to ready-to-charge</a></li><li><a href="#slide-6">6. Six steps from discovery to a funded first phase</a></li><li><a href="#slide-7">7. What the launch depends on today</a></li><li><a href="#slide-8">8. Every asset the use case touches, by layer</a></li><li><a href="#slide-9">9. Each launch stage and the systems it touches</a></li><li><a href="#slide-10">10. Expected business outcomes and KPIs</a></li><li><a href="#slide-11">11. Requirements that shape the design</a></li><li><a href="#slide-12">12. Security at every layer, autonomy by tier</a></li><li><a href="#slide-13">13. Vendor-neutral solution architecture</a></li><li><a href="#slide-14">14. Maya launches Project Atlas the day it is won</a></li><li><a href="#slide-15">15. How the components work together in Maya’s day</a></li><li><a href="#slide-16">16. Realized with MuleSoft Agent Fabric and Informatica</a></li><li><a href="#slide-17">17. Every component and its capability</a></li><li><a href="#slide-18">18. Coexisting with other agent control planes</a></li><li><a href="#slide-19">19. The north star, realized with MuleSoft Agent Fabric and Informatica</a></li><li><a href="#slide-20">20. The platform and the use case, phased together</a></li><li><a href="#slide-21">21. How value builds across the four phases</a></li><li><a href="#slide-22">22. KPIs at every milestone</a></li><li><a href="#slide-23">23. Value arrives at every milestone</a></li><li><a href="#slide-24">24. Who owns what once the agents are live</a></li><li><a href="#slide-25">25. Decisions for the next 90 days</a></li></ol></li><li><a href="client-deck-2.html"><span class="n" aria-hidden="true">•</span><span>Client deck, Part 2: template</span></a></li></ol>
+      </nav>
+    </details>
+    <main id="main" class="doc-main">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Toolkit</a></li><li><span aria-current="page">Client deck, Part 1</span></li></ol></nav>
+      <p class="doc-kicker">Client deck · Slides 1–25</p>
+      <h1>Client deck, Part 1: worked example</h1>
+<section class="slide" id="slide-1" aria-labelledby="slide-1-h">
+<h2 id="slide-1-h"><span class="slide-no">Slide 1</span> AI Control Plane Assessment</h2>
+<figure class="slide-img"><img src="img/client/slide-01.png" width="1601" height="900" alt="Slide 1: AI Control Plane Assessment" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Part 1: a worked example, engagement launch (reference use case 1). Part 2: the same readout as a template for your client.</p>
+<p>John Fisher   |   2026</p>
+<p>John Fisher works for Salesforce. The views here are his own, not Salesforce’s, and are drawn from public information; this toolkit is not affiliated with or endorsed by Salesforce. Product names are trademarks of their owners. Illustrative figures are not results from any customer.</p>
+<p>Discover</p>
+<p>Design</p>
+<p>Phase for value</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>This deck is the client-facing companion to the guide Assessing an AI Control Plane Project. Part 1 presents reference use case 1 from The AI Control Plane Handbook (engagement launch at a global audit, tax and advisory firm) as a finished assessment readout. Part 2 is the same storyline as a template.</p>
+<p>The design, diagrams and wording match the executive deck The AI Control Plane, so the two can be used together. Superscripts and bracketed numbers refer to the handbook’s endnotes.</p>
+</div>
+</section>
+<section class="slide" id="slide-2" aria-labelledby="slide-2-h">
+<h2 id="slide-2-h"><span class="slide-no">Slide 2</span> How to use this deck</h2>
+<figure class="slide-img"><img src="img/client/slide-02.png" width="1601" height="900" alt="Slide 2: How to use this deck" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Part 1 is a finished readout for reference use case 1. Part 2 is the same storyline as a template. Leave this slide out of your readout.</p>
+<p>Part 1: worked example</p>
+<p>Engagement launch at a global audit, tax and advisory firm (illustrative)<br>Shows what a finished assessment readout looks like<br>Every slide’s speaker notes carry the talk track<br>Figures are illustrative, for use only as an example</p>
+<p>Part 2: template</p>
+<p>The same slides with [bracketed prompts] to replace<br>MuleSoft Agent Fabric and Informatica capabilities pre-filled<br>Speaker notes say which template in the guide feeds each slide<br>Repeat the section for each client and use case</p>
+<p>1. Fill the templates</p>
+<p>Work through T1 to T13 in the guide Assessing an AI Control Plane Project.</p>
+<p>2. Replace the prompts</p>
+<p>Start from Part 2 and replace every [bracketed] prompt with the client’s content.</p>
+<p>3. Keep it honest</p>
+<p>Describe products by what they do, label illustrative numbers and cite sources.</p>
+<p>4. Rehearse</p>
+<p>Follow the notes: engagement lead opens and closes, lead architect presents the architecture.</p>
+<p>Companion to The AI Control Plane Handbook and the guide Assessing an AI Control Plane Project.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Internal slide for the lead architect and the engagement lead. Leave it out of the readout you present.</p>
+<p>Part 1 is reference use case 1 from the handbook (professional services engagement launch), presented as a finished client readout. Use it to show a client what the assessment produces, or as the model answer when you fill in Part 2.</p>
+<p>Part 2 is the same storyline as a template. The MuleSoft Agent Fabric and Informatica capabilities are pre-filled because they do not change from client to client. Everything that does is a bracketed prompt. The guide explains each template (T1 to T13) and gives the use case 1 answer for every one.</p>
+<p>The standards and regulation dates slide in the appendix keeps protocol versions and regulation dates in one place. Check it before every readout.</p>
+<p>The last two slides are the notices (the license, the toolkit’s additional permission, the trademarks and the credits) and a note about the author. Keep the credit line, the icon credit and the trademark notice in readouts built from Part 2.</p>
+<p>John Fisher works for Salesforce. The views here are his own, not Salesforce’s, and are drawn from public information; this toolkit is not affiliated with or endorsed by Salesforce. Product names are trademarks of their owners. Illustrative figures are not results from any customer.</p>
+</div>
+</section>
+<section class="slide" id="slide-3" aria-labelledby="slide-3-h">
+<h2 id="slide-3-h"><span class="slide-no">Slide 3</span> AI control plane assessment for engagement launch</h2>
+<figure class="slide-img"><img src="img/client/slide-03.png" width="1601" height="900" alt="Slide 3: AI control plane assessment for engagement launch" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Reference use case 1 from The AI Control Plane Handbook, presented as a client readout. The client and all figures are illustrative.</p>
+<p>Client: a global audit, tax and advisory firm (illustrative)   |   Use case: from verbal win to ready-to-charge</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Part 1 starts here. It is written as the readout you would give the firm’s executive sponsor at the end of a five-week assessment. Everything specific to the firm is illustrative. Product descriptions come from public information.</p>
+</div>
+</section>
+<section class="slide" id="slide-4" aria-labelledby="slide-4-h">
+<h2 id="slide-4-h"><span class="slide-no">Slide 4</span> What this readout covers</h2>
+<figure class="slide-img"><img src="img/client/slide-04.png" width="1601" height="900" alt="Slide 4: What this readout covers" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Sixty minutes: the use case, how the assessment ran, what discovery found, and the recommended plan.</p>
+<p>1. The use case</p>
+<p>Its goals, its scope and its stages</p>
+<p>2. How the assessment ran</p>
+<p>Six steps from discovery to a funded first phase</p>
+<p>3. What discovery found</p>
+<p>The assets the use case depends on</p>
+<p>4. The value at stake</p>
+<p>Business case and KPIs</p>
+<p>5. What it must do</p>
+<p>Requirements, security and autonomy by tier</p>
+<p>6. Recommended architecture</p>
+<p>North star, how it works, and its realization</p>
+<p>7. A phased plan</p>
+<p>Value at every milestone, quick wins first</p>
+<p>8. Decisions</p>
+<p>Owners and decisions for the next 90 days</p>
+<p>Reference use case 1. All client details and figures are illustrative.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Engagement lead opens: thank the sponsor, restate the goal of the meeting (agree the plan and the decisions for the next 90 days) and walk the agenda. The lead architect presents parts 3, 5 and 6, the engagement lead presents 1, 4, 7 and 8, and part 2 is shared.</p>
+</div>
+</section>
+<section class="slide" id="slide-5" aria-labelledby="slide-5-h">
+<h2 id="slide-5-h"><span class="slide-no">Slide 5</span> Taking an engagement from verbal win to ready-to-charge</h2>
+<figure class="slide-img"><img src="img/client/slide-05.png" width="1601" height="900" alt="Slide 5: Taking an engagement from verbal win to ready-to-charge" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>A global audit, tax and advisory firm uses governed agents to accept, staff and set up new engagements in days instead of weeks.</p>
+<p>THE CHALLENGE</p>
+<p>Between a verbal win and the first chargeable hour sits a chain of manual, risk-sensitive steps: resolving the legal entity, checking conflicts and auditor independence, drafting the letter, pricing, staffing, and creating the SAP project and billing plan. Each step lives in a different system and function.</p>
+<p>Slow</p>
+<p>Days to weeks from verbal win to the first chargeable hour.</p>
+<p>Costly</p>
+<p>People wait on the bench and early work goes unbilled.</p>
+<p>Risky</p>
+<p>A missed affiliate can become an independence breach.<sup class="cite"><a href="../handbook/appendix-b.html#en-89" aria-label="Endnote 89">89</a></sup></p>
+<p>THE TARGET STATE</p>
+<p>An Engagement Launch Orchestrator coordinates six specialist agents across the CRM, the independence system, document management, Workday, SAP S/4HANA and Snowflake. People keep every judgment that carries professional or regulatory accountability. Agents assemble, check, draft and update, and the control plane governs every step.</p>
+<p>SCOPE</p>
+<p>TRIGGER</p>
+<p>An opportunity reaches verbal win in the CRM</p>
+<p>END STATE</p>
+<p>Independence cleared, letter signed, team soft-booked, SAP project and charge codes active</p>
+<p>USERS</p>
+<p>Engagement managers and partners, Risk &amp; Quality, resource management, finance</p>
+<p>SYSTEMS OF RECORD</p>
+<p>CRM • independence system • DMS • Workday • SAP S/4HANA • Snowflake</p>
+<p>OUT OF SCOPE</p>
+<p>Delivering the engagement and invoicing after launch</p>
+<p>Source: endnote <a href="../handbook/appendix-b.html#en-89">89</a>. All figures in this use case are illustrative.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Talk track (two minutes): This is the first of three reference use cases that show the control plane working end to end on a real process. It is written for a global audit, tax and advisory firm, and the architecture is vendor-neutral except for the transactional systems the process already runs on: a CRM, SAP S/4HANA, Workday and Snowflake.</p>
+<p>The problem: between a verbal win and the first chargeable hour sits a chain of manual, risk-sensitive steps owned by different functions in different systems. Delays leave people on the bench and let early work go unbilled, and a missed affiliate relationship can become an auditor-independence breach, with regulatory consequences, when the client or its parent is an audit client [<a href="../handbook/appendix-b.html#en-89">89</a>].</p>
+<p>In the target state, an Engagement Launch Orchestrator coordinates six specialist agents: Entity Resolution, Conflicts &amp; Independence, Scoping &amp; Letter, Pricing &amp; Budget, Staffing and Engagement Setup. People keep every judgment that carries professional or regulatory accountability (independence decisions, engagement terms, partner approval). Agents do the assembly, checking, drafting and system updates, and the control plane makes every step governed, observable and auditable.</p>
+<p>All figures in this use case are illustrative. Replace them with the firm&#x27;s own baseline during discovery. The companion handbook (Section 11) has the full detail.</p>
+</div>
+</section>
+<section class="slide" id="slide-6" aria-labelledby="slide-6-h">
+<h2 id="slide-6-h"><span class="slide-no">Slide 6</span> Six steps from discovery to a funded first phase</h2>
+<figure class="slide-img"><img src="img/client/slide-06.png" width="1601" height="900" alt="Slide 6: Six steps from discovery to a funded first phase" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Each step produces a template in the assessment toolkit and a part of this readout.</p>
+<p>STEP 1</p>
+<p>Frame</p>
+<p>Which use case, which goals, how much value?</p>
+<p>Choose one priority use case, agree its goals and scope, and write the value hypothesis.</p>
+<p>Templates T1, T2</p>
+<p>STEP 2</p>
+<p>Discover</p>
+<p>What exists today, and how well does it perform?</p>
+<p>Inventory the applications, data, integrations, agents, models, identities, policies and infrastructure the use case touches, and baseline its KPIs.</p>
+<p>Templates T3, T6</p>
+<p>STEP 3</p>
+<p>Define</p>
+<p>What must be true for it to work, safely?</p>
+<p>Capture business, functional, data, integration, non-functional and operational requirements, and the security and compliance controls for every layer.</p>
+<p>Templates T4, T5</p>
+<p>STEP 4</p>
+<p>Design</p>
+<p>What does good look like, and how is it realized?</p>
+<p>Draw the vendor-neutral north star for the use case, tell a day in the life, trace how the components work together, then realize it with MuleSoft Agent Fabric and Informatica.</p>
+<p>Templates T7, T8, T9, T10</p>
+<p>STEP 5</p>
+<p>Phase</p>
+<p>How does value arrive at every milestone?</p>
+<p>Sequence the use case with the four phases of the plan, quick wins first, and put KPIs, ROI and business value on every milestone.</p>
+<p>Templates T11</p>
+<p>STEP 6</p>
+<p>Decide</p>
+<p>What should the client decide?</p>
+<p>Present the findings and the plan, agree who owns what once the agents are live, secure the decisions for the first 90 days, and log risks, assumptions and next steps.</p>
+<p>Templates T12, T13</p>
+<p>WORKSHOPS</p>
+<p>Executive framing</p>
+<p>Process and systems</p>
+<p>AI estate inventory</p>
+<p>Data and master data</p>
+<p>Requirements and security</p>
+<p>Architecture</p>
+<p>Value and phasing</p>
+<p>Readout</p>
+<p>FIVE WEEKS  Week 0: prepare  •  week 1: frame  •  weeks 1–3: discover  •  week 3: define and design  •  week 4: phase  •  week 5: decide</p>
+<p>Illustrative plan. Compress or stretch it to the client’s pace. Templates T1 to T13 are in the guide Assessing an AI Control Plane Project.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Lead architect: explain how the assessment ran, so the client trusts where the numbers and the design came from.</p>
+<ol><li>Frame: the use case, its goals and scope, and the value hypothesis, agreed with the sponsor. 2) Discover: an inventory of the applications, data, integrations, agents, models, identities, policies and infrastructure the launch touches, and the KPI baselines. 3) Define: requirements and security for every layer, and a tier for every agent. 4) Design: a vendor-neutral north star, a day in the life, how the components work together, and its realization with MuleSoft Agent Fabric and Informatica. 5) Phase: milestones with value at every step, quick wins first. 6) Decide: this readout, with the operating model that keeps the program running.</li></ol>
+<p>The workshops are listed along the bottom. Each produced one or more templates in the assessment report.</p>
+</div>
+</section>
+<section class="slide" id="slide-7" aria-labelledby="slide-7-h">
+<h2 id="slide-7-h"><span class="slide-no">Slide 7</span> What the launch depends on today</h2>
+<figure class="slide-img"><img src="img/client/slide-07.png" width="1601" height="900" alt="Slide 7: What the launch depends on today" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Illustrative findings for the firm. The full inventory is in the assessment report (templates T3a to T3h).</p>
+<p>6. systems of record</p>
+<p>7. agents: an orchestrator and six specialists</p>
+<p>4. models, routed by policy</p>
+<p>15. MCP tools to publish</p>
+<p>4. master data domains</p>
+<p>9. policies and controls to enforce</p>
+<p>A launch crosses six systems and four functions</p>
+<p>The CRM, the independence system, document management, Workday, SAP S/4HANA and Snowflake, owned by the practice, Risk &amp; Quality, Talent and Finance, with no shared engagement ID.</p>
+<p>The client hierarchy is the weak link</p>
+<p>Entity data sits in the CRM, SAP and the independence system without one golden record, and a missed subsidiary is a missed conflict.</p>
+<p>AI is in use but not governed</p>
+<p>Pilots call models directly, with no registry, no gateway and no measure of token cost, data flows or agent quality.</p>
+<p>Setup lags the work</p>
+<p>Charge codes often arrive after work starts, so early hours go unbilled on about a quarter of launches.</p>
+<p>Illustrative findings from discovery workshops and the asset inventory.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Lead architect: summarize discovery in one minute, then land the four findings.</p>
+<p>The numbers on the left are the assets the launch depends on: six systems of record, seven agents (an orchestrator and six specialists), four models, fifteen MCP tools to publish, four master data domains and nine policies and controls that must be enforced at runtime rather than on paper.</p>
+<p>Discovery found that a launch crosses six systems and four functions with no shared engagement ID. The client hierarchy is the weak link, because a missed subsidiary is a missed conflict. AI is already in use but ungoverned, with no registry, gateway or measure of cost and quality. And setup lags the work, so early hours go unbilled on about a quarter of launches. All findings are illustrative for this example.</p>
+</div>
+</section>
+<section class="slide" id="slide-8" aria-labelledby="slide-8-h">
+<h2 id="slide-8-h"><span class="slide-no">Slide 8</span> Every asset the use case touches, by layer</h2>
+<figure class="slide-img"><img src="img/client/slide-08.png" width="1601" height="900" alt="Slide 8: Every asset the use case touches, by layer" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>From the asset inventory: what exists, what must be built, and what each agent may reach. Phase numbers show when each is needed.</p>
+<p>SYSTEMS OF RECORD</p>
+<p>CRM<br>verbal-win event • phase 1</p>
+<p>Independence system<br>searches • clearance • phase 1</p>
+<p>DMS &amp; e-signature<br>templates • letters • phase 2</p>
+<p>Workday HCM<br>skills • availability • phase 2</p>
+<p>SAP S/4HANA<br>read 2 • gated write 3</p>
+<p>Snowflake<br>semantic views • phase 2</p>
+<p>MASTER DATA</p>
+<p>Client &amp; legal entity<br>hierarchy • LEI • tax IDs</p>
+<p>Worker<br>cross-referenced IDs</p>
+<p>Engagement<br>one ID end to end</p>
+<p>Reference data<br>service catalog • rate cards</p>
+<p>Restricted entities<br>linked to client master</p>
+<p>Independence declarations<br>restricted • yes/no only</p>
+<p>MCP TOOLS &amp; APIs</p>
+<p>resolve_entity • get_hierarchy<br>MDM • read</p>
+<p>search_restricted • check_services<br>independence • read</p>
+<p>search_knowledge • get_template<br>DMS • read</p>
+<p>get_rate_card • query_actuals<br>SAP • Snowflake • read</p>
+<p>find_available_staff<br>Workday • read</p>
+<p>create_project • create_wbs<br>SAP • gated write</p>
+<p>AGENTS &amp; TIERS</p>
+<p>Launch Orchestrator<br>Tier 2 • supervisor</p>
+<p>Entity Resolution<br>Tier 2 • read-only</p>
+<p>Conflicts &amp; Independence<br>Tier 1 • Risk decides</p>
+<p>Scoping &amp; Letter<br>Tier 1 • drafts</p>
+<p>Pricing &amp; Budget<br>Tier 2 • proposes</p>
+<p>Staffing<br>Tier 2 • proposes</p>
+<p>Engagement Setup<br>Tier 3 • gated writes</p>
+<p>MODELS</p>
+<p>Frontier LLM<br>drafting • zero retention</p>
+<p>Failover LLM<br>second provider</p>
+<p>Open-weight SLM<br>firm VPC • extraction</p>
+<p>Embeddings<br>private endpoint</p>
+<p>Routing policy<br>confidential data stays private</p>
+<p>POLICIES &amp; CONTROLS</p>
+<p>Setup gate<br>cleared • bound approval • signed</p>
+<p>Approved templates<br>deviations to Risk</p>
+<p>Cleared staff only<br>yes/no clearance flag</p>
+<p>Private models<br>for client-confidential data</p>
+<p>PII masked<br>before every prompt</p>
+<p>Token budget<br>per launch, within a target</p>
+<p>Illustrative inventory for reference use case 1. The full tables (T3a to T3h) are in the assessment report.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Walk the six columns left to right. Systems of record: what the launch runs on today, and whether agents need read or write access. Master data: the golden records and reference data the agents depend on. The client hierarchy is on the critical path. MCP tools and APIs: the capabilities to expose once, with read or write scopes. Agents and tiers: seven agents, each with an owner and an autonomy tier. Models: four, routed by policy so client-confidential text stays on private models. Policies and controls: the rules that must be enforced at runtime in the gateway path.</p>
+<p>Every item has an owner and a phase in the inventory tables.</p>
+</div>
+</section>
+<section class="slide" id="slide-9" aria-labelledby="slide-9-h">
+<h2 id="slide-9-h"><span class="slide-no">Slide 9</span> Each launch stage and the systems it touches</h2>
+<figure class="slide-img"><img src="img/client/slide-09.png" width="1601" height="900" alt="Slide 9: Each launch stage and the systems it touches" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>STAGE</p>
+<p>PEOPLE</p>
+<p>AGENT</p>
+<p>CONTROL PLANE</p>
+<p>MCP / API</p>
+<p>SYSTEM OF RECORD</p>
+<p>OUTCOME</p>
+<p>Verbal win</p>
+<p>Manager sees launch plan</p>
+<p>Launch Orchestrator<br>Supervisor • Tier 2</p>
+<p>CRM MCP</p>
+<p>CRM</p>
+<p>Accept client</p>
+<p>No human step</p>
+<p>Entity Resolution<br>Tier 2 • read-only</p>
+<p>MDM MCP</p>
+<p>Client master (MDM)</p>
+<p>Risk clearance</p>
+<p>Risk decides</p>
+<p>Conflicts &amp; Independence<br>Tier 1 • assist only</p>
+<p>Independence API</p>
+<p>Independence system</p>
+<p>Scope &amp; price</p>
+<p>Manager edits letter</p>
+<p>Scoping &amp; Pricing<br>Tier 1–2 • drafts</p>
+<p>Knowledge &amp; SAP MCP</p>
+<p>DMS • SAP • Snowflake</p>
+<p>Staff team</p>
+<p>Manager confirms</p>
+<p>Staffing<br>Tier 2 • proposes</p>
+<p>Workday MCP</p>
+<p>Workday HCM</p>
+<p>Approve &amp;<br>set up</p>
+<p>Partner approves • client signs</p>
+<p>Engagement Setup<br>Tier 3 • gated</p>
+<p>SAP MCP (write)</p>
+<p>SAP S/4HANA</p>
+<p>Enterprise AI control plane: registry • AI gateway (LLM, MCP, A2A) • policy • agent identity • evals • cost • observability</p>
+<p>Verbal win to ready-to-charge in about 2 days instead of 2 weeks, with every independence decision made by a person, before work starts</p>
+<p>Illustrative. Amber = human decision. Blue = agent and autonomy tier. Every call passes through the control plane.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Walk the six stages left to right. For each, point to the human step (amber), the agent and its autonomy tier (blue), and the governed path underneath: every agent reaches its system of record only through the control plane and a governed MCP tool or API.</p>
+<ul><li>Verbal win: the CRM event starts the Launch Orchestrator, which posts a launch plan to the engagement manager.</li><li>Accept client: the Entity Resolution agent matches the client to its MDM golden record and corporate hierarchy (read-only).</li><li>Risk clearance: the Conflicts &amp; Independence agent assembles findings and precedent. Risk &amp; Quality decides (Tier 1).</li><li>Scope &amp; price: the letter is drafted from approved clauses. The budget comes from SAP rate cards and Snowflake actuals. The manager edits.</li><li>Staff team: a proposal from Workday skills and availability plus a yes/no independence-clearance flag. The manager confirms.</li><li>Approve &amp; set up: partner approval and client signature open the gate. Only then does the Setup agent write to SAP S/4HANA (Tier 3, policy-gated).</li></ul>
+<p>The outcome to land: verbal win to ready-to-charge in about two days instead of two weeks (illustrative), with every independence decision made by a person, before work starts, with evidence attached.</p>
+</div>
+</section>
+<section class="slide" id="slide-10" aria-labelledby="slide-10-h">
+<h2 id="slide-10-h"><span class="slide-no">Slide 10</span> Expected business outcomes and KPIs</h2>
+<figure class="slide-img"><img src="img/client/slide-10.png" width="1601" height="900" alt="Slide 10: Expected business outcomes and KPIs" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Illustrative for a firm launching 10,000 engagements a year. Replace with the firm’s own baseline during discovery.</p>
+<p>EXPECTED BUSINESS OUTCOMES</p>
+<p>Capacity released</p>
+<p>Manual effort falls from about 14 to 5 hours per launch</p>
+<p>$10.8M</p>
+<p>10,000 launches × 9 hours × $120</p>
+<p>Revenue protected</p>
+<p>Charge codes exist when work starts, so early hours are billed</p>
+<p>$10.0M</p>
+<p>2,500 launches × 20 hours × $200</p>
+<p>Higher utilization</p>
+<p>Teams confirmed within days instead of weeks</p>
+<p>$9.0M</p>
+<p>0.5 pt × 5,000 staff × 1,800 h × $200</p>
+<p>Risk avoided</p>
+<p>Independence decided by a person before work starts, with evidence</p>
+<p>Not quantified</p>
+<p>remediation, regulatory, reputational</p>
+<p>~$30M a year released or protected, before platform, model and change costs</p>
+<p>KEY PERFORMANCE INDICATORS</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table: KPI, Baseline, Target (12 months)"><table><thead><tr><th scope="col">KPI</th><th scope="col">Baseline*</th><th scope="col">Target (12 months)</th></tr></thead><tbody><tr><td>Win-to-ready-to-charge</td><td>10 days</td><td>2 days</td></tr><tr><td>Manual effort per launch</td><td>14 hours</td><td>5 hours</td></tr><tr><td>Independence cleared before start</td><td>92%</td><td>100%</td></tr><tr><td>Post-start exceptions per 1,000</td><td>4</td><td>Below 0.5</td></tr><tr><td>First-time-right SAP setup</td><td>80%</td><td>97%</td></tr><tr><td>Staffing within 48 hours</td><td>55%</td><td>85%</td></tr><tr><td>Agent evaluation pass rate</td><td>Not measured</td><td>95% or higher</td></tr><tr><td>Governed AI traffic</td><td>Not measured</td><td>100%</td></tr><tr><td>AI cost per launch</td><td>Not measured</td><td>Within target</td></tr></tbody></table></div>
+<p>*Baselines and values are illustrative. Measure the firm’s baseline during discovery.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Business case, illustrative for a firm launching 10,000 engagements a year:</p>
+<ul><li>Capacity released: manual assembly, checking and data entry falls from about 14 to 5 hours per launch across managers, Risk, resourcing and finance. 10,000 launches × 9 hours × $120 loaded cost is about $10.8M a year.</li><li>Revenue protected: charge codes exist when work starts, so early hours are billed instead of written off. 2,500 affected launches × 20 hours × $200 average rate is about $10.0M.</li><li>Higher utilization: teams are confirmed within days instead of weeks. 0.5 point × 5,000 client-facing staff × 1,800 hours × $200 is about $9.0M.</li><li>Risk avoided: every independence decision is made by a person before work starts, with evidence and lineage. Not quantified.</li></ul>
+<p>Roughly $30M a year released or protected before platform, model and change costs, which should be estimated alongside the baseline.</p>
+<p>Expected business outcomes: faster time to revenue (about two business days from verbal win to ready-to-charge), lower cost to launch, no known independence exceptions at engagement start, and a better client and staff experience.</p>
+<p>KPIs: the baselines are illustrative. The KPIs that speak directly to the control plane are governed AI traffic (target: 100% of model and tool calls through the gateway) and AI cost per launch within target. Agent evaluation pass rate covers letter-clause accuracy and independence-finding recall.</p>
+</div>
+</section>
+<section class="slide" id="slide-11" aria-labelledby="slide-11-h">
+<h2 id="slide-11-h"><span class="slide-no">Slide 11</span> Requirements that shape the design</h2>
+<figure class="slide-img"><img src="img/client/slide-11.png" width="1601" height="900" alt="Slide 11: Requirements that shape the design" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Twenty-three requirements in the register (template T4). These are the ones the architecture turns on.</p>
+<p>Business</p>
+<p>BR-01  Verbal win to ready-to-charge in 2 business days, down from 10<br>Must • phase 3</p>
+<p>BR-02  Manual effort per launch down from 14 to 5 hours<br>Must • phases 1–3</p>
+<p>BR-03  A person makes every independence decision before work starts, with evidence<br>Must • phase 1</p>
+<p>NFR-02  AI cost per launch within its target, with a token budget per launch<br>Must • phases 1–2</p>
+<p>Functional</p>
+<p>FR-02  Resolve every client to its golden record with the full hierarchy<br>Must • phase 1</p>
+<p>FR-03  Assemble conflict and independence findings for a reviewer to decide<br>Must • phase 1</p>
+<p>FR-06  Propose only people cleared for this client<br>Must • phase 2</p>
+<p>FR-07  Write to SAP only when cleared, approved and signed<br>Must • phase 3</p>
+<p>Data &amp; integration</p>
+<p>DR-01  One golden record per legal entity, linked to the restricted list<br>Must • phase 1</p>
+<p>DR-02  One engagement ID across CRM, independence, letter and SAP<br>Must • phases 1–3</p>
+<p>DR-03  Glossary, data contracts and lineage for every MCP tool<br>Should • phase 2</p>
+<p>IR-01  Every system exposed as governed APIs and MCP tools with scopes<br>Must • phases 1–3</p>
+<p>Operations</p>
+<p>NFR-01  Model failover to a second provider and idempotent SAP writes<br>Must • phases 2–3</p>
+<p>OR-01  One trace per engagement, from verbal win to charge codes<br>Must • phase 1</p>
+<p>OR-02  Evaluation before any promotion, then on sampled live traces<br>Must • phase 2</p>
+<p>CR-01  Evidence for every independence decision kept for inspections<br>Must • phase 1</p>
+<p>Illustrative requirements for reference use case 1. The full register (T4) is in the assessment report.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Lead architect: the register has 23 requirements. These 16 are the ones the architecture turns on.</p>
+<p>Business: the two KPI targets (2 days, 5 hours), the rule that people make every independence decision, and the AI cost target. Functional: the golden record, Tier 1 independence, cleared staff only, and the gated SAP write. Data and integration: the golden record per legal entity, one engagement ID, data contracts and lineage, and governed APIs and MCP tools. Operations: failover and idempotent writes, one trace per engagement, evaluation before promotion and on sampled live traces, and evidence kept for inspections. The register also makes a drilled takeover runbook a condition of tier 3 (OR-03).</p>
+<p>Each requirement links to a KPI and a phase in the register, so the plan and the scorecard trace back to it.</p>
+</div>
+</section>
+<section class="slide" id="slide-12" aria-labelledby="slide-12-h">
+<h2 id="slide-12-h"><span class="slide-no">Slide 12</span> Security at every layer, autonomy by tier</h2>
+<figure class="slide-img"><img src="img/client/slide-12.png" width="1601" height="900" alt="Slide 12: Security at every layer, autonomy by tier" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Zero-trust controls on every call,<sup class="cite"><a href="../handbook/appendix-b.html#en-90" aria-label="Endnote 90">90</a></sup> and a tier for every agent that sets how much it may do on its own: earned on evidence, and lowered automatically when something goes wrong.</p>
+<p>Users</p>
+<p>Single sign-on with phishing-resistant MFA, and step-up authentication for partner approval</p>
+<p>Agents</p>
+<p>A workload identity per agent instance,<sup class="cite"><a href="../handbook/appendix-b.html#en-91" aria-label="Endnote 91">91</a></sup> no static keys, least privilege, a kill switch and no self-approval</p>
+<p>A2A</p>
+<p>Signed agent cards verified by the registry, mTLS plus OAuth on every call,<sup class="cite"><a href="../handbook/appendix-b.html#en-27" aria-label="Endnote 27">27</a></sup> and on-behalf-of tokens with narrowed scopes<sup class="cite"><a href="../handbook/appendix-b.html#en-92" aria-label="Endnote 92">92</a></sup></p>
+<p>MCP</p>
+<p>Registered, version-pinned servers behind the gateway, with per-tool scopes, policy on the standard MCP headers<sup class="cite"><a href="../handbook/appendix-b.html#en-26" aria-label="Endnote 26">26</a></sup> and one trace per call</p>
+<p>APIs</p>
+<p>OAuth or signed JWTs, mTLS to backends, rate limits and threat protection, private connectivity</p>
+<p>Models</p>
+<p>Gateway only, zero data retention, injection screening, personal data masked, output validated<sup class="cite"><a href="../handbook/appendix-b.html#en-93" aria-label="Endnote 93">93</a></sup></p>
+<p>Data at rest</p>
+<p>AES-256 with customer-managed keys, tokenized personal financial interests, row-access and masking</p>
+<p>Data in motion</p>
+<p>TLS 1.3 everywhere, mTLS between services, hybrid post-quantum key exchange as vendors support it</p>
+<p>Audit</p>
+<p>Tamper-evident logs linking user, agent, tool call and record, retained to professional standards</p>
+<p>AUTONOMY BY AGENT</p>
+<p>TIER 1  •  ASSISTED</p>
+<p>Conflicts &amp; Independence (Risk decides), Scoping &amp; Letter (manager edits, partner approves)</p>
+<p>TIER 2  •  SUPERVISED</p>
+<p>Launch Orchestrator, Entity Resolution (read-only), Pricing &amp; Budget, Staffing</p>
+<p>TIER 3  •  AUTONOMOUS, GATED</p>
+<p>Engagement Setup writes to SAP only when cleared, approved and signed, with the approval bound to that request</p>
+<p>COMPLIANCE</p>
+<p>Auditor-independence rules,<sup class="cite"><a href="../handbook/appendix-b.html#en-89" aria-label="Endnote 89">89</a></sup> with the evidence behind every decision kept for inspections</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-26">26</a>, <a href="../handbook/appendix-b.html#en-27">27</a>, <a href="../handbook/appendix-b.html#en-33">33</a>, <a href="../handbook/appendix-b.html#en-46">46</a>, <a href="../handbook/appendix-b.html#en-48">48</a>, <a href="../handbook/appendix-b.html#en-64">64</a>, <a href="../handbook/appendix-b.html#en-89">89</a>–<a href="../handbook/appendix-b.html#en-93">93</a>. Controls follow the handbook’s use case 1; confirm them with the firm’s CISO.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Lead architect: security follows zero-trust principles [<a href="../handbook/appendix-b.html#en-90">90</a>]: every actor is authenticated, every call is authorized for the specific task, and nothing is trusted because of where it sits on the network.</p>
+<p>Walk the nine layers. Users get phishing-resistant MFA, with step-up for partners. Agents have a workload identity per instance [<a href="../handbook/appendix-b.html#en-91">91</a>] and no static API keys [<a href="../handbook/appendix-b.html#en-46">46</a>], with least privilege, a kill switch and no self-approval. A2A uses signed agent cards verified by the registry, mTLS plus OAuth [<a href="../handbook/appendix-b.html#en-27">27</a>], and on-behalf-of tokens with narrowed scopes [<a href="../handbook/appendix-b.html#en-92">92</a>]. MCP allows only registered, version-pinned servers behind the gateway, with per-tool scopes, schema validation, and policy on the standard MCP request headers with every call joined to its trace [<a href="../handbook/appendix-b.html#en-26">26</a>]. Pinned tool definitions are firm practice. Then cover APIs, models (gateway only, zero retention, masking, output validation [<a href="../handbook/appendix-b.html#en-93">93</a>]), data at rest and in motion, and tamper-evident audit.</p>
+<p>Then the tiers on the right: only the setup agent writes to a system of record, and only when independence is cleared, the partner has approved that exact request and the client has signed. The approval expires at the end of the business day.</p>
+<p>Tiers move both ways: an agent moves up only on evidence (evaluations over a sustained period, red-team findings closed, an up-to-date impact assessment) and drops automatically on a security event, a failed binding check or stale data [<a href="../handbook/appendix-b.html#en-33">33</a>]. The controls map to the OWASP Top 10 for Agentic Applications [<a href="../handbook/appendix-b.html#en-48">48</a>]. The report’s security section shows the mapping and the owners of the two gaps no gateway closes alone. And if the setup agent is ever stopped, finance takes over its open launches with the launch trace in hand, under a runbook drilled before tier 3 [<a href="../handbook/appendix-b.html#en-64">64</a>].</p>
+</div>
+</section>
+<section class="slide" id="slide-13" aria-labelledby="slide-13-h">
+<h2 id="slide-13-h"><span class="slide-no">Slide 13</span> Vendor-neutral solution architecture</h2>
+<figure class="slide-img"><img src="img/client/slide-13.png" width="1601" height="900" alt="Slide 13: Vendor-neutral solution architecture" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>USERS &amp; CLIENTS</p>
+<p>Chat copilot<br>engagement managers</p>
+<p>Mobile approvals<br>partners • step-up MFA</p>
+<p>Risk workspace<br>independence reviewers</p>
+<p>E-signature portal<br>client signatories</p>
+<p>AGENTS<br>autonomy tier</p>
+<p>Entity Resolution<br>Tier 2 • read-only</p>
+<p>Conflicts &amp; Independence<br>Tier 1 • Risk decides</p>
+<p>Scoping &amp; Letter<br>Tier 1 • drafts only</p>
+<p>Pricing &amp; Budget<br>Tier 2 • proposes</p>
+<p>Staffing<br>Tier 2 • proposes</p>
+<p>Engagement Setup<br>Tier 3 • gated writes</p>
+<p>ORCHESTRATION<br>hybrid / federated</p>
+<p>Launch Orchestrator<br>supervisor agent</p>
+<p>Deterministic gates<br>independence • approvals</p>
+<p>A2A delegation<br>agent cards • task state</p>
+<p>Event triggers<br>CRM • e-signature</p>
+<p>CONTROL PLANE</p>
+<p>Registry<br>agents • tools • APIs</p>
+<p>AI gateway<br>LLM • MCP • A2A</p>
+<p>Policy decision point<br>policy-as-code</p>
+<p>Identity &amp; delegation<br>agent IDs • OBO</p>
+<p>Evals &amp; cost<br>tests • budgets</p>
+<p>Kill switch<br>circuit breakers</p>
+<p>MODELS<br>routed by policy</p>
+<p>Frontier LLM A<br>drafting • zero retention</p>
+<p>Frontier LLM B<br>failover provider</p>
+<p>Open-weight SLM<br>self-hosted • extraction</p>
+<p>Embeddings<br>private endpoint</p>
+<p>MCP SERVERS &amp; APIs</p>
+<p>CRM<br>opportunity • account</p>
+<p>Independence<br>search • clearance</p>
+<p>Knowledge &amp; DMS<br>walls enforced</p>
+<p>Workday<br>skills • availability</p>
+<p>SAP S/4HANA<br>rates • WBS • billing</p>
+<p>Snowflake<br>semantic views</p>
+<p>DATA GOVERNANCE<br>MDM &amp; semantics</p>
+<p>MDM golden records<br>client • worker • engagement</p>
+<p>Semantic layer<br>glossary • metrics</p>
+<p>Catalog &amp; lineage<br>source to answer</p>
+<p>Data quality<br>hierarchy • duplicates</p>
+<p>Access policies<br>masking • walls</p>
+<p>Data contracts<br>one per MCP tool</p>
+<p>SYSTEMS OF RECORD</p>
+<p>CRM</p>
+<p>Independence system</p>
+<p>DMS &amp; e-signature</p>
+<p>Workday HCM</p>
+<p>SAP S/4HANA</p>
+<p>Snowflake</p>
+<p>SECURITY AT EVERY LAYER</p>
+<p>Phishing-resistant MFA<br>Per-agent identity<br>OAuth scopes per tool<br>A2A: mTLS + signed cards<br>API threat protection<br>PII masked in prompts<br>TLS 1.3 in motion<br>At rest: AES-256 + CMK<br>Tamper-evident audit</p>
+<p>GOVERNANCE &amp; OBSERVABILITY</p>
+<p>Autonomy tiers<br>Human approval gates<br>Agent owners in registry<br>OpenTelemetry traces<br>Token cost per launch<br>Eval scores &amp; drift<br>Policy-block alerts</p>
+<p>Vendor-neutral: only systems of record are named products. Standards: endnotes <a href="../handbook/appendix-b.html#en-26">26</a>, <a href="../handbook/appendix-b.html#en-27">27</a>, <a href="../handbook/appendix-b.html#en-90">90</a>–<a href="../handbook/appendix-b.html#en-94">94</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>This is the vendor-neutral solution architecture, aligned to the north-star reference architecture. Only the systems of record are named products. Everything else is replaceable.</p>
+<p>Orchestration model selected: hybrid/federated. The control plane governs identity, policy, cost and audit centrally, while Risk &amp; Quality, Finance and Talent own their agents. Within a launch, a supervisor pattern applies: the orchestrator delegates tasks to specialist agents over A2A [<a href="../handbook/appendix-b.html#en-27">27</a>], and agents reach tools and data only through MCP servers [<a href="../handbook/appendix-b.html#en-26">26</a>]. The regulated sequence is deterministic and does not depend on model reasoning: no letter before independence is cleared, no SAP write before partner approval and client signature.</p>
+<p>Models and routing: a frontier model under enterprise terms with zero data retention drafts letters and summarizes findings, with a second provider for failover. A self-hosted open-weight small language model handles extraction, classification and personal-data detection, and embeddings run on a private endpoint. The AI gateway sends client-confidential payloads only to private models or approved regions and sets token budgets per launch.</p>
+<p>Data governance covers client and legal-entity, worker and engagement golden records and a semantic layer (glossary, metric definitions and a data contract for each MCP tool). A catalog with lineage lets a reviewer see which records drove an independence finding, and access policies enforce masking and information barriers between engagements.</p>
+<p>Security at every level: the design follows zero-trust principles [<a href="../handbook/appendix-b.html#en-90">90</a>] and gives each agent instance a unique workload identity [<a href="../handbook/appendix-b.html#en-91">91</a>]. A2A calls use on-behalf-of token exchange with narrowed scopes [<a href="../handbook/appendix-b.html#en-92">92</a>]. MCP servers are OAuth-protected, with per-tool scopes and no token pass-through [<a href="../handbook/appendix-b.html#en-26">26</a>], and as firm practice their tool definitions are reviewed and pinned. The design also uses prompt-injection screening and output validation [<a href="../handbook/appendix-b.html#en-93">93</a>]. Data at rest uses AES-256 with customer-managed keys, and data in motion uses TLS 1.3 and mTLS.</p>
+<p>Observability: every hop emits OpenTelemetry traces using the generative-AI semantic conventions, tied to one engagement correlation ID [<a href="../handbook/appendix-b.html#en-94">94</a>].</p>
+</div>
+</section>
+<section class="slide" id="slide-14" aria-labelledby="slide-14-h">
+<h2 id="slide-14-h"><span class="slide-no">Slide 14</span> Maya launches Project Atlas the day it is won</h2>
+<figure class="slide-img"><img src="img/client/slide-14.png" width="1601" height="900" alt="Slide 14: Maya launches Project Atlas the day it is won" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>1. 08:05<br>Verbal win<br>The CRM opportunity moves to verbal win. The orchestrator posts a launch plan in Maya’s chat.</p>
+<p>2. 08:12<br>Client resolved<br>MDM shows the client is a subsidiary of an audit client’s parent. Enhanced review starts.</p>
+<p>3. 09:40<br>Independence cleared<br>Risk approves with one condition: no work on financial-reporting systems.</p>
+<p>4. 10:30<br>Letter drafted<br>Drafted from approved clauses with the carve-out. Maya edits two paragraphs.</p>
+<p>5. 11:20<br>Budget ready<br>From SAP rate cards and Snowflake actuals: 31% margin against a 30% target.</p>
+<p>6. 13:05<br>Team proposed<br>Five people proposed. One not cleared for this client is swapped automatically.</p>
+<p>7. 14:30<br>Partner approves<br>Letter and budget approved on mobile with step-up MFA, then sent for e-signature.</p>
+<p>8. 16:10<br>Ready to charge<br>Client signs. SAP project, WBS and billing plan created. Team gets charge codes.</p>
+<p>Illustrative scenario. Maya Chen is an engagement manager in the advisory practice.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Tell Maya&#x27;s day as a story.</p>
+<p>At 08:05 the CRM opportunity for Project Atlas moves to verbal win, and within a minute Maya&#x27;s chat copilot shows a launch plan targeting ready-to-charge in two days. By 08:12 the entity-resolution agent has matched the client to its golden record and found that it is a subsidiary of a group whose parent is an audit client, so an enhanced independence review starts automatically. At 09:40 a reviewer in Risk &amp; Quality approves the engagement with one condition: no work on financial-reporting systems.</p>
+<p>The scoping agent drafts the engagement letter with that carve-out by 10:30, and Maya rewrites two paragraphs. The pricing agent&#x27;s budget arrives at 11:20 with a 31% margin against a 30% target. At 13:05 the staffing agent proposes a team of five, having already replaced a consultant who is not independence-cleared for this client. Maya sees only that a substitution was required, not why. The partner approves the letter and budget on mobile at 14:30 with step-up authentication, and the letter goes to the client for signature. At 16:10 the client signs, the setup agent creates the SAP project, WBS and billing plan, and the team receives charge codes.</p>
+<p>End the story on the result: what used to take two weeks finished the same day, and every accountable decision was still made by a person.</p>
+</div>
+</section>
+<section class="slide" id="slide-15" aria-labelledby="slide-15-h">
+<h2 id="slide-15-h"><span class="slide-no">Slide 15</span> How the components work together in Maya’s day</h2>
+<figure class="slide-img"><img src="img/client/slide-15.png" width="1601" height="900" alt="Slide 15: How the components work together in Maya’s day" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Engagement team<br>chat • mobile</p>
+<p>Orchestrator<br>supervisor agent</p>
+<p>Specialist agents<br>A2A workers</p>
+<p>Control plane<br>gateway • policy • identity</p>
+<p>Models<br>SLM • frontier</p>
+<p>MCP servers &amp; APIs<br>governed tools</p>
+<p>Systems &amp; MDM<br>systems of record</p>
+<p>1  CRM event: verbal win</p>
+<p>2  A2A: resolve entity, check independence</p>
+<p>3  MCP calls with delegated token</p>
+<p>4  Allow read scopes and forward</p>
+<p>5  Query MDM hierarchy &amp; restricted list</p>
+<p>6  Golden record: affiliate of audit client</p>
+<p>7  Summarize findings (private SLM)</p>
+<p>8  Tier 1 review task to Risk</p>
+<p>9  Risk approves with a condition</p>
+<p>10  A2A: draft letter, price, staff</p>
+<p>11  Draft letter (frontier, PII masked)</p>
+<p>12  Read rates, actuals, availability</p>
+<p>13  Letter, budget and team for review</p>
+<p>14  Partner approves (step-up MFA)</p>
+<p>15  Policy check: cleared and approved?</p>
+<p>16  Allow gated SAP write tools</p>
+<p>17  Create project, WBS, billing plan</p>
+<p>18  Launch summary and charge codes</p>
+<p>Every hop emits an OpenTelemetry span and an audit event tied to the engagement ID. Tokens are metered and evals sampled. Endnotes <a href="../handbook/appendix-b.html#en-26">26</a>, <a href="../handbook/appendix-b.html#en-27">27</a>, <a href="../handbook/appendix-b.html#en-92">92</a>, <a href="../handbook/appendix-b.html#en-94">94</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Read the numbered steps top to bottom. They follow Maya&#x27;s day.</p>
+<p>Steps 1–6 (08:05–08:12): the CRM event starts the orchestrator, which delegates entity resolution and the independence check over A2A [<a href="../handbook/appendix-b.html#en-27">27</a>]. The agent&#x27;s MCP calls carry a delegated, on-behalf-of token [<a href="../handbook/appendix-b.html#en-92">92</a>], and the control plane authorizes read scopes only [<a href="../handbook/appendix-b.html#en-26">26</a>]. The MDM returns the golden record and flags the affiliate of an audit client, and lineage is captured.</p>
+<p>Steps 7–9 (09:40): a private small language model summarizes the findings, and a Tier 1 review task goes to Risk &amp; Quality. The decision is made there, never by the agent, and it is signed and logged.</p>
+<p>Steps 10–13 (10:30–13:05): the orchestrator delegates drafting, pricing and staffing. Drafting uses the frontier model with personal data masked, and retrieval is filtered by information barriers. Rate cards, actuals and availability are read through MCP under row-access policies. Staffing sees only a yes/no clearance flag, never the underlying personal financial interests.</p>
+<p>Steps 14–18 (14:30–16:10): the partner approves with step-up MFA, and the policy decision point confirms that the engagement is cleared, approved and signed. Only then does the gateway allow the SAP write tools, and the setup agent creates the project, WBS and billing plan with idempotent calls. The partner&#x27;s approval is bound to the exact setup request and expires at the end of the business day.</p>
+<p>Every hop emits an OpenTelemetry span and an audit event [<a href="../handbook/appendix-b.html#en-94">94</a>], tokens are metered against the launch budget, evaluations are sampled, and the kill switch is available throughout.</p>
+</div>
+</section>
+<section class="slide" id="slide-16" aria-labelledby="slide-16-h">
+<h2 id="slide-16-h"><span class="slide-no">Slide 16</span> Realized with MuleSoft Agent Fabric and Informatica</h2>
+<figure class="slide-img"><img src="img/client/slide-16.png" width="1601" height="900" alt="Slide 16: Realized with MuleSoft Agent Fabric and Informatica" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>MuleSoft</p>
+<p>Informatica</p>
+<p>MuleSoft + Informatica</p>
+<p>Customer choice</p>
+<p>USERS &amp; CLIENTS</p>
+<p>Chat copilot<br>Slack or Teams</p>
+<p>Mobile approvals<br>Trusted Agent Identity</p>
+<p>Risk workspace<br>firm application</p>
+<p>E-signature portal<br>firm choice</p>
+<p>AGENTS<br>built anywhere, governed centrally</p>
+<p>Entity Resolution<br>any platform</p>
+<p>Conflicts &amp; Independence<br>any platform</p>
+<p>Scoping &amp; Letter<br>any platform</p>
+<p>Pricing &amp; Budget<br>any platform</p>
+<p>Staffing<br>any platform</p>
+<p>Engagement Setup<br>MuleSoft + MCP tools</p>
+<p>ORCHESTRATION</p>
+<p>Launch orchestration<br>Agent Broker</p>
+<p>Deterministic gates<br>guided determinism</p>
+<p>A2A delegation<br>A2A support</p>
+<p>Event triggers<br>MuleSoft event APIs</p>
+<p>CONTROL PLANE<br>MuleSoft Agent Fabric</p>
+<p>Registry &amp; discovery<br>Registry • Scanners</p>
+<p>LLM &amp; MCP gateway<br>AI Gateway</p>
+<p>API &amp; A2A policies<br>Omni Gateway</p>
+<p>Agent identity<br>Trusted Agent Identity</p>
+<p>Visibility &amp; cost<br>Visualizer • LLM Governance</p>
+<p>Kill switch<br>Agent Kill Switch</p>
+<p>MODELS</p>
+<p>Frontier LLMs<br>any provider • via AI Gateway</p>
+<p>Failover LLM<br>second provider</p>
+<p>Open-weight SLM<br>firm VPC</p>
+<p>Embeddings<br>private endpoint</p>
+<p>MCP SERVERS &amp; APIs</p>
+<p>MCP Bridge<br>APIs become MCP tools</p>
+<p>SAP S/4HANA API<br>MuleSoft connector</p>
+<p>Workday API<br>MuleSoft connector</p>
+<p>Snowflake API<br>MuleSoft connector</p>
+<p>Engagement APIs<br>MuleSoft process APIs</p>
+<p>Data MCP tools<br>Informatica MCP servers</p>
+<p>DATA GOVERNANCE<br>Informatica</p>
+<p>Golden records<br>Multidomain MDM</p>
+<p>Glossary &amp; lineage<br>Governance &amp; Catalog</p>
+<p>Data quality<br>Informatica Data Quality</p>
+<p>Address checks<br>Address Verification MCP</p>
+<p>Catalog search<br>CDGC MCP • AI Gateway</p>
+<p>Access &amp; masking<br>Snowflake + gateway</p>
+<p>SYSTEMS OF RECORD</p>
+<p>CRM</p>
+<p>Independence system</p>
+<p>DMS &amp; e-signature</p>
+<p>Workday HCM</p>
+<p>SAP S/4HANA</p>
+<p>Snowflake</p>
+<p>DEPLOY &amp; SECURE</p>
+<p>Runtime Fabric in the firm VPC<br>Omni Gateway: OAuth, mTLS, rate limits<br>AI Gateway: token limits, masking<br>Trusted Agent Identity: OBO + mobile approval<br>Keys in the firm KMS / HSM<br>Informatica: classification &amp; lineage</p>
+<p>OPERATE &amp; GOVERN</p>
+<p>Agent Visualizer: traces &amp; risk<br>Evaluation before release (firm tool)<br>Token rate limits and spend per launch<br>Agent Kill Switch<br>Agent Registry: owners &amp; tiers<br>Telemetry to the firm SIEM</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-21">21</a>, <a href="../handbook/appendix-b.html#en-77">77</a>, <a href="../handbook/appendix-b.html#en-78">78</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>How MuleSoft Agent Fabric and Informatica realize the vendor-neutral design. Colors show which vendor fills each role. Grey boxes remain the firm&#x27;s choice (collaboration tools, models, agent frameworks and systems of record).</p>
+<ul><li>Registry and discovery: Agent Registry and Agent Scanners register every launch agent, including agents other teams built on other platforms, with owner and autonomy tier [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Orchestration: Agent Broker with guided determinism enforces the fixed gates for independence, approvals and signature. A2A support handles delegation [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Gateway: AI Gateway is the single policy point for LLM and MCP traffic (routing, token limits, masking). Omni Gateway applies authentication, mTLS and rate-limit policies to APIs and A2A [<a href="../handbook/appendix-b.html#en-21">21</a>][<a href="../handbook/appendix-b.html#en-78">78</a>].</li><li>Identity and control: Trusted Agent Identity lets agents act on behalf of Maya or the partner, with mobile approval for high-risk steps [<a href="../handbook/appendix-b.html#en-21">21</a>]. A custom Omni Gateway policy, built with the Policy Development Kit, binds each approval to the executed call [<a href="../handbook/appendix-b.html#en-78">78</a>]. Agent Kill Switch, Agent Visualizer and AI cost controls (token-based rate limits and spend attribution) operate the system [<a href="../handbook/appendix-b.html#en-21">21</a>], and letters and findings are tested before release with the firm&#x27;s evaluation tool.</li><li>Tools: MCP Bridge turns existing APIs into governed MCP tools, and MuleSoft connectors reach SAP S/4HANA, Workday, Snowflake and the CRM without rewriting integrations [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Data foundation (Informatica): Multidomain MDM provides client, worker and engagement golden records that agents reach through governed APIs, while data quality rules validate entity data at the point of entry and the Address Verification MCP server validates and standardizes addresses. Data Governance and Catalog gives agents and people a shared glossary and lineage, and agents find data assets through the CDGC Metadata Search MCP server [<a href="../handbook/appendix-b.html#en-77">77</a>].</li><li>Deployment: Runtime Fabric keeps gateways and MCP servers inside the firm&#x27;s VPC where confidentiality requires [<a href="../handbook/appendix-b.html#en-21">21</a>].</li></ul>
+</div>
+</section>
+<section class="slide" id="slide-17" aria-labelledby="slide-17-h">
+<h2 id="slide-17-h"><span class="slide-no">Slide 17</span> Every component and its capability</h2>
+<figure class="slide-img"><img src="img/client/slide-17.png" width="1601" height="900" alt="Slide 17: Every component and its capability" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Each component of the vendor-neutral design, the MuleSoft Agent Fabric, MuleSoft or Informatica capability that realizes it, and its role in the launch.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table: Reference component, MuleSoft or Informatica capability, Role in this use case"><table><thead><tr><th scope="col">Reference component</th><th scope="col">MuleSoft or Informatica capability</th><th scope="col">Role in this use case</th></tr></thead><tbody><tr><td>Registry</td><td>Agent Registry and Agent Scanners (MuleSoft Agent Fabric)</td><td>Registers every launch agent, including agents other teams built on other platforms, with owner and autonomy tier<sup class="cite"><a href="../handbook/appendix-b.html#en-21" aria-label="Endnote 21">21</a></sup></td></tr><tr><td>Orchestration</td><td>Agent Broker with guided determinism (MuleSoft Agent Fabric)</td><td>Supervisor routing over A2A, with fixed gates for independence, approvals and signature<sup class="cite"><a href="../handbook/appendix-b.html#en-21" aria-label="Endnote 21">21</a></sup></td></tr><tr><td>AI gateway</td><td>AI Gateway for LLM and MCP traffic; Omni Gateway policies for APIs and A2A (MuleSoft)</td><td>One policy point for token limits, routing, masking, authentication and rate limits<sup class="cite"><a href="../handbook/appendix-b.html#en-21" aria-label="Endnote 21">21</a>,<a href="../handbook/appendix-b.html#en-78" aria-label="Endnote 78">78</a></sup></td></tr><tr><td>Agent identity</td><td>Trusted Agent Identity (MuleSoft Agent Fabric)</td><td>Agents act on behalf of Maya or the partner, with mobile approval for high-risk steps.<sup class="cite"><a href="../handbook/appendix-b.html#en-21" aria-label="Endnote 21">21</a></sup> A custom Omni Gateway policy, built with the Policy Development Kit, binds each approval to the executed call<sup class="cite"><a href="../handbook/appendix-b.html#en-78" aria-label="Endnote 78">78</a></sup></td></tr><tr><td>Operate and control</td><td>Agent Kill Switch, Agent Visualizer, AI cost controls (MuleSoft Agent Fabric)</td><td>Stop a misbehaving agent, trace the launch, apply token-based rate limits and attribute AI spend to each launch.<sup class="cite"><a href="../handbook/appendix-b.html#en-21" aria-label="Endnote 21">21</a></sup> Evaluation suites run with any evaluation tool</td></tr><tr><td>MCP servers and APIs</td><td>MCP Bridge, plus System and Process APIs with MuleSoft connectors for SAP S/4HANA, Workday, Snowflake and the CRM (MuleSoft)</td><td>Existing APIs become governed MCP tools without rewriting integrations<sup class="cite"><a href="../handbook/appendix-b.html#en-21" aria-label="Endnote 21">21</a></sup></td></tr><tr><td>Master data</td><td>Multidomain MDM (Informatica)</td><td>Client, worker and engagement golden records with hierarchies, which agents reach through governed APIs exposed as MCP tools by MCP Bridge<sup class="cite"><a href="../handbook/appendix-b.html#en-21" aria-label="Endnote 21">21</a>,<a href="../handbook/appendix-b.html#en-77" aria-label="Endnote 77">77</a></sup></td></tr><tr><td>Semantics, catalog, lineage</td><td>Data Governance and Catalog, with the CDGC Metadata Search MCP server (Informatica)</td><td>Shared glossary and lineage for agents and people, with agents searching catalog metadata through MCP<sup class="cite"><a href="../handbook/appendix-b.html#en-77" aria-label="Endnote 77">77</a></sup></td></tr><tr><td>Data quality</td><td>Data quality rules, with the Address Verification MCP server (Informatica)</td><td>Validate entity data, such as addresses and identifiers, at the point of entry, and flag duplicates and stale hierarchies to data stewards<sup class="cite"><a href="../handbook/appendix-b.html#en-77" aria-label="Endnote 77">77</a></sup></td></tr><tr><td>Deployment</td><td>CloudHub or customer-managed Runtime Fabric (MuleSoft)</td><td>Keep gateways and MCP servers inside the firm’s VPC where confidentiality requires<sup class="cite"><a href="../handbook/appendix-b.html#en-21" aria-label="Endnote 21">21</a></sup></td></tr></tbody></table></div>
+<p>Approval binding is a custom Omni Gateway policy built with the Policy Development Kit, not a MuleSoft product.<sup class="cite"><a href="../handbook/appendix-b.html#en-78" aria-label="Endnote 78">78</a></sup> Sources: endnotes <a href="../handbook/appendix-b.html#en-21">21</a>, <a href="../handbook/appendix-b.html#en-62">62</a>, <a href="../handbook/appendix-b.html#en-63">63</a>, <a href="../handbook/appendix-b.html#en-77">77</a>, <a href="../handbook/appendix-b.html#en-78">78</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Lead architect: this is the requirement-to-capability map for the launch. Every reference component in the vendor-neutral design maps to a MuleSoft Agent Fabric, MuleSoft or Informatica capability, with the role it plays in the launch.</p>
+<p>Approval binding is a custom Omni Gateway policy built with the Policy Development Kit, not a MuleSoft product, so agree who builds, tests and supports it [<a href="../handbook/appendix-b.html#en-78">78</a>]. The evaluation suites run with any evaluation tool, such as Amazon Bedrock AgentCore Evaluations or Microsoft’s open-source ASSERT framework, with the results recorded in the registry [<a href="../handbook/appendix-b.html#en-62">62</a>][<a href="../handbook/appendix-b.html#en-63">63</a>]. MDM APIs exposed through MCP Bridge give the agents governed access to the golden records, and the CDGC Metadata Search and Address Verification MCP servers cover catalog search and address checks [<a href="../handbook/appendix-b.html#en-77">77</a>].</p>
+</div>
+</section>
+<section class="slide" id="slide-18" aria-labelledby="slide-18-h">
+<h2 id="slide-18-h"><span class="slide-no">Slide 18</span> Coexisting with other agent control planes</h2>
+<figure class="slide-img"><img src="img/client/slide-18.png" width="1601" height="900" alt="Slide 18: Coexisting with other agent control planes" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>The firm’s platforms keep their own controls. Agree which plane is authoritative for what, and where a vendor-neutral plane adds what no single estate can.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table: Estate, Native agent control plane, Usually authoritative for, MuleSoft Agent Fabric’s role"><table><thead><tr><th scope="col">Estate</th><th scope="col">Native agent control plane</th><th scope="col">Usually authoritative for</th><th scope="col">MuleSoft Agent Fabric’s role</th></tr></thead><tbody><tr><td>Microsoft 365 and Azure</td><td>Agent 365 and Microsoft Entra Agent ID<sup class="cite"><a href="../handbook/appendix-b.html#en-12" aria-label="Endnote 12">12</a></sup></td><td>Identities and inventory of Microsoft agents, and access to Microsoft 365 data</td><td>Registers Copilot Studio and Foundry agents; applies common policy to their calls into enterprise systems</td></tr><tr><td>AWS</td><td>Amazon Bedrock AgentCore<sup class="cite"><a href="../handbook/appendix-b.html#en-62" aria-label="Endnote 62">62</a></sup></td><td>Runtime, memory and identity for agents built on AWS</td><td>Registers Bedrock and AgentCore agents and governs their access to enterprise APIs and MCP tools</td></tr><tr><td>Google Cloud</td><td>Gemini Enterprise Agent Platform: Agent Registry, Agent Gateway, Agent Identity<sup class="cite"><a href="../handbook/appendix-b.html#en-47" aria-label="Endnote 47">47</a></sup></td><td>Agents built on Google Cloud</td><td>Registers them and applies the same policy as for every other estate</td></tr><tr><td>Salesforce</td><td>Agentforce</td><td>Agents working in Salesforce data and processes</td><td>Registers and governs Agentforce agents</td></tr><tr><td>Across estates</td><td>No single native plane</td><td>Cross-vendor inventory, policy on every call into enterprise capabilities and data, cross-vendor orchestration, and cost and audit</td><td>The vendor-neutral control plane<sup class="cite"><a href="../handbook/appendix-b.html#en-21" aria-label="Endnote 21">21</a></sup></td></tr></tbody></table></div>
+<p>For the firm:  the collaboration platform keeps its own admin controls, and agents other teams built on other platforms stay under their native planes for identity and runtime. The firm’s identity provider stays authoritative for people. Agent Fabric is authoritative for the launch agents’ inventory, policy on every call into SAP, Workday, Snowflake, the CRM and the independence system, and AI cost and audit (illustrative).</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-12">12</a>, <a href="../handbook/appendix-b.html#en-14">14</a>, <a href="../handbook/appendix-b.html#en-21">21</a>, <a href="../handbook/appendix-b.html#en-47">47</a>, <a href="../handbook/appendix-b.html#en-62">62</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Lead architect: a client that runs Microsoft 365 or AWS already has an agent control plane in those estates, so show how the planes divide the work. Microsoft describes Agent 365 as “the control-plane for AI agents”, with Microsoft Entra Agent ID for agent identities [<a href="../handbook/appendix-b.html#en-12">12</a>]. AWS offers Amazon Bedrock AgentCore, with a runtime, memory, a gateway for MCP servers, identity and observability [<a href="../handbook/appendix-b.html#en-62">62</a>]. Google’s Gemini Enterprise Agent Platform includes an agent registry, an agent gateway and agent identities [<a href="../handbook/appendix-b.html#en-47">47</a>].</p>
+<p>Each governs its own estate well. The answer is a division of labor agreed up front: each native plane stays authoritative for identity and runtime in its own estate, and MuleSoft Agent Fabric is authoritative for the cross-estate inventory, for policy on every call into enterprise capabilities and data, for orchestration across vendors, and for cost and audit [<a href="../handbook/appendix-b.html#en-21">21</a>]. Microsoft’s own Cloud Adoption Framework asks for consistent policy across every agent platform [<a href="../handbook/appendix-b.html#en-14">14</a>].</p>
+<p>For the firm, the band at the bottom is the agreement to confirm with the chief architect: the collaboration platform keeps its own controls, the identity provider stays authoritative for people, and every call the launch agents make into the systems of record passes through Agent Fabric.</p>
+</div>
+</section>
+<section class="slide" id="slide-19" aria-labelledby="slide-19-h">
+<h2 id="slide-19-h"><span class="slide-no">Slide 19</span> The north star, realized with MuleSoft Agent Fabric and Informatica</h2>
+<figure class="slide-img"><img src="img/client/slide-19.png" width="1601" height="900" alt="Slide 19: The north star, realized with MuleSoft Agent Fabric and Informatica" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>1. CONSUMERS &amp; WORKLOADS</p>
+<p>Agentforce agents</p>
+<p>Copilot Studio &amp; Foundry agents</p>
+<p>Bedrock AgentCore &amp; Gemini Enterprise Agent Platform agents</p>
+<p>Copilots &amp; MCP clients (Claude, Slack, Teams)</p>
+<p>B2B &amp; partner systems</p>
+<p>2. CONTROL PLANE</p>
+<p>MuleSoft Agent Fabric</p>
+<p>Agent Registry &amp; Scanners</p>
+<p>Agent Broker orchestration</p>
+<p>AI Gateway: LLM &amp; MCP policy</p>
+<p>Trusted Agent Identity</p>
+<p>Visualizer &amp; cost controls</p>
+<p>3. MODELS</p>
+<p>Routed by AI Gateway</p>
+<p>Frontier models</p>
+<p>Open-source models</p>
+<p>Specialized models</p>
+<p>Self-hosted &amp; sovereign models</p>
+<p>Packaged SaaS models</p>
+<p>4. CAPABILITIES &amp; DATA</p>
+<p>MuleSoft + Informatica</p>
+<p>System &amp; process APIs</p>
+<p>MCP Bridge: APIs as tools</p>
+<p>Connectors, IDP &amp; RPA</p>
+<p>Informatica MDM, quality &amp; catalog</p>
+<p>ERP, CRM &amp; core systems</p>
+<p>5. INFRASTRUCTURE &amp; RESILIENCE</p>
+<p>Multi-cloud &amp; edge</p>
+<p>CloudHub &amp; Runtime Fabric</p>
+<p>Post-quantum-ready transport</p>
+<p>OpenTelemetry &amp; audit logs</p>
+<p>Failover &amp; model fallback</p>
+<p>ACROSS EVERY LAYER</p>
+<p>Omni Gateway policies, incl. custom  •  Trusted Agent Identity  •  Agent Kill Switch  •  Visualizer &amp; OpenTelemetry  •  Informatica lineage</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-21">21</a>, <a href="../handbook/appendix-b.html#en-77">77</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>This slide shows the north star realized: every layer of the vendor-neutral architecture maps to a MuleSoft or Informatica capability. The control plane (layer 2) sits between consumer workloads and the models and data beneath, and applies identity, policy, routing, cost controls and audit to every agent-to-model and agent-to-tool call.</p>
+<p>How the layers map:</p>
+<ol><li>Consumers and workloads: agents from any platform (Agentforce, Copilot Studio and Foundry, Bedrock AgentCore, Gemini Enterprise Agent Platform), copilots and MCP clients such as Claude, Slack and Teams, and B2B systems, discovered by Agent Scanners and registered in Agent Registry [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Control plane, MuleSoft Agent Fabric: Agent Registry and Scanners (inventory), Agent Broker (orchestration), AI Gateway (one policy point for LLM and MCP traffic), Trusted Agent Identity, and Agent Visualizer and AI cost controls [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Models: five model classes, routed per task by AI Gateway&#x27;s intelligent model routing, with token-based rate limits and spend attribution [<a href="../handbook/appendix-b.html#en-1">1</a>][<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Capabilities and data: MuleSoft system and process APIs, MCP Bridge and connectors with IDP and RPA, plus Informatica for master data, data quality, catalog and lineage (with data services exposed to agents through Informatica&#x27;s MCP servers) and Salesforce Data 360 for customer data [<a href="../handbook/appendix-b.html#en-21">21</a>][<a href="../handbook/appendix-b.html#en-77">77</a>].</li><li>Infrastructure and resilience: multi-cloud and edge, CloudHub or customer-managed Runtime Fabric, post-quantum-ready transport, OpenTelemetry and audit logs, and failover.</li></ol>
+<p>Across every layer: Omni Gateway policies (including custom ones), Trusted Agent Identity, the Agent Kill Switch, Agent Visualizer and OpenTelemetry traces, and Informatica governance and lineage.</p>
+<p>Design rule: nothing in layer 1 calls layer 3 or 4 directly. Every agent-to-model and agent-to-tool call traverses layer 2. In operational technology the rule extends one layer down: no agent reaches a control system except through a governed conduit, and independent safety systems sit beneath everything (reference use case 3 applies this to a gas pipeline operator).</p>
+</div>
+</section>
+<section class="slide" id="slide-20" aria-labelledby="slide-20-h">
+<h2 id="slide-20-h"><span class="slide-no">Slide 20</span> The platform and the use case, phased together</h2>
+<figure class="slide-img"><img src="img/client/slide-20.png" width="1601" height="900" alt="Slide 20: The platform and the use case, phased together" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Each platform phase switches on part of the control plane. In the same window, a larger slice of the launch goes live and pays back.</p>
+<p>CONTROL PLANE<br>MuleSoft Agent Fabric + Informatica</p>
+<p>USE CASE<br>Engagement launch</p>
+<p>PHASE 1  •  MONTHS 1–3</p>
+<p>Inventory and gateway</p>
+<p>Agent Scanners and Registry, AI Gateway for LLM and MCP traffic with new policies in audit mode first, LLM Governance for spend, autonomy tiers published</p>
+<p>PHASE 2  •  MONTHS 4–8</p>
+<p>Unlock and route</p>
+<p>MCP Bridge and MuleSoft APIs for the top capabilities, model routing and token-based rate limits, plus catalog, glossary and data contracts</p>
+<p>PHASE 3  •  MONTHS 9–14</p>
+<p>Autonomy and trust</p>
+<p>Trusted Agent Identity, approvals bound to actions (custom PDK policy), Kill Switch drills, evaluation in every release</p>
+<p>PHASE 4  •  MONTHS 15–24</p>
+<p>Federated control plane</p>
+<p>Agent Broker and A2A across domains, plus post-quantum migration for control-plane traffic</p>
+<p>MONTH 3</p>
+<p>One service line in one region, with read-only entity resolution and independence agents</p>
+<p>$0.5M a year</p>
+<p>MONTH 8</p>
+<p>Half of all launches, with letters, budgets and staffing proposals</p>
+<p>$8M a year</p>
+<p>MONTH 12</p>
+<p>Every launch, with SAP setup gated on the partner’s bound approval</p>
+<p>$30M a year</p>
+<p>MONTH 24</p>
+<p>All goals met, with adjacent processes on the same controls</p>
+<p>$33M cumulative</p>
+<p>Quick win first: the month-3 slice is read-only, in one scope, on reachable systems, and leaves the gateway, registry and client golden record behind for every next use case.</p>
+<p>Illustrative values from the business case, before platform, model and change costs. Sources: endnotes <a href="../handbook/appendix-b.html#en-20">20</a>, <a href="../handbook/appendix-b.html#en-21">21</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Engagement lead: this slide shows how value arrives while the platform matures. The platform is adopted in four phases, visibility and one policy point first and federation last, which is the sequence published phasing guidance recommends [<a href="../handbook/appendix-b.html#en-20">20</a>]. In the same window, each phase puts a larger slice of engagement launch into production.</p>
+<p>Month 3: one service line in one region, read-only entity resolution and independence agents, about $0.5M a year. Month 8: half of all launches, with letters, budgets and staffing proposals, about $8M a year. Month 12: every launch, with SAP setup gated on the partner’s approval bound to that exact request, about $30M a year, the full business case. Month 24: all goals met, about $33M cumulative.</p>
+<p>The first slice is a quick win by design. It is read-only, in one scope, on systems that are reachable now, and it leaves reusable foundations behind: the gateway, the registry and the client golden record.</p>
+</div>
+</section>
+<section class="slide" id="slide-21" aria-labelledby="slide-21-h">
+<h2 id="slide-21-h"><span class="slide-no">Slide 21</span> How value builds across the four phases</h2>
+<figure class="slide-img"><img src="img/client/slide-21.png" width="1601" height="900" alt="Slide 21: How value builds across the four phases" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Delivered in the four phases of the plan: each milestone widens scope or raises autonomy only after the last one proved its value and controls. Values are illustrative.</p>
+<p>MONTH 3  •  PHASE 1</p>
+<p>Read-only in one scope</p>
+<p>One service line in one region, about a tenth of launches. Entity resolution and independence agents at tiers 1–2, with every call through the gateway.</p>
+<p>Effort per launch down from 14 to about 10 hours in scope</p>
+<p>$0.5M a year</p>
+<p>MONTH 8  •  PHASE 2</p>
+<p>Half of all launches</p>
+<p>Agents draft letters and budgets and propose teams from Workday; launch capabilities published as governed MCP tools.</p>
+<p>Effort about 8 hours, staffing within 48 hours toward 70%</p>
+<p>$8M a year</p>
+<p>MONTH 12  •  PHASE 3</p>
+<p>Every launch, setup gated</p>
+<p>The setup agent writes the SAP project, WBS and billing plan after the partner’s bound approval and the client’s signature.</p>
+<p>All KPI targets met, including ready-to-charge in 2 days</p>
+<p>$30M a year</p>
+<p>MONTH 24  •  PHASE 4</p>
+<p>All goals met</p>
+<p>Run rate and targets sustained. Adjacent processes such as engagement changes and closure added on the same controls.</p>
+<p>All KPIs held at target</p>
+<p>$33M cumulative</p>
+<p>Cumulative value by month 24: about $33M, before platform, model and change costs (illustrative)</p>
+<p>Illustrative, derived from the business case: 1,000 launches × 4 hours × $120 at month 3, capacity plus utilization at month 8, and the full case from month 12.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Phased delivery for the engagement-launch use case, aligned with the four phases of the plan. Each milestone widens the scope or raises the autonomy tier only after the previous one has proved its value and its controls.</p>
+<ul><li>Month 3 (phase 1): one service line in one region, about a tenth of launches (1,000 a year). Entity resolution and independence agents work read-only at tiers 1–2, and every model and tool call goes through the gateway from day one. Effort per launch falls from 14 to about 10 hours in scope: 1,000 × 4 hours × $120 is about $0.5M a year.</li><li>Month 8 (phase 2): half of all launches. Agents draft letters and budgets from approved clauses and rate cards, and the staffing agent proposes teams from Workday. Effort falls to about 8 hours (5,000 × 6 hours × $120, about $3.6M) and faster staffing lifts utilization by about a quarter point (about $4.5M): about $8M a year.</li><li>Month 12 (phase 3): every launch. The setup agent writes the SAP project, WBS and billing plan at tier 3 once the partner&#x27;s approval, bound to that exact request, and the client&#x27;s signature are in place. All KPI targets are met and the full business case applies: about $30M a year.</li><li>Month 24 (phase 4): run rate and targets sustained, with adjacent processes added on the same controls. Counting each run rate from the milestone at which it was reached, cumulative value by month 24 is about $33M.</li></ul>
+<p>All values are illustrative and before platform, model and change costs. The revenue protected by timely charge codes arrives in phase 3, when agents can write to SAP S/4HANA under bound approvals.</p>
+</div>
+</section>
+<section class="slide" id="slide-22" aria-labelledby="slide-22-h">
+<h2 id="slide-22-h"><span class="slide-no">Slide 22</span> KPIs at every milestone</h2>
+<figure class="slide-img"><img src="img/client/slide-22.png" width="1601" height="900" alt="Slide 22: KPIs at every milestone" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Baselines are illustrative until measured in discovery. Targets are agreed with the business owner and finance.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table: KPI, Baseline, Month 3, Month 8, Month 12, Month 24"><table><thead><tr><th scope="col">KPI</th><th scope="col">Baseline*</th><th scope="col">Month 3</th><th scope="col">Month 8</th><th scope="col">Month 12</th><th scope="col">Month 24</th></tr></thead><tbody><tr><td>Win-to-ready-to-charge</td><td>10 days</td><td>Measure in scope</td><td>Measure</td><td>2 days</td><td>2 days</td></tr><tr><td>Manual effort per launch</td><td>14 hours</td><td>About 10 hours in scope</td><td>About 8 hours</td><td>5 hours</td><td>5 hours</td></tr><tr><td>Independence cleared before start</td><td>92%</td><td>Measure in scope</td><td>Measure</td><td>100%</td><td>100%</td></tr><tr><td>Post-start independence exceptions</td><td>4</td><td>Measure in scope</td><td>Measure</td><td>Below 0.5</td><td>Below 0.5</td></tr><tr><td>First-time-right setup</td><td>80%</td><td>Manual, as today</td><td>Manual, as today</td><td>97%</td><td>97%</td></tr><tr><td>Staffing within 48 hours</td><td>55%</td><td>Measure</td><td>Toward 70%</td><td>85%</td><td>85%</td></tr><tr><td>Agent quality</td><td>Not measured</td><td>Baseline set</td><td>Track</td><td>95% or higher</td><td>95% or higher</td></tr><tr><td>Governed AI traffic</td><td>Not measured</td><td>100% in scope</td><td>100% in scope</td><td>100%</td><td>100%</td></tr><tr><td>AI cost per launch</td><td>Not measured</td><td>Baseline set</td><td>Within target</td><td>Within target</td><td>Within target</td></tr><tr><td>AI cost visibility</td><td>Not measured</td><td>100% in scope</td><td>100% in scope</td><td>100%</td><td>100%</td></tr></tbody></table></div>
+<p>CONTROL-PLANE SCORECARD, WITH A LEADING INDICATOR FOR EACH METRIC</p>
+<p>Agent coverage<br>Unregistered agents found</p>
+<p>Governed traffic<br>New agents behind the gateway</p>
+<p>Cost per outcome<br>Cost per successful task</p>
+<p>AI cost visibility<br>Spend attributed within a day</p>
+<p>Value realized<br>Acceptance rate</p>
+<p>Oversight effectiveness<br>Takeover rate</p>
+<p>Time to contain<br>Drill time</p>
+<p>*Baselines and targets are illustrative. Scorecard definitions follow the handbook, Section 9. Leading indicators: endnotes <a href="../handbook/appendix-b.html#en-60">60</a> and <a href="../handbook/appendix-b.html#en-88">88</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Engagement lead and business owner: these are the KPIs the firm’s leadership will judge the program by, with a target at every milestone. Month 3 is measured in the one service line in scope. Month 12 is when all targets are met. Month 24 shows them sustained.</p>
+<p>The row along the bottom is the control-plane scorecard, reported monthly to the executive committee and quarterly to the AI governance board: agent coverage, governed traffic, cost per outcome, value realized, oversight effectiveness and time to contain. For this use case, oversight effectiveness means every SAP setup executed exactly as the partner approved it, within the approval’s validity window. AI cost visibility means every model and tool call in scope tagged to its engagement within a day. Only 26% of organizations had full, real-time visibility into AI operating costs in KPMG’s Q2 2026 pulse [<a href="../handbook/appendix-b.html#en-8">8</a>].</p>
+<p>Each chip also shows a leading indicator, an early signal that moves within weeks: unregistered agents found, new agents behind the gateway, cost per successful task, spend attributed within a day, acceptance rate, takeover rate and drill time [<a href="../handbook/appendix-b.html#en-60">60</a>]. Evaluate trajectories as well as answers, and measure value rather than adoption [<a href="../handbook/appendix-b.html#en-88">88</a>].</p>
+</div>
+</section>
+<section class="slide" id="slide-23" aria-labelledby="slide-23-h">
+<h2 id="slide-23-h"><span class="slide-no">Slide 23</span> Value arrives at every milestone</h2>
+<figure class="slide-img"><img src="img/client/slide-23.png" width="1601" height="900" alt="Slide 23: Value arrives at every milestone" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Illustrative run rates from the business case, before platform, model and change costs. Each run rate counts from the milestone at which it is reached.</p>
+<p>About $33M</p>
+<p>cumulative value by month 24, before platform, model and change costs (illustrative)</p>
+<p>HOW THE CUMULATIVE VALUE ADDS UP</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table: Months 3–8, $0.5M a year for 5 months, About $0.2M"><table><thead><tr><th scope="col">Months 3–8</th><th scope="col">$0.5M a year for 5 months</th><th scope="col">About $0.2M</th></tr></thead><tbody><tr><td>Months 8–12</td><td>$8M a year for 4 months</td><td>About $2.7M</td></tr><tr><td>Months 12–24</td><td>$30M a year for 12 months</td><td>About $30.0M</td></tr><tr><td>Total by month 24</td><td></td><td>About $33M</td></tr></tbody></table></div>
+<p>Payback benchmark and net ROI<br>Typical AI payback is two to four years, against seven to 12 months for other technology.<sup class="cite"><a href="../handbook/appendix-b.html#en-82" aria-label="Endnote 82">82</a></sup> Add the project team’s cost estimate, then report net value and payback at every milestone review.</p>
+<p>Illustrative, derived from the business case: 1,000 launches × 4 hours × $120 at month 3, capacity plus utilization at month 8, and the full case from month 12. Benchmark: endnote <a href="../handbook/appendix-b.html#en-82">82</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Engagement lead: the value builds in steps from month 3. Run rate at month 3 is about $0.5M a year from one service line, rising to about $8M at month 8 from half of all launches. From month 12 it is about $30M, when every launch is in and the revenue protected by timely charge codes arrives. Counting each run rate only from the milestone at which it is reached, cumulative value by month 24 is about $33M.</p>
+<p>For context, 56% of CEOs report no significant financial benefit from AI so far, while strong foundations make meaningful returns three times more likely [<a href="../handbook/appendix-b.html#en-79">79</a>]. High performers build a repeatable capability rather than accumulating pilots [<a href="../handbook/appendix-b.html#en-80">80</a>], and successful deployments start in adjacent processes, prove value, then scale [<a href="../handbook/appendix-b.html#en-81">81</a>].</p>
+<p>Net ROI and payback need the cost side: platform, model usage and change. The project team estimates it with the firm, and value is then reported against it at every milestone review. All values are illustrative until the firm’s baseline is measured.</p>
+<p>The benchmark in the amber box: in Deloitte’s 2025 survey of 1,854 executives in Europe and the Middle East, a typical AI use case paid back in two to four years, against seven to 12 months for other technology, and only 6% saw payback within a year [<a href="../handbook/appendix-b.html#en-82">82</a>]. In KPMG’s 2025 Global CEO Outlook, 67% of CEOs expected AI returns within one to three years [<a href="../handbook/appendix-b.html#en-83">83</a>]. The first slice releases value within months, which is how phasing beats the benchmark.</p>
+</div>
+</section>
+<section class="slide" id="slide-24" aria-labelledby="slide-24-h">
+<h2 id="slide-24-h"><span class="slide-no">Slide 24</span> Who owns what once the agents are live</h2>
+<figure class="slide-img"><img src="img/client/slide-24.png" width="1601" height="900" alt="Slide 24: Who owns what once the agents are live" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Technology is the smaller part: becoming AI-first “involves 30% technology and 70% people and organization.”<sup class="cite"><a href="../handbook/appendix-b.html#en-85" aria-label="Endnote 85">85</a></sup> Every launch agent has a named sponsor.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table: Role, For the firm (illustrative), Decides"><table><thead><tr><th scope="col">Role</th><th scope="col">For the firm (illustrative)</th><th scope="col">Decides</th></tr></thead><tbody><tr><td>Accountable executive</td><td>Managing partner, operations</td><td>Which phases proceed, and when</td></tr><tr><td>AI governance council</td><td>Chief architect (chair), CISO, Risk &amp; Quality, data governance, finance and practice leaders</td><td>Promotions to tier 3 and exceptions</td></tr><tr><td>Business owner</td><td>Head of practice operations</td><td>Which stages stay human-led, AI-assisted or AI-led, and acceptance of results</td></tr><tr><td>Agent sponsors</td><td>One named person per agent (T3d)</td><td>Recertification, retirement and the first call in an incident</td></tr><tr><td>Platform team</td><td>Integration and AI platform team (proposed)</td><td>Shared policies and onboarding standards</td></tr><tr><td>Security and risk</td><td>CISO, with Risk &amp; Quality</td><td>Blocking a release, demoting or stopping an agent</td></tr><tr><td>Finance</td><td>Finance partner</td><td>AI budget thresholds and how value is reported</td></tr><tr><td>Skills and change</td><td>Talent and learning</td><td>When each group is ready to go live</td></tr></tbody></table></div>
+<p>COULD AI?  SHOULD AI?</p>
+<p>Human-led:  independence decisions, engagement terms, partner approval<br>AI-assisted:  letters, budgets and staffing proposals<br>AI-led:  entity resolution, launch tracking, and SAP setup under a bound approval</p>
+<p>Agreed before any change to roles.<sup class="cite"><a href="../handbook/appendix-b.html#en-87" aria-label="Endnote 87">87</a></sup></p>
+<p>SKILLS AND ADOPTION</p>
+<p>Partners are trained on what an approval binds before they approve on mobile, Risk reviewers on reading assembled findings, and managers on taking over a launch. Adoption is measured by acceptance and takeover rates, not logins.<sup class="cite"><a href="../handbook/appendix-b.html#en-60" aria-label="Endnote 60">60</a></sup></p>
+<p>Illustrative roles for the firm, from template T13. Sources: endnotes <a href="../handbook/appendix-b.html#en-60">60</a>, <a href="../handbook/appendix-b.html#en-85">85</a>, <a href="../handbook/appendix-b.html#en-87">87</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Engagement lead: before the decisions, show who owns what once the launch agents are live. BCG estimates that becoming AI-first involves 30% technology and 70% people and organization [<a href="../handbook/appendix-b.html#en-85">85</a>]. In Microsoft’s 2026 Work Trend Index, only one in four people using AI at work said their leadership is clearly aligned on AI [<a href="../handbook/appendix-b.html#en-86">86</a>]. Among the organizations whose AI returns are accelerating, 48% have extremely clear ownership and decision rights [<a href="../handbook/appendix-b.html#en-84">84</a>].</p>
+<p>Walk the roles. The managing partner for operations is accountable. The AI governance council owns policy, tiers and no-go zones, and its first no-go zone is written down: no agent decides independence. The head of practice operations owns the value and decides which stages stay human-led. Every launch agent has a named sponsor who recertifies it and makes the first call in an incident. The platform team runs the control plane, the CISO with Risk &amp; Quality can block a release or stop an agent, and finance owns cost attribution and how value is reported.</p>
+<p>The work split on the right was agreed stage by stage with the could-AI, should-AI questions. Record it before any decision on roles: 57% of leaders who cut staff because of AI have come to question that decision [<a href="../handbook/appendix-b.html#en-87">87</a>]. Adoption is measured by acceptance and takeover rates [<a href="../handbook/appendix-b.html#en-60">60</a>], not by logins.</p>
+</div>
+</section>
+<section class="slide" id="slide-25" aria-labelledby="slide-25-h">
+<h2 id="slide-25-h"><span class="slide-no">Slide 25</span> Decisions for the next 90 days</h2>
+<figure class="slide-img"><img src="img/client/slide-25.png" width="1601" height="900" alt="Slide 25: Decisions for the next 90 days" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Three decisions start phase 1, and a fourth makes its value provable.</p>
+<p>1. Name an owner</p>
+<p>One accountable executive and an AI governance council spanning architecture, security, data and the business, covering agents, models and AI spend, with a sponsor for every agent.</p>
+<p>2. Fund phase 1</p>
+<p>A 90-day program for one service line in one region, with entity resolution and independence agents in read-only mode, every model and tool call through AI Gateway, and KPIs baselined with finance.</p>
+<p>3. Adopt the standards</p>
+<p>API-led connectivity, MCP and A2A as enterprise policy, with every agent registered and routed through the control plane, whatever platform built it.</p>
+<p>4. Agree how value is reported</p>
+<p>Baseline the KPIs with finance now and report value at every milestone review.</p>
+<p>NEXT STEP: A 90-DAY PILOT</p>
+<p>01. Pick the scope and baseline</p>
+<p>Weeks 1–2: one service line in one region, KPIs baselined with finance.</p>
+<p>02. Govern the traffic</p>
+<p>Weeks 3–6: Agent Scanners, Registry and AI Gateway, plus the client hierarchy in MDM.</p>
+<p>03. Start read-only</p>
+<p>Weeks 7–10: entity resolution and independence agents in assist mode.</p>
+<p>04. Prove and decide</p>
+<p>Weeks 11–13: KPIs, run-rate value and AI cost per launch, then decide on phase 2.</p>
+<p>Before committing dates, confirm connector coverage for each system of record.</p>
+<p>Reference use case 1. All client details and figures are illustrative.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Engagement lead closes. Ask for four decisions:</p>
+<ol><li>Name an owner: one accountable executive and an AI governance council spanning architecture, security, data and the business, with a sponsor for every agent (the previous slide shows who owns what).</li><li>Fund phase 1: 90 days, one service line in one region, entity resolution and independence agents in read-only mode, every model and tool call through AI Gateway.</li><li>Adopt the standards: API-led connectivity, MCP and A2A as enterprise policy, with every agent registered and routed through the control plane.</li><li>Agree how value is reported: baseline the KPIs with finance now.</li></ol>
+<p>The right-hand panel is the 90-day plan. Before committing dates, confirm MuleSoft connector coverage for the independence system and document management.</p>
+</div>
+</section>
+      <nav class="pager" aria-label="Previous and next"><a class="pn prev" href="template.html" rel="prev"><span class="pn-dir">Previous</span><span class="pn-title">Client report template</span></a><a class="pn next" href="client-deck-2.html" rel="next"><span class="pn-dir">Next</span><span class="pn-title">Client deck, Part 2: template</span></a></nav>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 John Fisher · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> · <a href="appendix-e.html">Notices</a> · <a href="https://github.com/johnfisher-ai/ai-control-plane-handbook">Source on GitHub</a> · <a href="https://www.linkedin.com/in/johnrfisher">LinkedIn</a></p>
+      <p class="small">John Fisher works for Salesforce. The views here are his own, not Salesforce’s, and are drawn from public information; this toolkit is not affiliated with or endorsed by Salesforce. Product names are trademarks of their owners; the notices list them. Set in Plus Jakarta Sans, licensed under the SIL Open Font License 1.1.</p>
+    </div>
+  </footer>
+  <script>
+    (function () { var d = document.getElementById('doc-nav'); var m = window.matchMedia('(min-width: 1000px)'); function s() { d.open = m.matches; } s(); m.addEventListener ? m.addEventListener('change', s) : m.addListener(s); var c = d.querySelector('[aria-current="page"]'); if (c && m.matches) { d.scrollTop = Math.max(0, c.offsetTop - d.clientHeight / 3); } })();
+  </script>
+</body>
+</html>

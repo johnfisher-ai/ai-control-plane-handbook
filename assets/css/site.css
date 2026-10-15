@@ -263,3 +263,44 @@ p.lede { color: var(--muted); font-size: 0.95rem; }
   .table-wrap { overflow: visible; border: 0; }
   .table-wrap th { background: #FFFFFF; color: #000000; border-bottom: 2px solid #000000; }
 }
+
+/* ===================================================================== Companion pages (deck, toolkit, quantum briefing) */
+.site-nav a[aria-current="true"] { color: #FFFFFF; text-decoration: underline; text-decoration-color: var(--sky-light); text-decoration-thickness: 2px; }
+.contents-list .range { display: block; color: var(--muted); font-weight: 600; font-size: 0.85rem; margin-top: 0.1rem; }
+
+.slide { margin-top: 3rem; padding-top: 2.25rem; border-top: 1px solid var(--border); scroll-margin-top: 1rem; }
+.doc-main > .slide:first-of-type { margin-top: 1.5rem; }
+.slide h2 { margin-top: 0; }
+.slide-no { display: block; color: var(--link); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.35rem; }
+figure.slide-img { margin: 1.1rem 0 1rem; }
+figure.slide-img img { border-radius: 6px; }
+.slide-text { margin: 0 0 1.25rem; border: 1px solid var(--border); border-radius: 10px; background: var(--bg-alt); }
+.slide-text summary { cursor: pointer; padding: 0.6rem 0.9rem; font-weight: 700; font-size: 0.9rem; color: var(--text-2); }
+.slide-text-body { padding: 0.25rem 0.9rem 0.9rem; font-size: 0.88rem; line-height: 1.5; color: var(--text-2); }
+.slide-text-body p { margin: 0 0 0.55em; }
+.slide-text-body .table-wrap { margin: 0.75rem 0 1rem; background: var(--surface); }
+.notes-h { font-size: 0.8rem !important; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 1.4rem 0 0.6rem !important; }
+.notes { color: var(--text); }
+
+.prompt { color: var(--muted); font-style: italic; }
+p.guidance { border-left: 4px solid var(--sky); background: var(--bg-alt); padding: 0.6rem 1rem; color: var(--text-2); font-size: 0.95rem; border-radius: 0 8px 8px 0; }
+.callout-box p.guidance { background: var(--surface); }
+p.caption { font-size: 0.9rem; color: var(--muted); }
+p.caption em { font-style: normal; }
+.template-cover { border: 1px solid var(--border); border-top: 6px solid var(--navy); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 1.5rem 0 0.5rem; background: var(--surface); }
+.template-cover p { margin: 0 0 0.5em; }
+.template-cover p:first-child { font-size: 1.25rem; font-weight: 800; }
+.callout-box h3 { margin-top: 0; font-size: 1.1rem; }
+.callout-box h4, .callout-box h5 { font-size: 0.95rem; margin: 1.1rem 0 0.35rem; color: var(--text); }
+.doc-main h4 { font-size: 1rem; margin-top: 1.6rem; scroll-margin-top: 1rem; }
+.hb-en { display: block; font-size: 0.82rem; margin-top: 0.2rem; }
+@media print {
+  .slide-text[open] summary, .slide-text summary { display: none; }
+  .slide { break-inside: avoid-page; }
+}
+p.guidance:has(+ p.guidance) { margin-bottom: 0; border-bottom-right-radius: 0; padding-bottom: 0.45rem; }
+p.guidance + p.guidance { border-top-right-radius: 0; padding-top: 0.45rem; }
+.doc-main .contents-list { padding-left: 0; }
+.cards.links .card::before { content: none; }
+.cards.links h3 a { text-decoration: none; }
+.cards.links h3 a:hover { text-decoration: underline; }

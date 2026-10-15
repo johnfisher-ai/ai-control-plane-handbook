@@ -12,7 +12,9 @@ The handbook sets out what an enterprise AI control plane is, why it has become 
 |---|---|
 | Landing page | Published |
 | Handbook chapters (Sections 1–13, Appendices A–E) | Published, one page per section and appendix |
-| Executive briefing deck and assessment toolkit | Planned, after the handbook |
+| Executive deck | Published, slide images with the slide text and speaker notes |
+| Assessment toolkit (guide, client report template, client deck) | Published, one page per section and appendix |
+| Quantum briefing | Published, one page |
 
 ## What's in this repository
 
@@ -24,12 +26,15 @@ The handbook sets out what an enterprise AI control plane is, why it has become 
 | `assets/fonts/` | Plus Jakarta Sans, self-hosted, with its license (`OFL.txt`) |
 | `assets/img/` | Icons and the social-sharing image |
 | `handbook/` | The handbook: an introduction, the executive summary, Sections 1–13 and Appendices A–E, one page each, with the figures in `handbook/img/` |
+| `deck/` | The executive deck: the slides in seven pages, each slide with its text and speaker notes, then the notices; slide images in `deck/img/` |
+| `toolkit/` | The assessment toolkit: the guide (Parts 1–4, Sections 1–10, Appendices A–F), the client report template and the client deck; figures and slide images in `toolkit/img/` |
+| `quantum/` | The quantum briefing, with its own endnotes |
 | `sitemap.xml` | Site map for search engines |
 | `.nojekyll` | Tells GitHub Pages to publish the files as they are |
 
 The site is plain HTML and CSS with no build step. GitHub Pages publishes it from the `main` branch, root folder.
 
-The pages in this repository are the master copy of the handbook. Edit them directly. The Word edition the site was first converted from is no longer maintained, and no Word or PDF files are kept here.
+The pages in this repository are the master copy of the handbook and its companions. Edit them directly. The Word and PowerPoint editions the site was first converted from are no longer maintained, and no Word, PowerPoint or PDF files are kept here. The slide images are renders of the decks, so a change to what a slide shows needs a new image as well as a change to its slide text.
 
 ## License
 

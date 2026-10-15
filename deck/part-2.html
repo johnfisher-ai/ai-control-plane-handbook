@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Architecture, orchestration and trust · The AI Control Plane: executive deck</title>
+  <meta name="description" content="Slides 9 to 20 of the executive deck, with the slide text and speaker notes: Build channel-independent capabilities; How MuleSoft exposes enterprise…">
+  <meta name="author" content="John Fisher">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0F172A">
+  <link rel="canonical" href="https://johnfisher-ai.github.io/ai-control-plane-handbook/deck/part-2.html">
+  <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The AI Control Plane Handbook">
+  <meta property="og:title" content="Architecture, orchestration and trust">
+  <meta property="og:description" content="Slides 9 to 20 of the executive deck, with the slide text and speaker notes: Build channel-independent capabilities; How MuleSoft exposes enterprise…">
+  <meta property="og:url" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/deck/part-2.html">
+  <meta property="og:image" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/assets/img/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The AI Control Plane Handbook, by John Fisher, 2026 edition">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="doc-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#1E293B"/><g stroke="#64748B" stroke-width="1.6"><line x1="9" y1="9" x2="19" y2="15"/><line x1="8" y1="23" x2="19" y2="15"/><line x1="25" y1="25" x2="19" y2="15"/><line x1="24" y1="7" x2="19" y2="15"/></g><g fill="#0F172A" stroke="#94A3B8" stroke-width="1.4"><circle cx="9" cy="9" r="2.6"/><circle cx="8" cy="23" r="2.6"/><circle cx="25" cy="25" r="2.6"/><circle cx="24" cy="7" r="2.6"/></g><circle cx="19" cy="15" r="4.6" fill="#38BDF8"/></svg>
+        <span>The AI Control Plane Handbook</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../handbook/index.html">Handbook</a></li><li><a href="../deck/index.html" aria-current="true">Executive deck</a></li><li><a href="../toolkit/index.html">Toolkit</a></li><li><a href="../quantum/index.html">Quantum briefing</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap doc-layout">
+    <details class="doc-nav" id="doc-nav">
+      <summary>Deck contents</summary>
+      <nav aria-label="Executive deck contents">
+        <ol class="doc-toc"><li><a href="index.html"><span class="n" aria-hidden="true">•</span><span>About this deck</span></a></li><li><a href="part-1.html"><span class="n" aria-hidden="true">•</span><span>Why a control plane, and what it is</span></a></li><li><a href="part-2.html" aria-current="page"><span class="n" aria-hidden="true">•</span><span>Architecture, orchestration and trust</span></a><ol class="onpage"><li><a href="#slide-9">9. Build channel-independent capabilities</a></li><li><a href="#slide-10">10. How MuleSoft exposes enterprise applications</a></li><li><a href="#slide-11">11. Choose the architectural paradigm before the platform</a></li><li><a href="#slide-12">12. Route every task to the right model, place and price</a></li><li><a href="#slide-13">13. Context engineering and open interoperability</a></li><li><a href="#slide-14">14. Tier agent autonomy and bind each tier to controls</a></li><li><a href="#slide-15">15. Tiers that travel, and move in both directions</a></li><li><a href="#slide-16">16. Extend identity and authority to every agent</a></li><li><a href="#slide-17">17. Map every agentic threat to a control</a></li><li><a href="#slide-18">18. Modernize the cryptographic foundation now</a></li><li><a href="#slide-19">19. Govern output integrity and protect human judgment</a></li><li><a href="#slide-20">20. When agents can move equipment</a></li></ol></li><li><a href="part-3.html"><span class="n" aria-hidden="true">•</span><span>From north star to plan</span></a></li><li><a href="use-case-1.html"><span class="n" aria-hidden="true">•</span><span>Use case 1: Professional services engagement launch</span></a></li><li><a href="use-case-2.html"><span class="n" aria-hidden="true">•</span><span>Use case 2: Capital markets T+1 settlement exceptions</span></a></li><li><a href="use-case-3.html"><span class="n" aria-hidden="true">•</span><span>Use case 3: Energy pipeline compressor reliability</span></a></li><li><a href="closing.html"><span class="n" aria-hidden="true">•</span><span>Closing and standards dates</span></a></li><li><a href="notices.html"><span class="n" aria-hidden="true">•</span><span>Notices and about the author</span></a></li></ol>
+      </nav>
+    </details>
+    <main id="main" class="doc-main">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Executive deck</a></li><li><span aria-current="page">Architecture, orchestration and trust</span></li></ol></nav>
+      <p class="doc-kicker">Slides 9–20</p>
+      <h1>Architecture, orchestration and trust</h1>
+<section class="slide" id="slide-9" aria-labelledby="slide-9-h">
+<h2 id="slide-9-h"><span class="slide-no">Slide 9</span> Build channel-independent capabilities</h2>
+<figure class="slide-img"><img src="img/slide-09.png" width="1601" height="900" alt="Slide 9: Build channel-independent capabilities" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>When agents become the primary consumers of APIs, the definition of good service design changes.</p>
+<p>Decoupled, headless logic</p>
+<p>Take business logic such as search, pricing and identity verification out of web and mobile interfaces and expose it as independent capabilities.</p>
+<p>Machine-first APIs</p>
+<p>Standardized, self-describing schemas and semantic metadata designed for agent tool-calling, exposed through secure, auditable service layers.</p>
+<p>Designed for failure</p>
+<p>Circuit breakers fall back to deterministic business rules when a model, tool or network fails, so critical functions keep running.</p>
+<p>EXAMPLE</p>
+<p>Salesforce capabilities as APIs, MCP tools and CLI</p>
+<p>Salesforce exposes its platform capabilities as APIs, MCP tools and CLI commands, so agents can operate it without a browser.<sup class="cite"><a href="../handbook/appendix-b.html#en-16" aria-label="Endnote 16">16</a></sup></p>
+<p>AGENT-READINESS TEST</p>
+<p>Embedded AI capabilities in every channel<br>Operability for external agents: structured content, machine-readable policies, standard protocols<br>Trustworthiness: governance, observability, cost, provenance</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-16">16</a>, <a href="../handbook/appendix-b.html#en-17">17</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Reference Salesforce&#x27;s hosted MCP servers (endnote [<a href="../handbook/appendix-b.html#en-16">16</a>]). When agents become the primary consumers of APIs, UI-oriented endpoints fail. APIs must provide rich semantic metadata, self-describing validation schemas, and deterministic fallbacks when probabilistic LLMs generate hallucinated function calls.</p>
+<p>Additional talking points:</p>
+<ul><li>As agents increasingly become the primary consumers of enterprise services, architecture may need to move from channel-centric to capability-centric design, organized around functions such as search, pricing or identity verification, exposed through secure, auditable and standardized service layers and designed for failure so critical functions continue in a degraded mode [<a href="../handbook/appendix-b.html#en-1">1</a>].</li><li>Salesforce exposes platform capabilities as APIs, MCP tools and CLI commands, so agents can operate the system without a browser, and its hosted MCP servers let compatible AI clients work with Salesforce data and automation under each user&#x27;s permissions [<a href="../handbook/appendix-b.html#en-16">16</a>].</li><li>A digital-channel readiness framework [<a href="../handbook/appendix-b.html#en-17">17</a>] gives a practical test with three dimensions: embedded agentic capabilities, operability for external agents (structured content, machine-readable policies, standard agent protocols and APIs), and trustworthiness (governance, compliance, observability, cost management, scalability and data provenance). It cites three shifts: conversational journeys replacing click-based navigation, assistants that browse and transact, and rising expectations for privacy, explainability and governance.</li><li>Reuse is what makes capability-first design scale: without a standard like MCP, every new pairing of agent and tool needs its own integration, so integrations rise quadratically as agents spread. With MCP, integrations are reused and the effort grows only linearly [<a href="../handbook/appendix-b.html#en-18">18</a>].</li></ul>
+</div>
+</section>
+<section class="slide" id="slide-10" aria-labelledby="slide-10-h">
+<h2 id="slide-10-h"><span class="slide-no">Slide 10</span> How MuleSoft exposes enterprise applications</h2>
+<figure class="slide-img"><img src="img/slide-10.png" width="1601" height="900" alt="Slide 10: How MuleSoft exposes enterprise applications" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>API-led connectivity turns systems of record into governed, reusable capabilities that any agent, app or partner can consume.</p>
+<p>AGENT &amp; EXPERIENCE LAYER</p>
+<p>MCP tools via MCP Bridge</p>
+<p>A2A agent endpoints</p>
+<p>Apps, portals &amp; partners</p>
+<p>PROCESS APIs</p>
+<p>Order promise</p>
+<p>Pricing &amp; quoting</p>
+<p>Identity verification</p>
+<p>Claims intake</p>
+<p>SYSTEM APIs</p>
+<p>Expose ERP</p>
+<p>Expose CRM</p>
+<p>Expose databases</p>
+<p>Expose mainframe</p>
+<p>SYSTEMS OF RECORD &amp; UNSTRUCTURED SOURCES</p>
+<p>SAP &amp; ERP</p>
+<p>Salesforce</p>
+<p>Core &amp; mainframe</p>
+<p>SaaS apps</p>
+<p>Documents &amp; legacy UIs</p>
+<p>Reuse existing APIs</p>
+<p>MCP Bridge exposes existing APIs as MCP tools, adding security and rate limits without code changes.</p>
+<p>Connect anything</p>
+<p>Connectors plus IDP, RPA and B2B/EDI reach unstructured, legacy and partner data.</p>
+<p>One catalog</p>
+<p>Exchange and Agent Registry catalog every API, MCP server and agent for discovery and reuse.</p>
+<p>Run where rules require</p>
+<p>CloudHub or customer-managed Runtime Fabric, including guardrails on private infrastructure.</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-2">2</a>, <a href="../handbook/appendix-b.html#en-21">21</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Message: MuleSoft&#x27;s API-led connectivity makes enterprise applications usable by agents. Enterprise capabilities should be exposed through secure, auditable, standardized service layers [<a href="../handbook/appendix-b.html#en-1">1</a>]. API-led connectivity follows that pattern.</p>
+<p>How to explain API-led connectivity to executives:</p>
+<ul><li>System APIs expose data and functions in core systems (ERP, CRM, databases, mainframe) and shield consumers from change underneath.</li><li>Process APIs compose those into business capabilities such as order promise, pricing, identity verification or claims intake.</li><li>The agent and experience layer publishes the same capabilities to agents (as MCP tools via MCP Bridge, or as A2A endpoints), to apps and portals, and to partners.</li></ul>
+<p>Because the capability is built once and governed at the gateway, the same policy applies whether a person, an app or an agent calls it.</p>
+<p>Facts:</p>
+<ul><li>MCP Bridge makes existing APIs agent-ready by exposing them as MCP tools and extends security and rate-limiting without touching code [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>MuleSoft connectors, Intelligent Document Processing, RPA and B2B/EDI reach unstructured, legacy and partner data [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Runtime Fabric deployment lets customers run guardrails on their own infrastructure for private cloud and on-premises workloads [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>2026 Connectivity Benchmark: 50% of organizations already use APIs to connect and govern AI [<a href="../handbook/appendix-b.html#en-2">2</a>].</li></ul>
+<p>Why reuse pays: exposing each capability once, as a governed API and MCP tool, keeps integration effort growing linearly rather than quadratically as agents multiply [<a href="../handbook/appendix-b.html#en-18">18</a>].</p>
+</div>
+</section>
+<section class="slide" id="slide-11" aria-labelledby="slide-11-h">
+<h2 id="slide-11-h"><span class="slide-no">Slide 11</span> Choose the architectural paradigm before the platform</h2>
+<figure class="slide-img"><img src="img/slide-11.png" width="1601" height="900" alt="Slide 11: Choose the architectural paradigm before the platform" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Pick the pattern that fits strategy, maturity and constraints, then select platforms.</p>
+<p>1. Embedded</p>
+<p>SAAS-NATIVE INTELLIGENCE</p>
+<p>Agentic capabilities woven into each layer, often through SaaS applications such as CRM, HR and service management suites.</p>
+<p>Trade-off: Fastest time-to-value, but policy fragments across vendors.</p>
+<p>2. Dedicated orchestration</p>
+<p>PURPOSE-BUILT AGENTIC TIER</p>
+<p>A central tier that runs agent runtime, memory and multi-agent coordination, with governance in one place.</p>
+<p>Trade-off: Strong control, but risk of a central bottleneck.</p>
+<p>3. Hybrid / federated</p>
+<p>CENTRAL POLICY, LOCAL EXECUTION</p>
+<p>A central control plane governs identity, audit, cost and policy while domains build and run agents independently.</p>
+<p>Trade-off: Most flexible, but needs mature identity, CI/CD and operations.</p>
+<p>HOW AGENT FABRIC SUPPORTS EACH PATTERN</p>
+<p>Registers and governs embedded agents (Agentforce, Copilot Studio, Bedrock, Gemini Enterprise Agent Platform) without re-platforming.</p>
+<p>Agent Broker provides a purpose-built orchestration tier, with guided determinism for fixed hand-off rules.</p>
+<p>Central registry, identity, cost and policy via AI Gateway, while domains build on any platform.</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-19">19</a>–<a href="../handbook/appendix-b.html#en-21">21</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Leadership must decide on the architectural pattern before signing platform contracts [<a href="../handbook/appendix-b.html#en-1">1</a>][<a href="../handbook/appendix-b.html#en-19">19</a>]. 1. Embedded: Ideal for functional silos like HR or CRM, but risks fragmented policy. 2. Dedicated orchestration: Essential when strict compliance or high-security data operations require every prompt and token to flow through a centralized gate. 3. Hybrid/federated: The enterprise standard for large organizations, establishing centralized guardrails while allowing distributed business units to build autonomous agents.</p>
+<p>Nuance for a CIO audience: no paradigm is universally correct, and the choice should follow strategy, maturity and constraints [<a href="../handbook/appendix-b.html#en-1">1</a>]. In practice, large multi-vendor enterprises most often land on hybrid/federated. Because Agent Fabric registers and governs agents regardless of where they were built [<a href="../handbook/appendix-b.html#en-21">21</a>], it suits that pattern, and it can also sit behind embedded and dedicated designs.</p>
+<p>Sequencing: Bain [<a href="../handbook/appendix-b.html#en-20">20</a>] finds that enterprises investing in centralized governance, reusable orchestration, unified agent registries and platform-level policy enforcement move from concept to production faster, and that federated discovery and cross-domain routing should come last, once governance and orchestration are mature.</p>
+<p>Endnote [<a href="../handbook/appendix-b.html#en-19">19</a>] (Ravi et al., &quot;Architecting the agentic enterprise,&quot; 2026) is the source for these patterns. No public copy was located.</p>
+</div>
+</section>
+<section class="slide" id="slide-12" aria-labelledby="slide-12-h">
+<h2 id="slide-12-h"><span class="slide-no">Slide 12</span> Route every task to the right model, place and price</h2>
+<figure class="slide-img"><img src="img/slide-12.png" width="1601" height="900" alt="Slide 12: Route every task to the right model, place and price" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Model orchestration decides, in real time, which model handles a task, where inference runs, and which constraints apply.</p>
+<p>STEP 01</p>
+<p>Task ingestion</p>
+<p>Parse the request and classify intent, sensitivity and the capability required.</p>
+<p>STEP 02</p>
+<p>Policy filter</p>
+<p>Mask PII and check entitlements, data residency and sovereignty rules.</p>
+<p>STEP 03</p>
+<p>Model selector</p>
+<p>Balance accuracy, latency and cost across frontier, open, specialized and self-hosted models.</p>
+<p>STEP 04</p>
+<p>Dispatch &amp; log</p>
+<p>Execute in cloud, on-premises or at the edge, and log every model interaction for audit.</p>
+<p>Why it matters</p>
+<p>Not every task needs a frontier model. Routing routine extraction and classification to smaller, cheaper models, and reserving frontier models for complex reasoning, is where AI cost control starts. Latency-sensitive work in a hospital or factory may still run at the edge even when the cloud is cheaper.</p>
+<p>Treat the savings as a hypothesis to measure in Phase 2.</p>
+<p>IN MULESOFT AGENT FABRIC</p>
+<p>Intelligent model routing matched to each task’s needs<br>AI cost controls: token-based rate limits and spend attribution<br>Model Proxy: one governed endpoint across model providers<br>LLM Governance: token, cost and data-flow visibility</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-21">21</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>The core mechanism of the control plane is dynamic arbitration. Not every query requires a flagship frontier model: a large share of routine enterprise requests (parsing, routing, classification) can often be served by compact, fine-tuned small language models at a fraction of the latency and cost. Step 3 dynamically matches the model to the SLA. Measure your own task mix and savings in Phase 2.</p>
+<p>Framing: model orchestration is an intelligent router that decides in real time which model should handle a task, where inference should occur, and which cost, latency and regulatory constraints govern the decision [<a href="../handbook/appendix-b.html#en-1">1</a>]. At the infrastructure layer this becomes policy-based workload routing: a latency-sensitive workload in a hospital or factory may need to run at the edge even when cloud execution is cheaper.</p>
+<p>MuleSoft Agent Fabric provides intelligent model routing, AI cost controls (token-based rate limits and spend attributed by team, app and use case), Model Proxy (a single governed endpoint across model providers) and LLM Governance in AI Gateway, which gives centralized visibility of token usage, costs and data flows for third-party models [<a href="../handbook/appendix-b.html#en-21">21</a>].</p>
+<p>Treat cost visibility as a control. In KPMG&#x27;s Q2 2026 pulse only 26% of organizations had full, real-time visibility into what their AI systems cost to operate, and in Q3 43% had set usage or token budgets [<a href="../handbook/appendix-b.html#en-8">8</a>]. Tag every model and tool call to an owner, a use case and a cost center, alert as spend nears budget [<a href="../handbook/appendix-b.html#en-14">14</a>], and compare the cost of each completed outcome with the same work done by people [<a href="../handbook/appendix-b.html#en-22">22</a>]. The FinOps Foundation&#x27;s FinOps for AI adds unit metrics such as cost per inference and per token, and its FOCUS specification gives billing data a common format [<a href="../handbook/appendix-b.html#en-23">23</a>].</p>
+<p>Exposure limits cap what agents do, as cost limits cap what they spend. A per-call check cannot see many individually valid actions adding up past a limit, so a custom Omni Gateway policy (Cross-Session Aggregate-Risk Gate) reserves exposure against a shared budget across calls, agents and sessions [<a href="../handbook/appendix-b.html#en-78">78</a>].</p>
+</div>
+</section>
+<section class="slide" id="slide-13" aria-labelledby="slide-13-h">
+<h2 id="slide-13-h"><span class="slide-no">Slide 13</span> Context engineering and open interoperability</h2>
+<figure class="slide-img"><img src="img/slide-13.png" width="1601" height="900" alt="Slide 13: Context engineering and open interoperability" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>People can’t pre-wire every interaction among thousands of agents. Shape what agents know, let them discover capabilities, and standardize how they connect.</p>
+<p>Context engineering</p>
+<p>Govern what each agent can know and do at each decision point: just enough context, at the right time, from trusted sources.</p>
+<p>Research signal  Airbyte frames context management as controlling what an agent can access at every decision point.<sup class="cite"><a href="../handbook/appendix-b.html#en-24" aria-label="Endnote 24">24</a></sup></p>
+<p>Capability discovery</p>
+<p>Agents declare capabilities and dependencies, and a registry discovers and injects them at runtime in place of hard-coded wiring.</p>
+<p>Research signal  MCP Mesh applies dependency injection to distributed MCP agents and degrades gracefully if the registry is down.<sup class="cite"><a href="../handbook/appendix-b.html#en-25" aria-label="Endnote 25">25</a></sup></p>
+<p>Open protocols</p>
+<p>MCP standardizes tool access and A2A agent collaboration. Both are now Agentic AI Foundation projects, so one model can hand off to another mid-workflow.</p>
+<p>Research signal  A2A 1.0 (March 2026) added signed agent cards, and MCP’s July 2026 revision made it stateless. 68% find standards hard to keep up with.<sup class="cite"><a href="../handbook/appendix-b.html#en-5" aria-label="Endnote 5">5</a>,<a href="../handbook/appendix-b.html#en-26" aria-label="Endnote 26">26</a>,<a href="../handbook/appendix-b.html#en-27" aria-label="Endnote 27">27</a></sup></p>
+<p>IN MULESOFT AGENT FABRIC</p>
+<p>Agent Registry: the capability catalog</p>
+<p>Agent Broker: routes work across agents and tools</p>
+<p>MCP Bridge: existing APIs as MCP tools</p>
+<p>A2A connectors: any agent A2A-compliant</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-5">5</a>, <a href="../handbook/appendix-b.html#en-21">21</a>, <a href="../handbook/appendix-b.html#en-24">24</a>–<a href="../handbook/appendix-b.html#en-28">28</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Reference endnotes [<a href="../handbook/appendix-b.html#en-24">24</a>] (Pedro Lopez / Airbyte) and [<a href="../handbook/appendix-b.html#en-25">25</a>] (MCP Mesh). Context engineering has replaced static prompting: it treats the context window as a managed computational cache, injecting just-in-time enterprise data and active tools via the Model Context Protocol (MCP) standard.</p>
+<p>Additional talking points:</p>
+<ul><li>As open-source AI and thousands of autonomous or semi-autonomous agents are integrated, people won&#x27;t be able to anticipate every interaction or encode every path in advance [<a href="../handbook/appendix-b.html#en-1">1</a>]. Hard-coded orchestration becomes a liability as agents act across tools, files and open networks.</li><li>Airbyte [<a href="../handbook/appendix-b.html#en-24">24</a>]: context management controls what an agent can access at each decision point. Airbyte also offers a Context Store to keep retrieval focused on the right business data [<a href="../handbook/appendix-b.html#en-24">24</a>]. Treat it as a vendor offering, not independent validation.</li><li>MCP Mesh [<a href="../handbook/appendix-b.html#en-25">25</a>] is an open-source framework in which agents declare capabilities and dependencies. A registry discovers them and injects dependencies at runtime, with health checks and graceful degradation if the registry is unavailable. This is distributed dynamic dependency injection: coordination by capability rather than fixed instruction.</li><li>Standards churn is real: in the 2026 Connectivity Benchmark, 68% of IT leaders said keeping pace with emerging agent standards and protocols is challenging [<a href="../handbook/appendix-b.html#en-5">5</a>], which argues for a control plane that absorbs protocol change.</li><li>Agent Fabric mapping [<a href="../handbook/appendix-b.html#en-21">21</a>]: Agent Registry (capability catalog), Agent Broker (routes work across agents and tools), MCP Bridge (APIs as MCP tools), A2A support (pre-built connectors to make agents A2A-compliant).</li><li>2026 protocol facts: both MCP and A2A are now projects of the Agentic AI Foundation, hosted by the Linux Foundation. A2A reached version 1.0 in March 2026, adding version negotiation, multi-tenancy and signed agent cards [<a href="../handbook/appendix-b.html#en-27">27</a>]. MCP&#x27;s July 2026 revision (2026-07-28) made the protocol stateless: no sessions or initialization handshake, standard Mcp-Method and Mcp-Name headers on every HTTP request, OpenTelemetry trace context in each call, issuer validation in authorization, and several features deprecated with a minimum 12-month window [<a href="../handbook/appendix-b.html#en-26">26</a>]. Google contributed its Agent Payments Protocol (AP2) to the FIDO Alliance in April 2026 [<a href="../handbook/appendix-b.html#en-28">28</a>]. Treat it as pre-standard.</li><li>What the control plane does with that: the registry checks signed agent cards, and the gateway applies policy to MCP&#x27;s standard headers and joins every call to its trace, so each team does not re-implement protocol change. Confirm which MCP and A2A versions each gateway, registry and agent platform supports.</li></ul>
+</div>
+</section>
+<section class="slide" id="slide-14" aria-labelledby="slide-14-h">
+<h2 id="slide-14-h"><span class="slide-no">Slide 14</span> Tier agent autonomy and bind each tier to controls</h2>
+<figure class="slide-img"><img src="img/slide-14.png" width="1601" height="900" alt="Slide 14: Tier agent autonomy and bind each tier to controls" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Autonomy should grow with evidence. Give every registered agent a tier, and enforce the controls that tier requires.</p>
+<p>LEVEL 1</p>
+<p>Assisted</p>
+<p>A person approves before any action executes.</p>
+<p>Controls: approvals bound to the action, read-only tools</p>
+<p>LEVEL 2</p>
+<p>Supervised</p>
+<p>Routine tasks run on their own. People review asynchronously and audit samples.</p>
+<p>Controls: telemetry, sampled QA, immutable logs</p>
+<p>LEVEL 3</p>
+<p>Autonomous</p>
+<p>Acts within strict policy bounds, with financial and computational circuit breakers.</p>
+<p>Controls: spend and exposure limits, kill switch, canary releases</p>
+<p>LEVEL 4</p>
+<p>Multi-agent</p>
+<p>Agents negotiate and hand off work to other agents (A2A) with non-repudiable audit trails.</p>
+<p>Controls: agent identity, delegation chains, evals before promotion</p>
+<p>Oversight must be exercisable:  approvals are bound to the exact action and expire. Stale data drops an agent to propose-only, and drills prove people can stop it.</p>
+<p>Agent Fabric controls:  Trusted Agent Identity with mobile approval for high-risk actions  •  Agent Kill Switch  •  Guided determinism in Agent Broker  •  Owner and risk tier recorded in Agent Registry</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-21">21</a>, <a href="../handbook/appendix-b.html#en-29">29</a>–<a href="../handbook/appendix-b.html#en-32">32</a>, <a href="../handbook/appendix-b.html#en-78">78</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Reference endnote [<a href="../handbook/appendix-b.html#en-29">29</a>] (Chirag Agrawal / CDO Magazine). Governance must be progressive, because organizations cannot jump from chatbots directly to Level 4 autonomous swarms. Every agent registered in the control plane must be assigned a risk tier with enforced authorization gates.</p>
+<p>Additional talking points:</p>
+<ul><li>Tier agent autonomy by level of authority and connect each tier to specific controls, monitoring and rollback paths, so agents operate within explicit boundaries that can change with the task, context and risk [<a href="../handbook/appendix-b.html#en-1">1</a>].</li><li>The CDO Magazine plan [<a href="../handbook/appendix-b.html#en-29">29</a>] goes further: move from a &quot;model risk&quot; mindset to continuous runtime assurance. Its 12-month plan starts (days 0–90) with an AI governance council and autonomy levels, a published policy stack and exception process, an evaluation store, a prompt registry and an agent/tool allow-list behind a gateway, plus an inventory of AI systems that may be high-risk under the EU AI Act. Days 90–180 bind production agents to autonomy levels with telemetry, kill switches, immutable logs and canaries, with monthly red-teaming. A named governance lead reports a balanced scorecard monthly to the executive committee and quarterly to the AI governance board.</li><li>Agent Fabric maps directly: Agent Registry (inventory, owner, tier), AI Gateway (allow-list and policy), Agent Kill Switch [<a href="../handbook/appendix-b.html#en-21">21</a>], Trusted Agent Identity with mobile authorization for high-risk actions [<a href="../handbook/appendix-b.html#en-21">21</a>], and guided determinism in Agent Broker (fixed hand-off rules with LLM reasoning in between) [<a href="../handbook/appendix-b.html#en-21">21</a>]. The evaluation before each promotion can run on any evaluation tool.</li><li>Oversight has to be exercisable as well as assigned: a named approver may lack the time, information or authority to intervene, and human-oversight requirements can give a false sense of security [<a href="../handbook/appendix-b.html#en-30">30</a>]. Effective oversight needs the ability to act on the system, enough knowledge to judge it and the freedom to intervene [<a href="../handbook/appendix-b.html#en-31">31</a>]. The EU AI Act requires that people overseeing high-risk AI can recognize automation bias, override outputs and stop the system safely, with the competence, training, authority and support to do so [<a href="../handbook/appendix-b.html#en-32">32</a>].</li><li>Runtime defaults: an approval covers one specific action for a limited time, and an expired or altered approval is refused at the gateway (a custom Omni Gateway policy, Approval-to-Execution Binding [<a href="../handbook/appendix-b.html#en-78">78</a>]). Stale telemetry drops the affected agents to propose-only until the data recovers.</li><li>The next slide maps these tiers to the frameworks organizations already use and sets the rules for promotion and demotion.</li></ul>
+</div>
+</section>
+<section class="slide" id="slide-15" aria-labelledby="slide-15-h">
+<h2 id="slide-15-h"><span class="slide-no">Slide 15</span> Tiers that travel, and move in both directions</h2>
+<figure class="slide-img"><img src="img/slide-15.png" width="1601" height="900" alt="Slide 15: Tiers that travel, and move in both directions" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Map the tiers to frameworks clients already use, then set the rules for promotion and demotion in advance.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table: Tier, AWS scoping matrix, BCG autonomy stage, KPMG agent types"><table><thead><tr><th scope="col">Tier</th><th scope="col">AWS scoping matrix</th><th scope="col">BCG autonomy stage</th><th scope="col">KPMG agent types</th></tr></thead><tbody><tr><td>Level 1: Assisted</td><td>Scope 1, No Agency (read-only); Scope 2, Prescribed Agency</td><td>Shadow; supervised</td><td>Taskers; collaborators</td></tr><tr><td>Level 2: Supervised</td><td>Scope 3, Supervised Agency</td><td>Supervised; guided autonomy</td><td>Taskers; automators</td></tr><tr><td>Level 3: Autonomous</td><td>Scope 3, or Scope 4 for bounded operations</td><td>Guided autonomy</td><td>Automators</td></tr><tr><td>Level 4: Multi-agent</td><td>Scope 4, Full Agency</td><td>Full autonomy</td><td>Orchestrators</td></tr></tbody></table></div>
+<p>Closest equivalents, mapped approximately by the author.<sup class="cite"><a href="../handbook/appendix-b.html#en-33" aria-label="Endnote 33">33</a>–<a href="../handbook/appendix-b.html#en-35" aria-label="Endnote 35">35</a></sup></p>
+<p>PROMOTE ON EVIDENCE</p>
+<p>Evaluations meet the next tier’s thresholds over a sustained period<br>Red-team findings closed<br>Impact assessment up to date<br>Owner and risk function agree</p>
+<p>Each stage is earned through demonstrated performance.<sup class="cite"><a href="../handbook/appendix-b.html#en-33" aria-label="Endnote 33">33</a>,<a href="../handbook/appendix-b.html#en-34" aria-label="Endnote 34">34</a></sup></p>
+<p>DEMOTE AUTOMATICALLY</p>
+<p>Security event detected<br>Evaluation scores below threshold<br>An approval fails its binding check<br>Stale telemetry, or no sponsor</p>
+<p>Reduce autonomy on security events so work continues safely while people investigate.<sup class="cite"><a href="../handbook/appendix-b.html#en-33" aria-label="Endnote 33">33</a></sup></p>
+<p>DELEGATION CHAINS: NARROW AUTHORITY AT EVERY HOP</p>
+<p>Split work into verifiable units</p>
+<p>Right-size each unit’s model</p>
+<p>Narrow permissions at every hop</p>
+<p>Stop and ask when unclear</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-33">33</a>–<a href="../handbook/appendix-b.html#en-37">37</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>The tiers are portable. Organizations may already classify agents with AWS&#x27;s Agentic AI Security Scoping Matrix (four scopes: No Agency, Prescribed Agency, Supervised Agency, Full Agency) [<a href="../handbook/appendix-b.html#en-33">33</a>], BCG&#x27;s four autonomy stages (shadow mode, supervised mode, guided autonomy, full autonomy) [<a href="../handbook/appendix-b.html#en-34">34</a>] or KPMG&#x27;s TACO agent types (taskers, automators, collaborators, orchestrators) [<a href="../handbook/appendix-b.html#en-35">35</a>]. The table shows the closest equivalents. Because it is an approximate mapping, present it as a translation aid, not an equivalence.</p>
+<p>Tiers move in both directions, with the rules set in advance:</p>
+<ul><li>Promote on evidence: evaluations meet the next tier&#x27;s thresholds over a sustained period, red-team findings are closed, the impact assessment is up to date, and the owner and risk function agree. BCG describes each stage as earned through demonstrated performance [<a href="../handbook/appendix-b.html#en-34">34</a>]. AWS advises expanding autonomy on demonstrated performance rather than by default [<a href="../handbook/appendix-b.html#en-33">33</a>].</li><li>Demote automatically: a security event, evaluation scores below threshold, an approval that fails its binding check, stale telemetry or a lost sponsor drops the agent a tier, or to propose-only, without waiting for a meeting. AWS recommends designing systems to reduce autonomy automatically when security events are detected [<a href="../handbook/appendix-b.html#en-33">33</a>].</li></ul>
+<p>Delegation chains: research from Google DeepMind on intelligent delegation suggests four rules for every hop: split work into verifiable units (contract first), route each unit to the least costly model that meets its bar, give a sub-agent only the permissions its task needs, and challenge the delegator or ask a person when a request is ambiguous [<a href="../handbook/appendix-b.html#en-36">36</a>]. Never grant privilege on the strength of a role an agent claims for itself [<a href="../handbook/appendix-b.html#en-37">37</a>]. In the control plane, that means on-behalf-of tokens narrowed at each hop and one trace that joins every hop.</p>
+</div>
+</section>
+<section class="slide" id="slide-16" aria-labelledby="slide-16-h">
+<h2 id="slide-16-h"><span class="slide-no">Slide 16</span> Extend identity and authority to every agent</h2>
+<figure class="slide-img"><img src="img/slide-16.png" width="1601" height="900" alt="Slide 16: Extend identity and authority to every agent" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Agents should never inherit a person’s full access by default. Delegate explicitly, limit to the task, and bound by time, data, authority and risk.</p>
+<p>Agent identity as a first-class principal</p>
+<p>Cryptographic, attested identities distinct from users and service accounts. Google Cloud’s Agent Identity, for example, builds on SPIFFE.<sup class="cite"><a href="../handbook/appendix-b.html#en-41" aria-label="Endnote 41">41</a></sup></p>
+<p>Bounded, short-lived delegation</p>
+<p>Task-scoped credentials that expire when the task ends. Renewal extends time only. Revoke by token, agent, task or delegation chain.<sup class="cite"><a href="../handbook/appendix-b.html#en-42" aria-label="Endnote 42">42</a>,<a href="../handbook/appendix-b.html#en-43" aria-label="Endnote 43">43</a></sup></p>
+<p>Continuous runtime defense</p>
+<p>Detect prompt injection, data poisoning, hallucinations and anomalous agent behavior. Isolate a compromised path without disrupting core services.<sup class="cite"><a href="../handbook/appendix-b.html#en-1" aria-label="Endnote 1">1</a></sup></p>
+<p>21,666</p>
+<p>agent-hours a day in which stolen tokens stay valid when 100 agents run 2-minute tasks on 15-minute tokens, 1,000 cycles a day</p>
+<p>Cloud Security Alliance, May 2026<sup class="cite"><a href="../handbook/appendix-b.html#en-43" aria-label="Endnote 43">43</a></sup></p>
+<p>IN MULESOFT AGENT FABRIC</p>
+<p>Trusted Agent Identity: agents act with a specific user’s identity and authorization, auditable end to end<br>Mobile approval before high-risk actions, such as moving money, bound to the exact action by a custom Omni Gateway policy<br>Gateway policies for authentication, rate limits and token bounds across LLM and MCP traffic</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-21">21</a>, <a href="../handbook/appendix-b.html#en-41">41</a>–<a href="../handbook/appendix-b.html#en-44">44</a>, <a href="../handbook/appendix-b.html#en-78">78</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Vendor ecosystem supporting these orchestration and TRiSM models:</p>
+<ul><li>MuleSoft: API-led connectivity exposes legacy ERP/CRM systems to agents via governable API contracts and MCP tools. MuleSoft Agent Fabric is a cross-vendor control plane: Agent Registry and Scanners, Agent Broker, AI Gateway, Trusted Agent Identity, Agent Kill Switch and Visualizer [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Hyperscalers: Microsoft has Microsoft Foundry and Microsoft Agent Framework (the successor to Semantic Kernel and AutoGen), with Microsoft Entra Agent ID and Agent 365 [<a href="../handbook/appendix-b.html#en-12">12</a>]. AWS offers Amazon Bedrock AgentCore, whose services include identity [<a href="../handbook/appendix-b.html#en-62">62</a>], and Step Functions. Google Cloud&#x27;s Gemini Enterprise Agent Platform (formerly Vertex AI) comes with Model Armor and Agent Identity [<a href="../handbook/appendix-b.html#en-41">41</a>].</li><li>Specialized gateways and frameworks: Kong AI Gateway, Cloudflare AI Gateway, LangGraph.</li></ul>
+<p>Agent Fabric&#x27;s Scanners discover and register agents from these ecosystems, so it governs across them without replacing them.</p>
+<p>Deeper research:</p>
+<ul><li>Agents should not receive default entitlements or inherit a user&#x27;s full identity context. Access should be delegated explicitly, limited to the task and bounded by time, data, authority and risk [<a href="../handbook/appendix-b.html#en-1">1</a>][<a href="../handbook/appendix-b.html#en-42">42</a>]. Keep authentication and authorization distinct and attach verification to the moment of action.</li><li>Google Cloud [<a href="../handbook/appendix-b.html#en-41">41</a>] describes Agent Identity as a first-class principal type, distinct from human identities and service accounts, built on SPIFFE, cryptographically protected, attested and automatically provisioned, and pairs it with an Agent Gateway and runtime defense. It also notes that non-human identities outnumber human identities by 10 to 45 times in many large enterprises.</li><li>The temporal identity paradox article [<a href="../handbook/appendix-b.html#en-42">42</a>] describes short-lived delegated tokens that are renewed with the same scope once the delegation is rechecked. The Cloud Security Alliance [<a href="../handbook/appendix-b.html#en-43">43</a>] quantifies the same problem: 100 concurrent agents finishing 2-minute tasks while holding 15-minute tokens across 1,000 daily cycles leave 21,666 agent-hours a day of valid-but-unneeded credentials. Its pattern: per-instance identities, task-scoped tokens with short lifetimes, key-bound credentials, mTLS plus token validation on every request, and four-level revocation.</li><li>Microsoft Digital Defense Report 2025 [<a href="../handbook/appendix-b.html#en-44">44</a>]: identity attacks rose 32% in the first half of 2025, more than 97% were password attacks, and phishing-resistant MFA blocks over 99% of them. Attackers increasingly sign in rather than break in, which is why agent credentials must be short-lived and bound.</li><li>Standards work gives this a vendor-neutral shape: NIST&#x27;s National Cybersecurity Center of Excellence has proposed a project on software and AI agent identity and authorization, focused on identification, authorization, auditing, non-repudiation and prompt-injection controls [<a href="../handbook/appendix-b.html#en-45">45</a>]. An IETF draft on AI agent identity builds on workload identity (SPIFFE), short-lived key-bound credentials, OAuth delegation and token exchange, and real-time revocation through the OpenID Shared Signals Framework, and calls static API keys &quot;an antipattern for agent identity&quot; [<a href="../handbook/appendix-b.html#en-46">46</a>]. Both are drafts. The checklist: a unique identity per agent, authority that narrows at each hop, auditable actions, no static keys, and real-time revocation, which gives the kill switch a second path.</li></ul>
+</div>
+</section>
+<section class="slide" id="slide-17" aria-labelledby="slide-17-h">
+<h2 id="slide-17-h"><span class="slide-no">Slide 17</span> Map every agentic threat to a control</h2>
+<figure class="slide-img"><img src="img/slide-17.png" width="1601" height="900" alt="Slide 17: Map every agentic threat to a control" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>The OWASP Top 10 for Agentic Applications is the list security teams check first. Each risk maps to controls in the plane.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table: OWASP agentic risk, Control-plane controls"><table><thead><tr><th scope="col">OWASP agentic risk</th><th scope="col">Control-plane controls</th></tr></thead><tbody><tr><td>ASI01 Agent Goal Hijack</td><td>Input and tool-result screening at the gateway, allow-listed tools per agent, and approvals bound to the exact action</td></tr><tr><td>ASI02 Tool Misuse</td><td>Per-agent tool allow-lists, schema validation, and rate, spend and exposure limits</td></tr><tr><td>ASI03 Identity &amp; Privilege Abuse</td><td>One identity per agent, short-lived task-scoped tokens, delegation that narrows and real-time revocation</td></tr><tr><td>ASI04 Agentic Supply Chain Vulnerabilities</td><td>Only registered, signed and version-pinned MCP servers callable, a private registry and an agent bill of materials<sup class="cite"><a href="../handbook/appendix-b.html#en-18" aria-label="Endnote 18">18</a></sup></td></tr><tr><td>ASI05 Unexpected Code Execution</td><td>Sandboxed execution, code and shell tools only at an explicit tier, and limits on outbound connections</td></tr><tr><td>ASI06 Memory &amp; Context Poisoning</td><td>Context only from governed sources (master data, catalog, lineage), provenance checks and session integrity monitoring</td></tr><tr><td>ASI07 Insecure Inter-Agent Communication</td><td>Signed agent cards, mutual authentication, A2A through the gateway, no privilege from self-asserted roles</td></tr><tr><td>ASI08 Cascading Failures</td><td>Circuit breakers, cumulative exposure limits across agents and sessions, and propose-only on stale data</td></tr><tr><td>ASI09 Human-Agent Trust Exploitation</td><td>Approvals bound to the exact action and showing the facts behind it, approver drills and guards against consent fatigue</td></tr><tr><td>ASI10 Rogue Agents</td><td>Registry and scanners, honeytokens and decoy tools, behavioral monitoring and the kill switch</td></tr></tbody></table></div>
+<p>Keep the list current:  Microsoft’s seven new agentic failure modes (June 2026), such as inter-agent trust escalation and MCP and plugin abuse,<sup class="cite"><a href="../handbook/appendix-b.html#en-37" aria-label="Endnote 37">37</a></sup> and MITRE ATLAS agent techniques for tagging red-team scenarios.<sup class="cite"><a href="../handbook/appendix-b.html#en-49" aria-label="Endnote 49">49</a></sup> What enters the registry and what approvers are shown are gaps that each need a named owner.</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-18">18</a>, <a href="../handbook/appendix-b.html#en-37">37</a>, <a href="../handbook/appendix-b.html#en-48">48</a>, <a href="../handbook/appendix-b.html#en-49">49</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>CISOs judge security designs against the lists they already use. The OWASP Top 10 for Agentic Applications (December 2025) names ten risks [<a href="../handbook/appendix-b.html#en-48">48</a>]. The table maps each to the control-plane controls that address it. Walk two or three rows, then name the gaps.</p>
+<p>Keep the list current: in June 2026 Microsoft&#x27;s AI Red Team added seven agentic failure modes, including agentic supply chain compromise, goal hijacking, inter-agent trust escalation, session context contamination and MCP and plugin abuse, along with mitigations such as agent bills of materials covering MCP servers, signature and provenance checks with pinned versions, cryptographic agent identity and rejecting self-asserted roles at hand-offs [<a href="../handbook/appendix-b.html#en-37">37</a>]. Tag red-team scenarios with the agent techniques MITRE ATLAS added between December 2025 and June 2026, such as AI Agent Tool Credential Harvesting and Publish Poisoned AI Agent Tool [<a href="../handbook/appendix-b.html#en-49">49</a>]. For MCP specifically, BCG recommends private registries of trusted servers, version pinning, role-based access on every tool call and code checks before using public servers [<a href="../handbook/appendix-b.html#en-18">18</a>].</p>
+<p>The gaps no gateway closes alone: the supply chain (what enters the registry) and human-agent trust (what approvers are shown). Give each a named owner.</p>
+</div>
+</section>
+<section class="slide" id="slide-18" aria-labelledby="slide-18-h">
+<h2 id="slide-18-h"><span class="slide-no">Slide 18</span> Modernize the cryptographic foundation now</h2>
+<figure class="slide-img"><img src="img/slide-18.png" width="1601" height="900" alt="Slide 18: Modernize the cryptographic foundation now" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Quantum risk now has a deadline, and AI is accelerating cryptanalysis. Treat post-quantum migration as part of the build-now foundation for digital trust.</p>
+<p>Harvest now, decrypt later</p>
+<p>Adversaries can store encrypted data today and decrypt it once quantum capability arrives. Asymmetric cryptography (RSA, ECC) is the exposure.<sup class="cite"><a href="../handbook/appendix-b.html#en-1" aria-label="Endnote 1">1</a>,<a href="../handbook/appendix-b.html#en-50" aria-label="Endnote 50">50</a></sup></p>
+<p>The deadline is set</p>
+<p>A June 22, 2026 US executive order sets end-2030 (key establishment) and end-2031 (signatures) for federal high-value and high-impact systems, and calls for a rule giving covered contractors until end-2030.<sup class="cite"><a href="../handbook/appendix-b.html#en-51" aria-label="Endnote 51">51</a>,<a href="../handbook/appendix-b.html#en-52" aria-label="Endnote 52">52</a></sup></p>
+<p>AI accelerates cryptanalysis</p>
+<p>In July 2026 Anthropic reported that Claude Mythos Preview found new attacks on weakened AES and the candidate HAWK signature scheme, but deployed standards were not affected.<sup class="cite"><a href="../handbook/appendix-b.html#en-54" aria-label="Endnote 54">54</a>,<a href="../handbook/appendix-b.html#en-55" aria-label="Endnote 55">55</a></sup></p>
+<p>BOARD-LEVEL ACTION PLAN</p>
+<p>1. Inventory</p>
+<p>Map where asymmetric encryption protects data, APIs and agent traffic.</p>
+<p>2. Prioritize</p>
+<p>Start with the most critical data, transactions and long-lived secrets.</p>
+<p>3. Migrate in phases</p>
+<p>Adopt NIST ML-KEM and ML-DSA. Build crypto-agility into gateways.</p>
+<p>4. Govern</p>
+<p>Board oversight, a named migration lead and quarterly progress tracking.</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-50">50</a>–<a href="../handbook/appendix-b.html#en-57">57</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Reference endnotes [<a href="../handbook/appendix-b.html#en-50">50</a>]–[<a href="../handbook/appendix-b.html#en-57">57</a>]. As Anthropic&#x27;s July 2026 research showed, AI models can already find new attacks on a weakened version of a widely used cipher (AES) and on a candidate post-quantum scheme (HAWK), although neither affects encryption deployed today [<a href="../handbook/appendix-b.html#en-54">54</a>][<a href="../handbook/appendix-b.html#en-55">55</a>]. Agent traffic crosses clouds and services over TLS, and OMB&#x27;s implementation memorandum already expects infrastructure that terminates TLS to support post-quantum key exchange and API gateways to issue and validate post-quantum-signed tokens [<a href="../handbook/appendix-b.html#en-50">50</a>], so plan the control plane&#x27;s own migration to post-quantum cryptography (PQC) now.</p>
+<p>Policy context:</p>
+<ul><li>NSM-10 dates from May 2022. The mandate in force is the executive order &quot;Securing the Nation Against Advanced Cryptographic Attacks,&quot; signed June 22, 2026: agencies must move high-value and high-impact systems to quantum-resistant key establishment by December 31, 2030 and to post-quantum digital signatures by December 31, 2031, and the order directs the FAR Council to propose, within 180 days, a rule requiring covered contractors to comply with NIST&#x27;s post-quantum standards by the end of 2030 [<a href="../handbook/appendix-b.html#en-51">51</a>][<a href="../handbook/appendix-b.html#en-52">52</a>]. OMB Memorandum M-26-15 (June 24, 2026) sets out how agencies execute the migration [<a href="../handbook/appendix-b.html#en-50">50</a>]. NIST finalized FIPS 203 (ML-KEM), 204 (ML-DSA) and 205 (SLH-DSA) in August 2024 [<a href="../handbook/appendix-b.html#en-53">53</a>].</li><li>The New York Times [<a href="../handbook/appendix-b.html#en-54">54</a>] reported that Claude Mythos Preview found new attacks against a weakened, seven-round version of AES and against HAWK, a candidate post-quantum signature scheme, and that the AES attack is 200 to 800 times faster than the best earlier human-developed attack. Anthropic said the findings do not threaten deployed encryption [<a href="../handbook/appendix-b.html#en-55">55</a>]. The lesson is that AI is compressing the time between a theoretical weakness and a practical attack.</li></ul>
+<p>Board context: post-quantum migration needs board oversight and cross-functional coordination, so it cannot be run as a narrow security-team initiative [<a href="../handbook/appendix-b.html#en-56">56</a>][<a href="../handbook/appendix-b.html#en-57">57</a>]. A 2026 board discussion guide in the NACD–ISA Director&#x27;s Handbook on Cyber-Risk Oversight cites Bain research finding roughly 90% of companies unprepared for quantum threats, and an ISACA study finding only 4% with a defined quantum strategy [<a href="../handbook/appendix-b.html#en-57">57</a>].</p>
+</div>
+</section>
+<section class="slide" id="slide-19" aria-labelledby="slide-19-h">
+<h2 id="slide-19-h"><span class="slide-no">Slide 19</span> Govern output integrity and protect human judgment</h2>
+<figure class="slide-img"><img src="img/slide-19.png" width="1601" height="900" alt="Slide 19: Govern output integrity and protect human judgment" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Trust has to extend past access control to the outputs agents produce and the decisions that follow.</p>
+<p>1. Verify provenance</p>
+<p>Know which data, model, prompt and tool produced each output.</p>
+<p>2. Validate continuously</p>
+<p>Score outputs against policy and quality thresholds at launch and throughout production.</p>
+<p>3. Detect anomalies</p>
+<p>Watch for behavioral drift across models and agents, and isolate issues before they scale.</p>
+<p>4. Keep humans able to intervene</p>
+<p>Give reviewers the time, information and authority to override or stop, and prove it in drills.</p>
+<p>RESEARCH SIGNAL</p>
+<p>TRiSM for agentic AI</p>
+<p>A review in AI Open (2026) extends AI trust, risk and security management to multi-agent systems across explainability, ModelOps, security, privacy and lifecycle governance, and proposes metrics for inter-agent collaboration and tool-use efficacy.<sup class="cite"><a href="../handbook/appendix-b.html#en-59" aria-label="Endnote 59">59</a></sup></p>
+<p>WITH MULESOFT AGENT FABRIC</p>
+<p>Agent Visualizer: confidence scores, bottleneck detection and hallucination-risk signals<br>AI Gateway: model interactions logged for audit<br>Evaluation on any tool: test scenarios, scored outcomes and failures surfaced before production</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-21">21</a>, <a href="../handbook/appendix-b.html#en-32">32</a>, <a href="../handbook/appendix-b.html#en-58">58</a>, <a href="../handbook/appendix-b.html#en-59">59</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Key point: trust must extend beyond access and model performance to output integrity and the decisions that follow [<a href="../handbook/appendix-b.html#en-1">1</a>]. The control plane should verify provenance, continuously validate outputs and detect behavioral anomalies across models and agents, so inaccurate, manipulated or out-of-policy results are caught before they influence a human decision or a customer interaction. This reduces automation bias, keeps human judgment central where it matters most, and prevents bad outputs from being scaled across the enterprise. AI-native banking products show where this is heading: governance built into the product itself, autonomy granted by permission, and customers able to review and override decisions [<a href="../handbook/appendix-b.html#en-58">58</a>]. Keeping humans central also means keeping oversight exercisable: reviewers need the time, information and authority to override or stop an agent, automation bias is a known failure mode, and drills should prove people can intervene [<a href="../handbook/appendix-b.html#en-30">30</a>][<a href="../handbook/appendix-b.html#en-32">32</a>].</p>
+<p>The TRiSM review [<a href="../handbook/appendix-b.html#en-59">59</a>] (Raza et al., AI Open 7, 2026; arXiv 2506.04133) adapts AI TRiSM to LLM-based multi-agent systems around explainability, ModelOps, security, privacy and lifecycle governance. It proposes a risk taxonomy from coordination failures to prompt-based adversarial manipulation, and introduces two metrics: the Component Synergy Score (inter-agent collaboration) and Tool Utilization Efficacy (whether tools are invoked correctly and efficiently).</p>
+<p>Agent Fabric: Agent Visualizer shows confidence scores, bottleneck detection and hallucination risks across the agent network [<a href="../handbook/appendix-b.html#en-21">21</a>]. The evaluation itself can run on any tool that generates test scenarios, scores outcomes against success criteria and surfaces failures before production. Record the results with the agent&#x27;s registry entry, so a failing agent can be tied to a remediation action.</p>
+<p>Evaluation runs through the whole lifecycle: test before promotion, score sampled production traces continuously, keep a standing red-team suite whose results feed tier decisions, and evaluate the trajectory (which tools, in what order) as well as the final answer [<a href="../handbook/appendix-b.html#en-60">60</a>]. In a large public red-teaming competition run with NIST&#x27;s Center for AI Standards and Innovation, more than 250,000 attack attempts from over 400 participants found at least one successful hijacking attack against all 13 frontier models tested [<a href="../handbook/appendix-b.html#en-61">61</a>]. Evaluation does not depend on any one vendor: AWS AgentCore Evaluations offers online evaluation of sampled live traces and on-demand tests in CI/CD [<a href="../handbook/appendix-b.html#en-62">62</a>], and Microsoft describes ASSERT, an open-source framework that turns behavior specifications into evaluations [<a href="../handbook/appendix-b.html#en-63">63</a>].</p>
+<p>After the kill switch comes human takeover: define who takes over the agent&#x27;s open work, with what information (trace, pending actions and approvals, data touched), and how the process continues in a degraded mode. BCG advises clear protocols for human workers to take over should agents be taken offline [<a href="../handbook/appendix-b.html#en-64">64</a>]. Rehearse it: 66% of employees who use AI at work say they rely on its output without evaluating its accuracy, and 56% have made mistakes because of AI [<a href="../handbook/appendix-b.html#en-65">65</a>]. In KPMG&#x27;s Q1 2026 pulse, 63% of organizations required human validation of agent outputs, up from 22% a year earlier [<a href="../handbook/appendix-b.html#en-8">8</a>].</p>
+</div>
+</section>
+<section class="slide" id="slide-20" aria-labelledby="slide-20-h">
+<h2 id="slide-20-h"><span class="slide-no">Slide 20</span> When agents can move equipment</h2>
+<figure class="slide-img"><img src="img/slide-20.png" width="1601" height="900" alt="Slide 20: When agents can move equipment" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>In energy, utilities and industrial operations, the control plane governs what agents may request. Independent safety layers decide what equipment may do.</p>
+<p>AGENTS &amp; CONTROL PLANE</p>
+<p>Enterprise zone or industrial DMZ: agents propose and Agent Fabric enforces identity, policy, bound approvals and cumulative limits</p>
+<p>INDUSTRIAL DMZ</p>
+<p>Historian replica (read-only) and a setpoint-request service: the only conduit into operations</p>
+<p>CONTROL SYSTEM</p>
+<p>SCADA or DCS enforces engineering limits, and the controller approves each change at the console</p>
+<p>INDEPENDENT SAFETY LAYER</p>
+<p>Safety instrumented systems, emergency shutdown and interlocks act on their own. No agent can reach them</p>
+<p>PHYSICAL SAFEGUARDS</p>
+<p>Relief valves and mechanical protection: the last line of defense</p>
+<p>Requests flow down only through governed conduits</p>
+<p>No agent path</p>
+<p>DESIGN RULES</p>
+<p>1. Agents propose, people approve</p>
+<p>Each approval is bound to the exact change and valid for minutes, not hours.</p>
+<p>2. Keep safety independent</p>
+<p>No agent tool reads or writes safety logic or bypasses an interlock.</p>
+<p>3. Limit the total across steps</p>
+<p>Caps on cumulative change apply across agents and sessions.</p>
+<p>4. Fail to the engineered safe state</p>
+<p>Stale data or lost contact drops agents to advice-only. Process safety defines the safe state.</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-32">32</a>, <a href="../handbook/appendix-b.html#en-66">66</a>–<a href="../handbook/appendix-b.html#en-69">69</a>. Reference use case 3 applies these rules to a gas pipeline operator.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Key point: when an agent&#x27;s action can reach physical equipment, the gateway is not the last line of defense. The control plane governs what agents may request, while independent safety layers decide what equipment may do.</p>
+<p>The layers, top to bottom: agents and the control plane sit in the enterprise zone or industrial DMZ. Next is the DMZ itself, with a read-only historian replica and a setpoint-request service as the only conduit into operations. Below it is the control system, which enforces engineering limits and where the controller approves each change. Then comes the independent safety layer (safety instrumented systems, emergency shutdown, interlocks), which acts on its own under process-safety discipline [<a href="../handbook/appendix-b.html#en-66">66</a>]. Physical safeguards such as relief valves sit at the bottom.</p>
+<p>Current guidance from US, Australian and allied cybersecurity agencies is explicit: people remain responsible for functional safety, AI should not actively control OT without a human in the loop, and AI systems need failsafes so they fail gracefully without disrupting critical operations [<a href="../handbook/appendix-b.html#en-67">67</a>]. Keep agents out of the control network and reach control systems only through defined conduits, following the ISA/IEC 62443 zone-and-conduit model and NIST&#x27;s guide to OT security [<a href="../handbook/appendix-b.html#en-68">68</a>][<a href="../handbook/appendix-b.html#en-69">69</a>].</p>
+<p>The four design rules on the right become runtime enforcement through custom Omni Gateway policies: Approval-to-Execution Binding checks that what executes is exactly what was approved and that the approval has not expired, and the Cross-Session Aggregate-Risk Gate caps cumulative change across agents and sessions [<a href="../handbook/appendix-b.html#en-78">78</a>]. When data goes stale, fall back to the safe state that process-safety engineering defines, which is not always &quot;stop.&quot;</p>
+<p>Regulation points the same way: under the EU AI Act, AI used as a safety component in the supply of water, gas, heating or electricity is high-risk, with human-oversight obligations from December 2027 [<a href="../handbook/appendix-b.html#en-32">32</a>]. Reference use case 3 shows the pattern at a natural gas pipeline operator.</p>
+</div>
+</section>
+      <nav class="pager" aria-label="Previous and next"><a class="pn prev" href="part-1.html" rel="prev"><span class="pn-dir">Previous</span><span class="pn-title">Why a control plane, and what it is</span></a><a class="pn next" href="part-3.html" rel="next"><span class="pn-dir">Next</span><span class="pn-title">From north star to plan</span></a></nav>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 John Fisher · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> · <a href="notices.html">Notices</a> · <a href="https://github.com/johnfisher-ai/ai-control-plane-handbook">Source on GitHub</a> · <a href="https://www.linkedin.com/in/johnrfisher">LinkedIn</a></p>
+      <p class="small">John Fisher works for Salesforce. The views here are his own, not Salesforce’s, and are drawn from public information; this deck is not affiliated with or endorsed by Salesforce. Product names are trademarks of their owners; the notices list them. Set in Plus Jakarta Sans, licensed under the SIL Open Font License 1.1.</p>
+    </div>
+  </footer>
+  <script>
+    (function () { var d = document.getElementById('doc-nav'); var m = window.matchMedia('(min-width: 1000px)'); function s() { d.open = m.matches; } s(); m.addEventListener ? m.addEventListener('change', s) : m.addListener(s); var c = d.querySelector('[aria-current="page"]'); if (c && m.matches) { d.scrollTop = Math.max(0, c.offsetTop - d.clientHeight / 3); } })();
+  </script>
+</body>
+</html>

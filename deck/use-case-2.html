@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Use case 2: Capital markets T+1 settlement exceptions · The AI Control Plane: executive deck</title>
+  <meta name="description" content="Slides 39 to 47 of the executive deck, with the slide text and speaker notes: Managing settlement exceptions under T+1; The trade lifecycle from execution…">
+  <meta name="author" content="John Fisher">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0F172A">
+  <link rel="canonical" href="https://johnfisher-ai.github.io/ai-control-plane-handbook/deck/use-case-2.html">
+  <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The AI Control Plane Handbook">
+  <meta property="og:title" content="Use case 2: Capital markets T+1 settlement exceptions">
+  <meta property="og:description" content="Slides 39 to 47 of the executive deck, with the slide text and speaker notes: Managing settlement exceptions under T+1; The trade lifecycle from execution…">
+  <meta property="og:url" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/deck/use-case-2.html">
+  <meta property="og:image" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/assets/img/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The AI Control Plane Handbook, by John Fisher, 2026 edition">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="doc-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#1E293B"/><g stroke="#64748B" stroke-width="1.6"><line x1="9" y1="9" x2="19" y2="15"/><line x1="8" y1="23" x2="19" y2="15"/><line x1="25" y1="25" x2="19" y2="15"/><line x1="24" y1="7" x2="19" y2="15"/></g><g fill="#0F172A" stroke="#94A3B8" stroke-width="1.4"><circle cx="9" cy="9" r="2.6"/><circle cx="8" cy="23" r="2.6"/><circle cx="25" cy="25" r="2.6"/><circle cx="24" cy="7" r="2.6"/></g><circle cx="19" cy="15" r="4.6" fill="#38BDF8"/></svg>
+        <span>The AI Control Plane Handbook</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../handbook/index.html">Handbook</a></li><li><a href="../deck/index.html" aria-current="true">Executive deck</a></li><li><a href="../toolkit/index.html">Toolkit</a></li><li><a href="../quantum/index.html">Quantum briefing</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap doc-layout">
+    <details class="doc-nav" id="doc-nav">
+      <summary>Deck contents</summary>
+      <nav aria-label="Executive deck contents">
+        <ol class="doc-toc"><li><a href="index.html"><span class="n" aria-hidden="true">•</span><span>About this deck</span></a></li><li><a href="part-1.html"><span class="n" aria-hidden="true">•</span><span>Why a control plane, and what it is</span></a></li><li><a href="part-2.html"><span class="n" aria-hidden="true">•</span><span>Architecture, orchestration and trust</span></a></li><li><a href="part-3.html"><span class="n" aria-hidden="true">•</span><span>From north star to plan</span></a></li><li><a href="use-case-1.html"><span class="n" aria-hidden="true">•</span><span>Use case 1: Professional services engagement launch</span></a></li><li><a href="use-case-2.html" aria-current="page"><span class="n" aria-hidden="true">•</span><span>Use case 2: Capital markets T+1 settlement exceptions</span></a><ol class="onpage"><li><a href="#slide-39">39. Managing settlement exceptions under T+1</a></li><li><a href="#slide-40">40. The trade lifecycle from execution to settlement</a></li><li><a href="#slide-41">41. Vendor-neutral solution architecture</a></li><li><a href="#slide-42">42. Daniel works the T+1 exceptions before the cutoff</a></li><li><a href="#slide-43">43. How the components work together in Daniel’s day</a></li><li><a href="#slide-44">44. Realized with MuleSoft Agent Fabric and Informatica</a></li><li><a href="#slide-45">45. Expected business outcomes and KPIs</a></li><li><a href="#slide-46">46. Delivery in four phases over 24 months</a></li><li><a href="#slide-47">47. What the settlement use case proves</a></li></ol></li><li><a href="use-case-3.html"><span class="n" aria-hidden="true">•</span><span>Use case 3: Energy pipeline compressor reliability</span></a></li><li><a href="closing.html"><span class="n" aria-hidden="true">•</span><span>Closing and standards dates</span></a></li><li><a href="notices.html"><span class="n" aria-hidden="true">•</span><span>Notices and about the author</span></a></li></ol>
+      </nav>
+    </details>
+    <main id="main" class="doc-main">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Executive deck</a></li><li><span aria-current="page">Use case 2</span></li></ol></nav>
+      <p class="doc-kicker">Slides 39–47</p>
+      <h1>Use case 2: Capital markets T+1 settlement exceptions</h1>
+<section class="slide" id="slide-39" aria-labelledby="slide-39-h">
+<h2 id="slide-39-h"><span class="slide-no">Slide 39</span> Managing settlement exceptions under T+1</h2>
+<figure class="slide-img"><img src="img/slide-39.png" width="1601" height="900" alt="Slide 39: Managing settlement exceptions under T+1" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>A global broker-dealer uses governed agents to predict, prevent and resolve settlement exceptions inside the T+1 window.</p>
+<p>THE CHALLENGE</p>
+<p>T+1 compresses allocation, confirmation, affirmation, funding and exception handling into a single day. Analysts still work breaks across order and booking systems, matching platforms, settlement systems, custodian portals, SWIFT messages and email, and every fail carries a cost.</p>
+<p>May 2024</p>
+<p>US equities and corporate bonds moved to T+1.<sup class="cite"><a href="../handbook/appendix-b.html#en-95" aria-label="Endnote 95">95</a></sup></p>
+<p>Oct 2027</p>
+<p>The EU, UK and Switzerland go live together on October 11, 2027.<sup class="cite"><a href="../handbook/appendix-b.html#en-96" aria-label="Endnote 96">96</a></sup></p>
+<p>€70.43M</p>
+<p>Average monthly EU fail penalties on T2S in 2024.<sup class="cite"><a href="../handbook/appendix-b.html#en-97" aria-label="Endnote 97">97</a></sup></p>
+<p>21%</p>
+<p>of surveyed firms’ fails came from data issues such as stale SSIs, and 71% from counterparty shorts.<sup class="cite"><a href="../handbook/appendix-b.html#en-97" aria-label="Endnote 97">97</a></sup></p>
+<p>THE TARGET STATE</p>
+<p>A Settlement Orchestrator ranks exceptions by value and time to cutoff and delegates to six specialist agents that predict fails, fix standard breaks, validate SSIs, source inventory, contact counterparties and account for penalties. People keep authority over anything that moves money, changes settlement instructions or commits the firm to a counterparty.</p>
+<p>SCOPE</p>
+<p>TRIGGER</p>
+<p>Trade booking on T and every later lifecycle event</p>
+<p>END STATE</p>
+<p>Trade settled, or the fail resolved with costs accrued, penalties recorded and counterparties informed</p>
+<p>USERS</p>
+<p>Settlement analysts and supervisors, trading desk, treasury, finance, compliance</p>
+<p>SYSTEMS OF RECORD</p>
+<p>OMS and booking • matching • settlement • custodians • SAP S/4HANA • Snowflake</p>
+<p>OUT OF SCOPE</p>
+<p>Trade execution and pre-trade compliance</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-95">95</a>–<a href="../handbook/appendix-b.html#en-97">97</a>. All figures in this use case are illustrative unless sourced.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Talk track (two minutes): The second reference use case moves to capital markets post-trade operations at a global broker-dealer. As before, the architecture is vendor-neutral except for the transactional platforms named (SAP S/4HANA for the general ledger and Snowflake for trade history and analytics). Trading, matching and settlement platforms are described generically.</p>
+<p>Why now: the US moved most broker-dealer securities trades, including equities and corporate bonds, to T+1 on May 28, 2024, together with a requirement for broker-dealers to complete allocations, confirmations and affirmations as soon as technologically practicable and no later than the end of trade date [<a href="../handbook/appendix-b.html#en-95">95</a>]. The EU, the UK and Switzerland move to T+1 together on October 11, 2027 [<a href="../handbook/appendix-b.html#en-96">96</a>]. Failures are expensive: in 2024 participants paid on average €70.43 million a month in EU cash penalties for settlement fails on T2S, and a 2025 industry survey found that 71% of respondents&#x27; 2024 fails were caused by counterparty shorts and 21% by data issues such as incorrect or stale standing settlement instructions [<a href="../handbook/appendix-b.html#en-97">97</a>].</p>
+<p>In the target state, a Settlement Orchestrator ranks exceptions and delegates to six specialist agents: Fail Prediction, Matching &amp; Allocation, SSI &amp; Reference Data, Inventory &amp; Funding, Counterparty Communications, and Penalty &amp; Accounting. People keep authority over anything that moves money, changes settlement instructions or commits the firm to a counterparty.</p>
+<p>The companion handbook (Section 12) has the full detail.</p>
+</div>
+</section>
+<section class="slide" id="slide-40" aria-labelledby="slide-40-h">
+<h2 id="slide-40-h"><span class="slide-no">Slide 40</span> The trade lifecycle from execution to settlement</h2>
+<figure class="slide-img"><img src="img/slide-40.png" width="1601" height="900" alt="Slide 40: The trade lifecycle from execution to settlement" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>STAGE</p>
+<p>PEOPLE</p>
+<p>AGENT</p>
+<p>CONTROL PLANE</p>
+<p>MCP / API</p>
+<p>SYSTEM OF RECORD</p>
+<p>OUTCOME</p>
+<p>Execute &amp; book</p>
+<p>No human step</p>
+<p>Fail Prediction<br>Tier 2 • scores only</p>
+<p>Booking API</p>
+<p>OMS &amp; booking</p>
+<p>Allocate &amp; confirm</p>
+<p>Analyst: out of tolerance</p>
+<p>Matching &amp; Allocation<br>Tier 3 • in tolerance</p>
+<p>Matching MCP</p>
+<p>Matching platform</p>
+<p>Affirm by cutoff</p>
+<p>Maker-checker SSI approval</p>
+<p>SSI &amp; Reference Data<br>Tier 1 • proposes</p>
+<p>SSI golden source</p>
+<p>Reference data MDM</p>
+<p>Fund &amp; source</p>
+<p>Desk: above limits</p>
+<p>Inventory &amp; Funding<br>Tier 3 • within limits</p>
+<p>Positions &amp; lending API</p>
+<p>Custody &amp; lending</p>
+<p>Resolve &amp; notify</p>
+<p>Analyst: non-standard</p>
+<p>Counterparty Comms<br>Tier 2 • templates</p>
+<p>Email &amp; SWIFT gateway</p>
+<p>SWIFT &amp; email</p>
+<p>Settle &amp; account</p>
+<p>Controller review</p>
+<p>Penalty &amp; Accounting<br>Tier 3 • accruals</p>
+<p>SAP GL API</p>
+<p>SAP S/4HANA • Snowflake</p>
+<p>Enterprise AI control plane: Settlement Orchestrator in a dedicated ops tier • registry • AI gateway • policy &amp; limits • identity • observability</p>
+<p>More trades affirmed on trade date, fewer SSI- and inventory-driven fails, lower penalties, and analysts focused on true exceptions</p>
+<p>Illustrative. Amber = human decision. Blue = agent and autonomy tier. Every call passes through the control plane.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Walk the six post-trade stages left to right, pointing to the human decision (amber), the agent and its tier (blue), and the governed path to each system.</p>
+<ul><li>Execute &amp; book: the Fail Prediction agent scores every trade&#x27;s probability of failing as it is booked (Tier 2: scores only).</li><li>Allocate &amp; confirm: the Matching &amp; Allocation agent fixes breaks within tolerances (Tier 3). Anything out of tolerance goes to an analyst.</li><li>Affirm by cutoff: the SSI &amp; Reference Data agent validates instructions against the SSI golden source and proposes corrections. Changes need maker-checker approval (Tier 1).</li><li>Fund &amp; source: the Inventory &amp; Funding agent books internal borrows or funding within limits (Tier 3). Above limits, the desk approves.</li><li>Resolve &amp; notify: the Counterparty Communications agent sends templated queries (Tier 2). Non-standard messages go to an analyst.</li><li>Settle &amp; account: the Penalty &amp; Accounting agent posts fail-cost accruals to SAP S/4HANA (Tier 3) for controller review.</li></ul>
+<p>Note the orchestration choice in the band: the Settlement Orchestrator runs in a dedicated operations tier, federated under the enterprise control plane.</p>
+</div>
+</section>
+<section class="slide" id="slide-41" aria-labelledby="slide-41-h">
+<h2 id="slide-41-h"><span class="slide-no">Slide 41</span> Vendor-neutral solution architecture</h2>
+<figure class="slide-img"><img src="img/slide-41.png" width="1601" height="900" alt="Slide 41: Vendor-neutral solution architecture" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>USERS &amp; CLIENTS</p>
+<p>Ops copilot<br>settlement analysts</p>
+<p>Mobile approvals<br>supervisors • 4-eyes</p>
+<p>Control dashboards<br>ops management</p>
+<p>Counterparty channels<br>email • SWIFT • portals</p>
+<p>AGENTS<br>autonomy tier</p>
+<p>Fail Prediction<br>Tier 2 • scores only</p>
+<p>Matching &amp; Allocation<br>Tier 3 • in tolerance</p>
+<p>SSI &amp; Reference Data<br>Tier 1 • proposes</p>
+<p>Inventory &amp; Funding<br>Tier 3 • within limits</p>
+<p>Counterparty Comms<br>Tier 2 • templates</p>
+<p>Penalty &amp; Accounting<br>Tier 3 • accruals</p>
+<p>ORCHESTRATION<br>dedicated, federated</p>
+<p>Settlement Orchestrator<br>dedicated ops tier</p>
+<p>Cutoff-aware queue<br>value • time • risk</p>
+<p>A2A delegation<br>internal agents</p>
+<p>Event streams<br>trade • match • status</p>
+<p>CONTROL PLANE</p>
+<p>Registry<br>agents • tools</p>
+<p>AI gateway<br>LLM • MCP • A2A • DLP</p>
+<p>Policy decision point<br>limits • 4-eyes</p>
+<p>Identity &amp; delegation<br>agent IDs • OBO</p>
+<p>Evals, cost &amp; SLOs<br>per market cutoff</p>
+<p>Kill switch &amp; failover<br>agent • model</p>
+<p>MODELS<br>routed by policy</p>
+<p>Fine-tuned SLM<br>self-hosted • parsing</p>
+<p>Frontier LLM<br>private endpoint • drafting</p>
+<p>Fail-prediction ML<br>gradient-boosted trees</p>
+<p>Rules engine<br>tolerances • penalties</p>
+<p>MCP SERVERS &amp; APIs</p>
+<p>Trade &amp; booking<br>read • gated amend</p>
+<p>Matching platform<br>confirm • affirm</p>
+<p>Settlement &amp; SWIFT<br>ISO 20022 messages</p>
+<p>Positions &amp; lending<br>inventory • borrows</p>
+<p>SAP S/4HANA<br>GL postings</p>
+<p>Snowflake<br>history • features</p>
+<p>DATA GOVERNANCE<br>MDM &amp; semantics</p>
+<p>Counterparty master<br>LEI • hierarchy</p>
+<p>Security master<br>ISIN • CUSIP • FIGI</p>
+<p>SSI golden source<br>maker-checker</p>
+<p>Semantic standards<br>ISO 20022 • FIBO • CDM</p>
+<p>Lineage &amp; quality<br>BCBS 239 aligned</p>
+<p>Access policies<br>entity • region • walls</p>
+<p>SYSTEMS OF RECORD</p>
+<p>OMS &amp; booking</p>
+<p>Matching platform</p>
+<p>Settlement engine</p>
+<p>Custodians &amp; CSDs</p>
+<p>SAP S/4HANA</p>
+<p>Snowflake</p>
+<p>SECURITY AT EVERY LAYER</p>
+<p>Phishing-resistant MFA<br>Per-agent identity<br>mTLS • TLS 1.3<br>SWIFT PKI signing<br>HSM keys • AES-256<br>Tokenized account data<br>SSI changes: 4-eyes + call-back<br>Outbound DLP<br>WORM records per Rule 17a-4<br>Information barriers</p>
+<p>GOVERNANCE &amp; OBSERVABILITY</p>
+<p>Autonomy tiers &amp; limits<br>Model risk validation<br>DORA ICT provider register<br>OpenTelemetry traces<br>Cutoff SLO dashboards<br>Failover &amp; drift alerts</p>
+<p>Vendor-neutral: only SAP S/4HANA and Snowflake are named products. Standards and rules: endnotes <a href="../handbook/appendix-b.html#en-26">26</a>, <a href="../handbook/appendix-b.html#en-27">27</a>, <a href="../handbook/appendix-b.html#en-90">90</a>–<a href="../handbook/appendix-b.html#en-94">94</a>, <a href="../handbook/appendix-b.html#en-98">98</a>–<a href="../handbook/appendix-b.html#en-104">104</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>This is the vendor-neutral solution architecture for settlement exceptions. Only SAP S/4HANA and Snowflake are named products.</p>
+<p>Orchestration model selected: a dedicated orchestration tier for settlement operations, federated under the enterprise control plane. Settlement is latency-sensitive and cutoff-driven, runs in a tightly controlled operations domain and needs every action traceable, so the orchestrator and its agents run close to the trading and settlement systems, while identity, policy, registry, audit and cost stay centrally governed. Orchestration is event-driven (trade, matching and settlement-status events), uses a supervisor pattern over A2A [<a href="../handbook/appendix-b.html#en-27">27</a>], and runs deterministic workflows for regulated actions: SSI changes, payments and borrows above limits always follow maker-checker rules.</p>
+<p>Models and routing: a self-hosted, fine-tuned small language model classifies exceptions and parses SWIFT and ISO 20022 messages and emails. A frontier model on a private endpoint drafts non-standard counterparty messages, with a second provider for failover, which also supports DORA expectations on ICT third-party risk [<a href="../handbook/appendix-b.html#en-98">98</a>]. Fail prediction is conventional machine learning trained on settlement history in Snowflake, and a rules engine applies tolerances and penalty calculations deterministically.</p>
+<p>Data governance covers counterparty and legal-entity golden records keyed by LEI, an instrument master with ISIN, CUSIP and FIGI cross-references, and an SSI golden source with maker-checker stewardship (the EU and UK T+1 programs are setting market standards for SSI management [<a href="../handbook/appendix-b.html#en-99">99</a>]). Semantics align to ISO 20022 [<a href="../handbook/appendix-b.html#en-100">100</a>], FIBO [<a href="../handbook/appendix-b.html#en-101">101</a>] and the Common Domain Model [<a href="../handbook/appendix-b.html#en-102">102</a>], and lineage and data quality follow BCBS 239 [<a href="../handbook/appendix-b.html#en-103">103</a>].</p>
+<p>Security: the same zero-trust baseline as use case 1 [<a href="../handbook/appendix-b.html#en-90">90</a>][<a href="../handbook/appendix-b.html#en-91">91</a>][<a href="../handbook/appendix-b.html#en-92">92</a>][<a href="../handbook/appendix-b.html#en-26">26</a>][<a href="../handbook/appendix-b.html#en-93">93</a>], plus SWIFT PKI signing, HSM-held keys, tokenized account numbers, outbound data-loss prevention, write-once retention of agent-sent communications under SEC Rule 17a-4 [<a href="../handbook/appendix-b.html#en-104">104</a>], information barriers, and fraud screening with call-back verification on SSI changes. Inbound counterparty emails are treated as untrusted input and screened for prompt injection.</p>
+<p>Observability: OpenTelemetry traces tied to a trade reference [<a href="../handbook/appendix-b.html#en-94">94</a>] feed cutoff SLO dashboards, failover and drift alerts.</p>
+</div>
+</section>
+<section class="slide" id="slide-42" aria-labelledby="slide-42-h">
+<h2 id="slide-42-h"><span class="slide-no">Slide 42</span> Daniel works the T+1 exceptions before the cutoff</h2>
+<figure class="slide-img"><img src="img/slide-42.png" width="1601" height="900" alt="Slide 42: Daniel works the T+1 exceptions before the cutoff" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>1. 06:30<br>Morning briefing<br>1,240 exceptions overnight, 610 auto-resolved, and 38 likely fails ranked by value and cutoff.</p>
+<p>2. 06:50<br>SSI mismatch fixed<br>$48M bond trade unmatched on place of settlement. Fix approved by maker and checker.</p>
+<p>3. 07:20<br>Shortfall covered<br>A Bund sale is short, so an internal borrow within limits is booked and logged.</p>
+<p>4. 09:10<br>Queries sent<br>14 templated queries auto-sent and one price dispute routed to Daniel, all archived.</p>
+<p>5. 11:05<br>Guardrail fires<br>A draft email contains an account number. DLP masks it and logs a policy event.</p>
+<p>6. 12:40<br>Model failover<br>When primary model latency spikes, the gateway fails over and the queue keeps moving.</p>
+<p>7. 15:30<br>Cutoff sweep<br>12 exceptions remain, each with full context. Two are escalated to the desk.</p>
+<p>8. 17:15<br>Close<br>Fail-cost accruals posted to SAP. Daily fails and penalty report sent to ops and compliance.</p>
+<p>Illustrative scenario. Daniel Okafor is a settlement operations analyst in the EMEA team.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Tell Daniel&#x27;s day as a story.</p>
+<p>Daniel starts at 06:30. His copilot&#x27;s briefing says 1,240 exceptions arrived overnight. Agents have already closed 610 of them (standard matching breaks and SSI enrichments from verified sources), and 38 trades are flagged as likely fails, ranked by value and time to cutoff. At 06:50 he opens the top item: a $48 million corporate-bond trade unmatched on place of settlement. The SSI agent has found that the counterparty published updated instructions the previous afternoon and proposes the correction. Daniel approves as maker, his supervisor approves as checker on mobile with step-up authentication, and the settlement system re-instructs. At 07:20 the inventory agent spots that a sale of German Bunds is short and books an internal borrow within its limit.</p>
+<p>By 09:10 the communications agent has sent 14 templated queries and routed one price dispute to Daniel, who rewrites the message himself. At 11:05 the gateway masks an account number that a draft email should not contain and shows Daniel the policy event. At 12:40 the primary model&#x27;s latency spikes. The gateway fails over to the secondary provider, and the only trace is on the operations dashboard. The 15:30 cutoff sweep leaves 12 exceptions, each with its full history, and Daniel escalates two to the trading desk. At 17:15 the penalty and accounting agent posts fail-cost accruals to SAP S/4HANA and publishes the daily fails and penalty report.</p>
+<p>Close by pointing out that analysts spend the day on genuine exceptions, with context, while money and instructions stay under human control.</p>
+</div>
+</section>
+<section class="slide" id="slide-43" aria-labelledby="slide-43-h">
+<h2 id="slide-43-h"><span class="slide-no">Slide 43</span> How the components work together in Daniel’s day</h2>
+<figure class="slide-img"><img src="img/slide-43.png" width="1601" height="900" alt="Slide 43: How the components work together in Daniel’s day" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Ops team<br>analyst • supervisor</p>
+<p>Orchestrator<br>dedicated ops tier</p>
+<p>Specialist agents<br>A2A workers</p>
+<p>Control plane<br>gateway • policy • identity</p>
+<p>Models<br>SLM • LLM • ML</p>
+<p>MCP servers &amp; APIs<br>governed tools</p>
+<p>Systems &amp; MDM<br>systems of record</p>
+<p>1  Trade and match events stream in</p>
+<p>2  A2A: score fail risk, triage breaks</p>
+<p>3  Score (ML) and classify (SLM)</p>
+<p>4  MCP calls with delegated token</p>
+<p>5  Authorize read scopes and forward</p>
+<p>6  Trade, confirm and SSI lookups</p>
+<p>7  Diff: place of settlement (SSI)</p>
+<p>8  Tier 1: propose SSI correction</p>
+<p>9  Maker and checker approve (step-up)</p>
+<p>10  Allow gated SSI write</p>
+<p>11  Update SSI golden source and re-instruct</p>
+<p>12  Book internal borrow within limit</p>
+<p>13  Draft counterparty query (masked)</p>
+<p>14  Send: DLP check, WORM archive</p>
+<p>15  Latency spike: fail over model</p>
+<p>16  Post fail-cost accruals</p>
+<p>17  SAP S/4HANA GL posting</p>
+<p>18  Cutoff sweep: 12 left, full context</p>
+<p>Every hop emits an OpenTelemetry span and an audit event tied to the trade reference. Policy enforces the limits. Endnotes <a href="../handbook/appendix-b.html#en-27">27</a>, <a href="../handbook/appendix-b.html#en-92">92</a>, <a href="../handbook/appendix-b.html#en-94">94</a>, <a href="../handbook/appendix-b.html#en-98">98</a>, <a href="../handbook/appendix-b.html#en-104">104</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Read the numbered steps top to bottom. They follow Daniel&#x27;s day.</p>
+<p>Steps 1–6 (06:30): trade and matching events stream to the Settlement Orchestrator, which delegates scoring and triage over A2A [<a href="../handbook/appendix-b.html#en-27">27</a>]. Fail Prediction scores trades with the machine-learning model on Snowflake features, and the small language model classifies breaks. Agents&#x27; MCP calls carry delegated tokens [<a href="../handbook/appendix-b.html#en-92">92</a>], and the control plane authorizes read scopes for lookups in the booking system, the matching platform and the SSI golden source.</p>
+<p>Steps 7–11 (06:50): the matching agent finds the difference (place of settlement). The SSI agent proposes the correction at Tier 1 but can never apply it. Maker and checker approve with step-up MFA and a call-back record, and each approval is bound to the exact change and expires before the cutoff. Only then does the policy decision point allow the gated SSI write. The MDM change history is updated and the settlement system re-instructs.</p>
+<p>Step 12 (07:20): the inventory agent books an internal borrow within the notional limits the policy decision point enforces. The daily limit holds across agents and sessions, so many small borrows cannot add up past it [<a href="../handbook/appendix-b.html#en-78">78</a>].</p>
+<p>Steps 13–14 (09:10–11:05): the communications agent drafts with the frontier model on masked data. Every outbound message passes data-loss prevention and is archived to WORM storage before it is sent [<a href="../handbook/appendix-b.html#en-104">104</a>].</p>
+<p>Step 15 (12:40): the AI gateway detects a latency breach on the primary provider and fails over to the secondary. The event is logged as an ICT-related incident under DORA, reported to the authority only if it meets the major-incident criteria, and recorded against the provider for third-party risk monitoring [<a href="../handbook/appendix-b.html#en-98">98</a>].</p>
+<p>Steps 16–18 (15:30–17:15): accruals are posted to the SAP S/4HANA general ledger with idempotent calls, and the orchestrator hands the remaining exceptions to people with full evidence. Every hop emits an OpenTelemetry span and an audit event [<a href="../handbook/appendix-b.html#en-94">94</a>].</p>
+</div>
+</section>
+<section class="slide" id="slide-44" aria-labelledby="slide-44-h">
+<h2 id="slide-44-h"><span class="slide-no">Slide 44</span> Realized with MuleSoft Agent Fabric and Informatica</h2>
+<figure class="slide-img"><img src="img/slide-44.png" width="1601" height="900" alt="Slide 44: Realized with MuleSoft Agent Fabric and Informatica" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>MuleSoft</p>
+<p>Informatica</p>
+<p>MuleSoft + Informatica</p>
+<p>Customer choice</p>
+<p>USERS &amp; CLIENTS</p>
+<p>Ops copilot<br>Slack, Teams or ops portal</p>
+<p>Mobile approvals<br>Trusted Agent Identity</p>
+<p>Control dashboards<br>Agent Visualizer + firm BI</p>
+<p>Counterparty channels<br>through Omni Gateway</p>
+<p>AGENTS<br>built anywhere, governed centrally</p>
+<p>Fail Prediction<br>firm ML platform</p>
+<p>Matching &amp; Allocation<br>any platform</p>
+<p>SSI &amp; Reference Data<br>any platform</p>
+<p>Inventory &amp; Funding<br>any platform</p>
+<p>Counterparty Comms<br>any platform</p>
+<p>Penalty &amp; Accounting<br>MuleSoft + MCP tools</p>
+<p>ORCHESTRATION</p>
+<p>Settlement orchestration<br>Agent Broker</p>
+<p>Maker-checker gates<br>guided determinism</p>
+<p>A2A delegation<br>A2A support</p>
+<p>Event streams<br>MuleSoft event APIs</p>
+<p>CONTROL PLANE<br>MuleSoft Agent Fabric</p>
+<p>Registry &amp; discovery<br>Registry • Scanners</p>
+<p>LLM &amp; MCP gateway<br>AI Gateway</p>
+<p>API &amp; A2A policies<br>Omni Gateway</p>
+<p>Agent identity<br>Trusted Agent Identity</p>
+<p>Visibility &amp; cost<br>Visualizer • LLM Governance</p>
+<p>Kill switch<br>Agent Kill Switch</p>
+<p>MODELS</p>
+<p>Fine-tuned SLM<br>firm data center</p>
+<p>Frontier LLMs<br>any provider • via AI Gateway</p>
+<p>Fail-prediction ML<br>firm ML platform</p>
+<p>Rules engine<br>firm choice</p>
+<p>MCP SERVERS &amp; APIs</p>
+<p>MCP Bridge<br>APIs become MCP tools</p>
+<p>Trading system APIs<br>trading platforms</p>
+<p>Settlement &amp; SWIFT<br>MuleSoft messaging</p>
+<p>SAP S/4HANA API<br>MuleSoft connector</p>
+<p>Snowflake API<br>MuleSoft connector</p>
+<p>Data MCP tools<br>Informatica MCP servers</p>
+<p>DATA GOVERNANCE<br>Informatica</p>
+<p>Counterparty &amp; LEI<br>Multidomain MDM</p>
+<p>Security master<br>Multidomain MDM</p>
+<p>SSI golden source<br>MDM + stewardship</p>
+<p>Glossary &amp; lineage<br>Governance &amp; Catalog</p>
+<p>Data quality<br>Informatica Data Quality</p>
+<p>Catalog search<br>CDGC MCP • AI Gateway</p>
+<p>SYSTEMS OF RECORD</p>
+<p>OMS &amp; booking</p>
+<p>Matching platform</p>
+<p>Settlement engine</p>
+<p>Custodians &amp; CSDs</p>
+<p>SAP S/4HANA</p>
+<p>Snowflake</p>
+<p>DEPLOY &amp; SECURE</p>
+<p>Runtime Fabric in firm data centers<br>Omni Gateway: mTLS, OAuth, rate limits<br>AI Gateway: DLP, masking, failover<br>Trusted Agent Identity: OBO + mobile<br>Keys in the firm HSM<br>Informatica: classification &amp; lineage</p>
+<p>OPERATE &amp; GOVERN</p>
+<p>Agent Visualizer: breaks &amp; risk<br>Evaluation for comms &amp; parsing<br>Token rate limits and spend per desk<br>Agent Kill Switch intraday<br>Agent Registry: owners &amp; limits<br>Telemetry to SIEM &amp; DORA logs</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-21">21</a>, <a href="../handbook/appendix-b.html#en-77">77</a>, <a href="../handbook/appendix-b.html#en-78">78</a>. Confirm connector coverage for each trading and settlement venue.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>How MuleSoft Agent Fabric and Informatica realize the settlement design. As in use case 1, MuleSoft governs the agents and the paths they use, Informatica governs the data they act on, and the firm keeps its trading, matching and settlement platforms, its models and its agent frameworks (grey).</p>
+<ul><li>Registry and discovery: Agent Registry and Agent Scanners register in-house operations agents and agents embedded in vendor platforms, with owners and limits [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Orchestration: Agent Broker with guided determinism provides event-driven routing with maker-checker gates for SSIs, payments and large borrows. A2A support handles delegation [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Events and messaging: MuleSoft event-driven APIs and messaging connectivity stream trade, matching and settlement events and connect SWIFT and ISO 20022 flows and custodian feeds. Confirm connector coverage for each venue.</li><li>Gateway: AI Gateway handles model routing and failover, data-loss-prevention and masking policies and token limits. Omni Gateway applies mTLS, OAuth 2.0 token validation and rate limits [<a href="../handbook/appendix-b.html#en-21">21</a>][<a href="../handbook/appendix-b.html#en-78">78</a>].</li><li>Identity and control: Trusted Agent Identity supports on-behalf-of actions with mobile approval for SSI changes and limit breaches [<a href="../handbook/appendix-b.html#en-21">21</a>]. Custom Omni Gateway policies, built with the Policy Development Kit, bind each approval to the executed call and hold the daily borrow limit across sessions [<a href="../handbook/appendix-b.html#en-78">78</a>]. Agent Kill Switch can stop an agent intraday, Agent Visualizer traces breaks, and token-based rate limits and spend attribution track AI spend by desk [<a href="../handbook/appendix-b.html#en-21">21</a>]. Communications and classifications are tested before release with the firm&#x27;s evaluation tool.</li><li>Tools: MCP Bridge exposes the trading, settlement and finance APIs as governed MCP tools with read and write separation. MuleSoft connectors reach SAP S/4HANA and Snowflake [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Deployment: Runtime Fabric runs gateways, MCP servers and agents in the firm&#x27;s data centers or VPC, close to trading systems, for latency and residency [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Data foundation (Informatica): Multidomain MDM holds counterparty and LEI, instrument and SSI golden records that agents reach through governed APIs, while data quality rules validate SSIs and reference data at the point of entry, with exceptions routed to data stewards. Data Governance and Catalog carries a glossary aligned to ISO 20022, FIBO and CDM and lineage evidence for BCBS 239, and agents find data assets through the CDGC Metadata Search MCP server [<a href="../handbook/appendix-b.html#en-77">77</a>].</li></ul>
+</div>
+</section>
+<section class="slide" id="slide-45" aria-labelledby="slide-45-h">
+<h2 id="slide-45-h"><span class="slide-no">Slide 45</span> Expected business outcomes and KPIs</h2>
+<figure class="slide-img"><img src="img/slide-45.png" width="1601" height="900" alt="Slide 45: Expected business outcomes and KPIs" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Illustrative for a broker-dealer settling 50,000 trades a day with a 3% exception rate. Replace with the firm’s own baseline.</p>
+<p>EXPECTED BUSINESS OUTCOMES</p>
+<p>Analyst capacity</p>
+<p>Agents close about 40% of exceptions and halve handling time for the rest</p>
+<p>$9.8M</p>
+<p>315 h/day × 250 days × $125</p>
+<p>Fewer fails and penalties</p>
+<p>Prediction plus early SSI and inventory fixes cut fails by about a third</p>
+<p>~1/3 fewer</p>
+<p>model on the firm’s penalty history</p>
+<p>Lower funding costs</p>
+<p>Earlier sight of shortfalls enables cheaper internal borrows</p>
+<p>Firm-specific</p>
+<p>material in fixed income, cross-border</p>
+<p>Regulatory outcomes</p>
+<p>Same-day affirmation, complete audit trails, faster client answers</p>
+<p>Risk reduction</p>
+<p>T+1 ready for October 2027</p>
+<p>~$9.8M a year in analyst capacity alone, before penalty, funding and risk benefits</p>
+<p>KEY PERFORMANCE INDICATORS</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table: KPI, Baseline, Target (12 months)"><table><thead><tr><th scope="col">KPI</th><th scope="col">Baseline*</th><th scope="col">Target (12 months)</th></tr></thead><tbody><tr><td>Same-day affirmation</td><td>88%</td><td>97% or higher</td></tr><tr><td>Settlement fail rate</td><td>2.0%</td><td>1.3%</td></tr><tr><td>Auto-resolved exceptions</td><td>0%</td><td>40%</td></tr><tr><td>Average handling time (minutes)</td><td>18</td><td>9</td></tr><tr><td>SSI-related share of fails</td><td>About 21%</td><td>Below 7%</td></tr><tr><td>Net CSDR penalties per month</td><td>Firm baseline</td><td>Down 30%</td></tr><tr><td>Fail-prediction precision</td><td>Not measured</td><td>70% or higher</td></tr><tr><td>Time to contain (minutes)</td><td>Not measured</td><td>Under 5</td></tr><tr><td>Agent messages archived to WORM</td><td>Not measured</td><td>100%</td></tr></tbody></table></div>
+<p>*Baselines and values are illustrative. The SSI share reflects an industry survey (endnote <a href="../handbook/appendix-b.html#en-97">97</a>). Measure the firm’s baseline during discovery.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Business case, illustrative for a broker-dealer settling 50,000 trades a day with a 3% exception rate (about 1,500 exceptions a day) and an average handling time of 18 minutes (about 450 analyst hours a day):</p>
+<ul><li>Analyst capacity: agents close about 40% of exceptions and halve handling time for the rest, so daily effort falls from about 450 to 135 hours. 315 hours × 250 days × $125 is about $9.8M a year.</li><li>Fewer fails and penalties: fail prediction plus pre-emptive SSI and inventory fixes could cut the fail rate by about a third (illustrative). Model the value on the firm&#x27;s penalty and fail-cost history. EU penalties on T2S averaged about €70M a month in 2024 [<a href="../handbook/appendix-b.html#en-97">97</a>].</li><li>Lower funding and borrow costs: earlier visibility of shortfalls allows cheaper internal borrows and planned funding. The value is firm-specific and typically material for fixed income and cross-border flows.</li><li>Regulatory and client outcomes: higher same-day affirmation, complete audit trails, faster answers to clients and readiness for T+1 in Europe in October 2027.</li></ul>
+<p>KPIs: baselines are illustrative. The SSI-related share of fails reflects the industry survey [<a href="../handbook/appendix-b.html#en-97">97</a>]. Communications retained measures the share of agent-sent messages archived to WORM storage before sending. Retaining business communications is a records requirement [<a href="../handbook/appendix-b.html#en-104">104</a>]. Archiving before sending is how this design meets it.</p>
+</div>
+</section>
+<section class="slide" id="slide-46" aria-labelledby="slide-46-h">
+<h2 id="slide-46-h"><span class="slide-no">Slide 46</span> Delivery in four phases over 24 months</h2>
+<figure class="slide-img"><img src="img/slide-46.png" width="1601" height="900" alt="Slide 46: Delivery in four phases over 24 months" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Automation that moves money or changes instructions waits for phase 3, when bound approvals and cross-session limits are in place. Values are illustrative.</p>
+<p>MONTH 3  •  PHASE 1</p>
+<p>One market, one asset class</p>
+<p>For example EU fixed income, about a fifth of exceptions: fail scoring and triage at tier 2, with analysts in the loop.</p>
+<p>Handling time down from 18 to about 13 minutes in scope</p>
+<p>$0.8M a year</p>
+<p>MONTH 8  •  PHASE 2</p>
+<p>All markets</p>
+<p>SSI golden source fixed with maker-checker stewardship. Agents propose fixes for one-click approval and draft messages.</p>
+<p>Handling time about 11 minutes; same-day affirmation rising</p>
+<p>$5.5M a year</p>
+<p>MONTH 12  •  PHASE 3</p>
+<p>Automate within limits</p>
+<p>Tier 3 fixes, borrows and accruals within cross-session limits, and SSI changes under bound approvals. Ready for EU T+1.<sup class="cite"><a href="../handbook/appendix-b.html#en-96" aria-label="Endnote 96">96</a></sup></p>
+<p>All KPI targets met: 40% auto-resolved, 9 minutes</p>
+<p>$9.8M a year</p>
+<p>MONTH 24  •  PHASE 4</p>
+<p>All goals met</p>
+<p>Run rate sustained. More asset classes and treasury funding added on the same controls, with European T+1 live.</p>
+<p>All KPIs held at target</p>
+<p>$12M cumulative</p>
+<p>Cumulative analyst capacity by month 24: about $12M, plus fewer fails, lower penalties and cheaper funding (illustrative)</p>
+<p>Illustrative: 300 exceptions a day × 5 minutes at month 3, 175 analyst hours a day at month 8, and the full business case from month 12. Source: endnote <a href="../handbook/appendix-b.html#en-96">96</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Phased delivery for the settlement use case, aligned with the four phases of the plan.</p>
+<ul><li>Month 3 (phase 1): one market and asset class, for example EU fixed income, about a fifth of exceptions (300 a day). The fail-prediction agent scores trades and agents classify breaks and gather context at tier 2. Analysts act as today. Handling time falls from 18 to about 13 minutes in scope: 300 × 5 minutes × 250 days × $125 an hour is about $0.8M a year.</li><li>Month 8 (phase 2): all markets. The SSI golden source is fixed with maker-checker stewardship, and agents propose fixes for one-click approval and draft counterparty messages from templates. Handling time about 11 minutes across 1,500 exceptions a day releases about 175 analyst hours a day: about $5.5M a year.</li><li>Month 12 (phase 3): standard breaks, internal borrows and accruals are automated at tier 3 within limits that hold across agents and sessions, and SSI changes need maker-checker approvals bound to the change and expiring before the cutoff. All KPI targets are met (40% auto-resolved, 9 minutes of handling, a 1.3% fail rate): about $9.8M a year in analyst capacity, plus fewer fails, lower penalties and cheaper funding. For a program starting in late 2026, this lands before the European T+1 go-live on October 11, 2027 [<a href="../handbook/appendix-b.html#en-96">96</a>].</li><li>Month 24 (phase 4): run rate sustained, with more asset classes and treasury funding added and European T+1 live. Cumulative analyst capacity reaches about $12M by month 24.</li></ul>
+<p>All values are illustrative and before platform, model and change costs.</p>
+</div>
+</section>
+<section class="slide" id="slide-47" aria-labelledby="slide-47-h">
+<h2 id="slide-47-h"><span class="slide-no">Slide 47</span> What the settlement use case proves</h2>
+<figure class="slide-img"><img src="img/slide-47.png" width="1601" height="900" alt="Slide 47: What the settlement use case proves" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Agents work the T+1 window at machine speed, while money, instructions and commitments stay under human control.</p>
+<p>1. Catch fails before they happen</p>
+<p>Fail prediction and pre-emptive SSI and inventory fixes act before the cutoff.</p>
+<p>2. Money and instructions stay human</p>
+<p>SSI changes, payments and large borrows follow maker-checker rules. Agents only propose.</p>
+<p>3. Reference data is a control</p>
+<p>SSI, counterparty and instrument golden records address the data-driven share of fails.<sup class="cite"><a href="../handbook/appendix-b.html#en-97" aria-label="Endnote 97">97</a></sup></p>
+<p>4. Resilient and auditable by design</p>
+<p>Model failover, WORM archiving and end-to-end traces support DORA and records rules.<sup class="cite"><a href="../handbook/appendix-b.html#en-98" aria-label="Endnote 98">98</a>,<a href="../handbook/appendix-b.html#en-104" aria-label="Endnote 104">104</a></sup></p>
+<p>NEXT STEP: A 90-DAY PILOT</p>
+<p>01. One market, one asset class</p>
+<p>For example EU fixed income ahead of October 2027, with fails and penalties baselined.</p>
+<p>02. Predict and triage first</p>
+<p>Fail scoring and break classification at Tier 2, analysts in the loop.</p>
+<p>03. Fix the SSI golden source</p>
+<p>MDM with maker-checker stewardship before agents touch instructions.</p>
+<p>04. Automate standard fixes</p>
+<p>Tier 3 matching and borrows within limits once evaluations and controls pass.</p>
+<p>Confirm connector coverage for each venue.</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-97">97</a>, <a href="../handbook/appendix-b.html#en-98">98</a>, <a href="../handbook/appendix-b.html#en-104">104</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Wrap up with what this use case proves:</p>
+<ol><li>Prevent fails as well as repair them. Fail prediction and pre-emptive SSI and inventory fixes act before the cutoff instead of after the fail.</li><li>Money and instructions stay under human control. SSI changes, payments and large borrows follow maker-checker rules, with agents proposing and people approving.</li><li>Reference data is a control. About a fifth of surveyed firms&#x27; fails traced back to data such as stale SSIs [<a href="../handbook/appendix-b.html#en-97">97</a>], so golden records for SSIs, counterparties and instruments go straight to the fail rate.</li><li>Resilient and auditable by design. Model failover, WORM archiving and end-to-end traces support DORA [<a href="../handbook/appendix-b.html#en-98">98</a>] and records-retention rules [<a href="../handbook/appendix-b.html#en-104">104</a>].</li></ol>
+<p>Proposed next step: a 90-day pilot. Start with one market and one asset class (for example EU fixed income ahead of the October 2027 go-live) and baseline fails and penalties. Begin with prediction and triage at Tier 2 with analysts in the loop. Fix the SSI golden source with maker-checker stewardship before any agent touches instructions. Automate standard fixes (Tier 3 matching and borrows within limits) only once evaluations and controls pass.</p>
+<p>Before committing dates, confirm connector coverage for each trading and settlement venue.</p>
+</div>
+</section>
+      <nav class="pager" aria-label="Previous and next"><a class="pn prev" href="use-case-1.html" rel="prev"><span class="pn-dir">Previous</span><span class="pn-title">Use case 1: Professional services engagement launch</span></a><a class="pn next" href="use-case-3.html" rel="next"><span class="pn-dir">Next</span><span class="pn-title">Use case 3: Energy pipeline compressor reliability</span></a></nav>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 John Fisher · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> · <a href="notices.html">Notices</a> · <a href="https://github.com/johnfisher-ai/ai-control-plane-handbook">Source on GitHub</a> · <a href="https://www.linkedin.com/in/johnrfisher">LinkedIn</a></p>
+      <p class="small">John Fisher works for Salesforce. The views here are his own, not Salesforce’s, and are drawn from public information; this deck is not affiliated with or endorsed by Salesforce. Product names are trademarks of their owners; the notices list them. Set in Plus Jakarta Sans, licensed under the SIL Open Font License 1.1.</p>
+    </div>
+  </footer>
+  <script>
+    (function () { var d = document.getElementById('doc-nav'); var m = window.matchMedia('(min-width: 1000px)'); function s() { d.open = m.matches; } s(); m.addEventListener ? m.addEventListener('change', s) : m.addListener(s); var c = d.querySelector('[aria-current="page"]'); if (c && m.matches) { d.scrollTop = Math.max(0, c.offsetTop - d.clientHeight / 3); } })();
+  </script>
+</body>
+</html>

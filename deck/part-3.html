@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From north star to plan · The AI Control Plane: executive deck</title>
+  <meta name="description" content="Slides 21 to 29 of the executive deck, with the slide text and speaker notes: The target reference architecture; The north star, realized with MuleSoft…">
+  <meta name="author" content="John Fisher">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0F172A">
+  <link rel="canonical" href="https://johnfisher-ai.github.io/ai-control-plane-handbook/deck/part-3.html">
+  <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The AI Control Plane Handbook">
+  <meta property="og:title" content="From north star to plan">
+  <meta property="og:description" content="Slides 21 to 29 of the executive deck, with the slide text and speaker notes: The target reference architecture; The north star, realized with MuleSoft…">
+  <meta property="og:url" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/deck/part-3.html">
+  <meta property="og:image" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/assets/img/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The AI Control Plane Handbook, by John Fisher, 2026 edition">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="doc-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#1E293B"/><g stroke="#64748B" stroke-width="1.6"><line x1="9" y1="9" x2="19" y2="15"/><line x1="8" y1="23" x2="19" y2="15"/><line x1="25" y1="25" x2="19" y2="15"/><line x1="24" y1="7" x2="19" y2="15"/></g><g fill="#0F172A" stroke="#94A3B8" stroke-width="1.4"><circle cx="9" cy="9" r="2.6"/><circle cx="8" cy="23" r="2.6"/><circle cx="25" cy="25" r="2.6"/><circle cx="24" cy="7" r="2.6"/></g><circle cx="19" cy="15" r="4.6" fill="#38BDF8"/></svg>
+        <span>The AI Control Plane Handbook</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../handbook/index.html">Handbook</a></li><li><a href="../deck/index.html" aria-current="true">Executive deck</a></li><li><a href="../toolkit/index.html">Toolkit</a></li><li><a href="../quantum/index.html">Quantum briefing</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap doc-layout">
+    <details class="doc-nav" id="doc-nav">
+      <summary>Deck contents</summary>
+      <nav aria-label="Executive deck contents">
+        <ol class="doc-toc"><li><a href="index.html"><span class="n" aria-hidden="true">•</span><span>About this deck</span></a></li><li><a href="part-1.html"><span class="n" aria-hidden="true">•</span><span>Why a control plane, and what it is</span></a></li><li><a href="part-2.html"><span class="n" aria-hidden="true">•</span><span>Architecture, orchestration and trust</span></a></li><li><a href="part-3.html" aria-current="page"><span class="n" aria-hidden="true">•</span><span>From north star to plan</span></a><ol class="onpage"><li><a href="#slide-21">21. The target reference architecture</a></li><li><a href="#slide-22">22. The north star, realized with MuleSoft Agent Fabric and Informatica</a></li><li><a href="#slide-23">23. Agent Fabric as the control plane for every agent</a></li><li><a href="#slide-24">24. How MuleSoft and Informatica cover the control-plane requirements</a></li><li><a href="#slide-25">25. Coexisting with the hyperscalers’ agent control planes</a></li><li><a href="#slide-26">26. A 12- to 24-month plan with value in every phase</a></li><li><a href="#slide-27">27. Value delivered at every milestone</a></li><li><a href="#slide-28">28. Owners, decision rights and skills</a></li><li><a href="#slide-29">29. Measure the control plane like a product</a></li></ol></li><li><a href="use-case-1.html"><span class="n" aria-hidden="true">•</span><span>Use case 1: Professional services engagement launch</span></a></li><li><a href="use-case-2.html"><span class="n" aria-hidden="true">•</span><span>Use case 2: Capital markets T+1 settlement exceptions</span></a></li><li><a href="use-case-3.html"><span class="n" aria-hidden="true">•</span><span>Use case 3: Energy pipeline compressor reliability</span></a></li><li><a href="closing.html"><span class="n" aria-hidden="true">•</span><span>Closing and standards dates</span></a></li><li><a href="notices.html"><span class="n" aria-hidden="true">•</span><span>Notices and about the author</span></a></li></ol>
+      </nav>
+    </details>
+    <main id="main" class="doc-main">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Executive deck</a></li><li><span aria-current="page">From north star to plan</span></li></ol></nav>
+      <p class="doc-kicker">Slides 21–29</p>
+      <h1>From north star to plan</h1>
+<section class="slide" id="slide-21" aria-labelledby="slide-21-h">
+<h2 id="slide-21-h"><span class="slide-no">Slide 21</span> The target reference architecture</h2>
+<figure class="slide-img"><img src="img/slide-21.png" width="1601" height="900" alt="Slide 21: The target reference architecture" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>1. CONSUMERS &amp; WORKLOADS</p>
+<p>Agents from any platform</p>
+<p>Copilots &amp; assistants</p>
+<p>MCP clients (Claude, Slack, Teams)</p>
+<p>Apps &amp; workflows</p>
+<p>B2B &amp; partner systems</p>
+<p>2. CONTROL PLANE</p>
+<p>One policy point</p>
+<p>Registry: agents, tools &amp; models</p>
+<p>Orchestration with deterministic gates</p>
+<p>AI gateway: model, MCP &amp; A2A policy</p>
+<p>Agent identity &amp; bounded authority</p>
+<p>Evals, observability &amp; kill switch</p>
+<p>3. MODELS</p>
+<p>Chosen per task</p>
+<p>Frontier models</p>
+<p>Open-source models</p>
+<p>Specialized models</p>
+<p>Self-hosted &amp; sovereign models</p>
+<p>Packaged SaaS models</p>
+<p>4. CAPABILITIES &amp; DATA</p>
+<p>Exposed once, reused</p>
+<p>Business APIs as governed tools</p>
+<p>MCP tools over systems of record</p>
+<p>Connectors, IDP &amp; RPA</p>
+<p>Trusted data: MDM, quality &amp; lineage</p>
+<p>ERP, CRM &amp; core systems</p>
+<p>5. INFRASTRUCTURE &amp; RESILIENCE</p>
+<p>Multi-cloud &amp; edge</p>
+<p>Managed or sovereign runtimes</p>
+<p>Post-quantum-ready transport</p>
+<p>OpenTelemetry &amp; audit logs</p>
+<p>Failover &amp; model fallback</p>
+<p>ACROSS EVERY LAYER</p>
+<p>Zero-trust security  •  Policy as code  •  Cost per outcome  •  Evaluation before promotion  •  Oversight people can exercise</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-11">11</a>, <a href="../handbook/appendix-b.html#en-20">20</a>. Vendor-neutral by design; the next slide shows it realized with MuleSoft Agent Fabric and Informatica.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>This is the north star: a vendor-neutral target reference architecture that turns the research in the first half of this briefing into what good looks like. Use it as the yardstick for any platform decision. The next slide shows it realized with MuleSoft Agent Fabric and Informatica.</p>
+<p>The layers:</p>
+<ol><li>Consumers and workloads: agents from any platform, copilots and assistants, MCP clients such as Claude, Slack and Teams, apps and workflows, and partner systems.</li><li>Control plane, the one policy point: a registry of agents, tools and models with owners and risk tiers, plus orchestration with deterministic gates. It also includes an AI gateway for model, MCP and A2A traffic, agent identity with bounded authority, and evaluation, observability and a kill switch.</li><li>Models: frontier, open-source, specialized, self-hosted and packaged SaaS models, chosen per task within cost, latency and regulatory limits [<a href="../handbook/appendix-b.html#en-1">1</a>].</li><li>Capabilities and data: business capabilities exposed once as governed APIs and MCP tools, plus connectors, document processing and automation, and trusted data, with master data, quality and lineage.</li><li>Infrastructure and resilience: multi-cloud and edge, managed or sovereign runtimes, post-quantum-ready transport, OpenTelemetry and audit logs, and failover with model fallback.</li></ol>
+<p>Across every layer: zero-trust security and governance, including policy as code, cost per outcome, evaluation before promotion and human oversight that people can exercise.</p>
+<p>Principles: one policy point, capabilities not channels, open by default (MCP and A2A), trust by design, economics built in, and adoptable in stages. Each layer delivers value on its own, so the plan can return value in every phase. Control planes compete for authority over identity, orchestration and data [<a href="../handbook/appendix-b.html#en-11">11</a>], and published guidance on architecting for agentic AI starts with governance and a single policy point [<a href="../handbook/appendix-b.html#en-20">20</a>].</p>
+<p>Design rule: nothing in layer 1 calls layer 3 or 4 directly. Every agent-to-model and agent-to-tool call traverses layer 2. In operational technology the rule extends one layer down: no agent reaches a control system except through a governed conduit, and independent safety systems sit beneath everything.</p>
+</div>
+</section>
+<section class="slide" id="slide-22" aria-labelledby="slide-22-h">
+<h2 id="slide-22-h"><span class="slide-no">Slide 22</span> The north star, realized with MuleSoft Agent Fabric and Informatica</h2>
+<figure class="slide-img"><img src="img/slide-22.png" width="1601" height="900" alt="Slide 22: The north star, realized with MuleSoft Agent Fabric and Informatica" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>1. CONSUMERS &amp; WORKLOADS</p>
+<p>Agentforce agents</p>
+<p>Copilot Studio &amp; Foundry agents</p>
+<p>Bedrock AgentCore &amp; Gemini Enterprise Agent Platform agents</p>
+<p>Copilots &amp; MCP clients (Claude, Slack, Teams)</p>
+<p>B2B &amp; partner systems</p>
+<p>2. CONTROL PLANE</p>
+<p>MuleSoft Agent Fabric</p>
+<p>Agent Registry &amp; Scanners</p>
+<p>Agent Broker orchestration</p>
+<p>AI Gateway: LLM &amp; MCP policy</p>
+<p>Trusted Agent Identity</p>
+<p>Visualizer &amp; cost controls</p>
+<p>3. MODELS</p>
+<p>Routed by AI Gateway</p>
+<p>Frontier models</p>
+<p>Open-source models</p>
+<p>Specialized models</p>
+<p>Self-hosted &amp; sovereign models</p>
+<p>Packaged SaaS models</p>
+<p>4. CAPABILITIES &amp; DATA</p>
+<p>MuleSoft + Informatica</p>
+<p>System &amp; process APIs</p>
+<p>MCP Bridge: APIs as tools</p>
+<p>Connectors, IDP &amp; RPA</p>
+<p>Informatica MDM, quality &amp; catalog</p>
+<p>ERP, CRM &amp; core systems</p>
+<p>5. INFRASTRUCTURE &amp; RESILIENCE</p>
+<p>Multi-cloud &amp; edge</p>
+<p>CloudHub &amp; Runtime Fabric</p>
+<p>Post-quantum-ready transport</p>
+<p>OpenTelemetry &amp; audit logs</p>
+<p>Failover &amp; model fallback</p>
+<p>ACROSS EVERY LAYER</p>
+<p>Omni Gateway policies, incl. custom  •  Trusted Agent Identity  •  Agent Kill Switch  •  Visualizer &amp; OpenTelemetry  •  Informatica lineage</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-21">21</a>, <a href="../handbook/appendix-b.html#en-77">77</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>This slide shows the north star realized: every layer of the vendor-neutral architecture maps to a MuleSoft or Informatica capability. The control plane (layer 2) sits between consumer workloads and the models and data beneath, and applies identity, policy, routing, cost controls and audit to every agent-to-model and agent-to-tool call.</p>
+<p>How the layers map:</p>
+<ol><li>Consumers and workloads: agents from any platform (Agentforce, Copilot Studio and Foundry, Bedrock AgentCore, Gemini Enterprise Agent Platform), copilots and MCP clients such as Claude, Slack and Teams, and B2B systems, discovered by Agent Scanners and registered in Agent Registry [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Control plane, MuleSoft Agent Fabric: Agent Registry and Scanners (inventory), Agent Broker (orchestration), AI Gateway (one policy point for LLM and MCP traffic), Trusted Agent Identity, and Agent Visualizer and AI cost controls [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Models: five model classes, routed per task by AI Gateway&#x27;s intelligent model routing, with token-based rate limits and spend attribution [<a href="../handbook/appendix-b.html#en-1">1</a>][<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Capabilities and data: MuleSoft system and process APIs, MCP Bridge and connectors with IDP and RPA, plus Informatica for master data, data quality, catalog and lineage (with data services exposed to agents through Informatica&#x27;s MCP servers) and Salesforce Data 360 for customer data [<a href="../handbook/appendix-b.html#en-21">21</a>][<a href="../handbook/appendix-b.html#en-77">77</a>].</li><li>Infrastructure and resilience: multi-cloud and edge, CloudHub or customer-managed Runtime Fabric, post-quantum-ready transport, OpenTelemetry and audit logs, and failover.</li></ol>
+<p>Across every layer: Omni Gateway policies (including custom ones), Trusted Agent Identity, the Agent Kill Switch, Agent Visualizer and OpenTelemetry traces, and Informatica governance and lineage.</p>
+<p>Design rule: nothing in layer 1 calls layer 3 or 4 directly. Every agent-to-model and agent-to-tool call traverses layer 2. In operational technology the rule extends one layer down: no agent reaches a control system except through a governed conduit, and independent safety systems sit beneath everything (reference use case 3 applies this to a gas pipeline operator).</p>
+</div>
+</section>
+<section class="slide" id="slide-23" aria-labelledby="slide-23-h">
+<h2 id="slide-23-h"><span class="slide-no">Slide 23</span> Agent Fabric as the control plane for every agent</h2>
+<figure class="slide-img"><img src="img/slide-23.png" width="1601" height="900" alt="Slide 23: Agent Fabric as the control plane for every agent" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Discover, connect, govern and optimize agents, APIs and MCP tools across the enterprise, regardless of which platform built them.</p>
+<p>See</p>
+<p>Agent Registry</p>
+<p>One source of truth for agents, APIs and MCP tools</p>
+<p>Scanners</p>
+<p>Auto-discover agents and MCP servers on AWS, Google, Microsoft, Claude, Databricks, Kong</p>
+<p>LLM Governance</p>
+<p>Token usage, cost and data flows for third-party models</p>
+<p>Act</p>
+<p>MCP Bridge</p>
+<p>Existing APIs become agent-ready MCP tools</p>
+<p>Agent Broker</p>
+<p>Routes multi-step work across agents and tools, with guided determinism</p>
+<p>A2A support</p>
+<p>Pre-built connectors make agents A2A-compliant</p>
+<p>Govern</p>
+<p>Unified LLM &amp; MCP gateway</p>
+<p>One policy point across agents, models and tools</p>
+<p>Trusted Agent Identity</p>
+<p>Acts on a user’s behalf, authorized and auditable</p>
+<p>Agent Kill Switch</p>
+<p>Stops agent activity quickly when needed</p>
+<p>Optimize</p>
+<p>AI cost controls</p>
+<p>Token-based rate limits and spend attribution</p>
+<p>Intelligent model routing</p>
+<p>The right model for each task’s needs</p>
+<p>Agent Visualizer</p>
+<p>See confidence, bottlenecks and risk across the agent network</p>
+<p>WORKS ACROSS</p>
+<p>Agentforce</p>
+<p>Amazon Bedrock &amp; AgentCore</p>
+<p>Google Gemini Enterprise Agent Platform</p>
+<p>Microsoft Copilot Studio &amp; Foundry</p>
+<p>Claude</p>
+<p>Databricks</p>
+<p>Sources: endnote <a href="../handbook/appendix-b.html#en-21">21</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>How Agent Fabric covers the control-plane requirements:</p>
+<ol><li>Breadth: it governs agents regardless of where they were built. Scanners discover and register agents, MCP servers and APIs from ecosystems including Amazon (Bedrock and AgentCore), Google (Gemini Enterprise Agent Platform, formerly Vertex AI), Microsoft (Copilot Studio, Microsoft Foundry), Claude, Databricks and Kong [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Depth: it is built on MuleSoft&#x27;s integration and API management foundation, so agents can take action in the systems where work happens as well as answer questions.</li><li>Enforcement at runtime: policy, identity, rate limits and the kill switch are applied in the gateway path [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>Economics: token visibility, spend attribution and intelligent routing connect AI spend to business value [<a href="../handbook/appendix-b.html#en-21">21</a>].</li></ol>
+<p>Be precise: governance is applied to agent traffic that flows through MuleSoft [<a href="../handbook/appendix-b.html#en-21">21</a>]. The architecture principle is therefore to route every agent-to-model and agent-to-tool call through the fabric. Shadow agents running on endpoints still need endpoint and identity controls. Decoys help find what inventories miss: honeytoken credentials, canary documents and decoy MCP tools that no sanctioned agent should ever touch, so any use flags an agent working outside the governed path. A custom Omni Gateway policy family can plant and watch them [<a href="../handbook/appendix-b.html#en-78">78</a>].</p>
+<p>Relationship to Agentforce: Agentforce is an agent platform for building and running agents in Salesforce. Agent Fabric is the control plane that registers, governs, orchestrates and observes all agents and MCP endpoints, including Agentforce. Both use the same engine for defining how agents reason, plan and act [<a href="../handbook/appendix-b.html#en-21">21</a>].</p>
+</div>
+</section>
+<section class="slide" id="slide-24" aria-labelledby="slide-24-h">
+<h2 id="slide-24-h"><span class="slide-no">Slide 24</span> How MuleSoft and Informatica cover the control-plane requirements</h2>
+<figure class="slide-img"><img src="img/slide-24.png" width="1601" height="900" alt="Slide 24: How MuleSoft and Informatica cover the control-plane requirements" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table: Control-plane requirement, MuleSoft or Informatica capability"><table><thead><tr><th scope="col">Control-plane requirement</th><th scope="col">MuleSoft or Informatica capability</th></tr></thead><tbody><tr><td>One API and common policy across models</td><td>Unified LLM &amp; MCP gateway (AI Gateway)</td></tr><tr><td>Cost visibility and limits</td><td>LLM Governance and AI cost controls</td></tr><tr><td>Dynamic, cost-aware model routing</td><td>Intelligent model routing</td></tr><tr><td>Enterprise capabilities exposed to agents</td><td>MuleSoft APIs + MCP Bridge</td></tr><tr><td>Trusted data and context for agents</td><td>Informatica Multidomain MDM, Data Governance and Catalog, data quality and MCP servers</td></tr><tr><td>Discovery by capability, across vendors</td><td>Agent Registry + Scanners</td></tr><tr><td>Coordinated multi-agent workflows</td><td>Agent Broker with guided determinism</td></tr><tr><td>Identity and bounded authority for agents</td><td>Trusted Agent Identity + mobile approval</td></tr><tr><td>Exposure limits and approvals bound to execution</td><td>Custom Omni Gateway policies (built with the PDK)</td></tr><tr><td>Rapid isolation of a compromised path</td><td>Agent Kill Switch and gateway policies</td></tr><tr><td>Output integrity before production</td><td>Agent Visualizer, with evaluation on any tool</td></tr><tr><td>Sovereign or private execution</td><td>Runtime Fabric deployment of guardrails</td></tr></tbody></table></div>
+<p>Custom: built with the Omni Gateway PDK; not a MuleSoft product.<sup class="cite"><a href="../handbook/appendix-b.html#en-78" aria-label="Endnote 78">78</a></sup></p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-21">21</a>, <a href="../handbook/appendix-b.html#en-77">77</a>, <a href="../handbook/appendix-b.html#en-78">78</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>How to use this slide: it maps each control-plane requirement to a specific MuleSoft or Informatica capability [<a href="../handbook/appendix-b.html#en-1">1</a>][<a href="../handbook/appendix-b.html#en-21">21</a>].</p>
+<ul><li>Trusted data: Informatica Multidomain MDM, Data Governance and Catalog and data quality, with data services exposed to agents through Informatica&#x27;s MCP servers, such as CDGC Metadata Search and Address Verification [<a href="../handbook/appendix-b.html#en-77">77</a>].</li><li>Output integrity: Agent Visualizer adds confidence, bottleneck and hallucination-risk signals [<a href="../handbook/appendix-b.html#en-21">21</a>]. The evaluation itself runs on any tool that scores outcomes before release, with the results recorded in the registry [<a href="../handbook/appendix-b.html#en-62">62</a>][<a href="../handbook/appendix-b.html#en-63">63</a>].</li><li>Custom: Omni Gateway runs custom policies written in Rust and compiled to WebAssembly with the Policy Development Kit [<a href="../handbook/appendix-b.html#en-78">78</a>]. Approval-to-Execution Binding (the executed MCP or A2A action must match its approval, including a freshness check against the gateway&#x27;s own clock and a separate attester), Cross-Session Aggregate-Risk Gate (reserve-then-authorize against a shared exposure budget) and decoy and honeytoken policies (planted credentials and tools that flag any agent working outside the governed path) are custom policies, not MuleSoft products. The customer or partner owns their testing and support.</li></ul>
+</div>
+</section>
+<section class="slide" id="slide-25" aria-labelledby="slide-25-h">
+<h2 id="slide-25-h"><span class="slide-no">Slide 25</span> Coexisting with the hyperscalers’ agent control planes</h2>
+<figure class="slide-img"><img src="img/slide-25.png" width="1601" height="900" alt="Slide 25: Coexisting with the hyperscalers’ agent control planes" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Most enterprises will run more than one agent control plane. Decide which is authoritative for what, and where a vendor-neutral plane adds what no single estate can.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table: Estate, Native agent control plane, Usually authoritative for, MuleSoft Agent Fabric’s role"><table><thead><tr><th scope="col">Estate</th><th scope="col">Native agent control plane</th><th scope="col">Usually authoritative for</th><th scope="col">MuleSoft Agent Fabric’s role</th></tr></thead><tbody><tr><td>Microsoft 365 and Azure</td><td>Agent 365 and Microsoft Entra Agent ID<sup class="cite"><a href="../handbook/appendix-b.html#en-12" aria-label="Endnote 12">12</a></sup></td><td>Identities and inventory of Microsoft agents, and access to Microsoft 365 data</td><td>Registers Copilot Studio and Foundry agents, with common policy on their calls into enterprise systems</td></tr><tr><td>AWS</td><td>Amazon Bedrock AgentCore<sup class="cite"><a href="../handbook/appendix-b.html#en-62" aria-label="Endnote 62">62</a></sup></td><td>Runtime, memory and identity for agents built on AWS</td><td>Registers Bedrock and AgentCore agents and governs their access to enterprise APIs and MCP tools</td></tr><tr><td>Google Cloud</td><td>Gemini Enterprise Agent Platform: Agent Registry, Agent Gateway, Agent Identity<sup class="cite"><a href="../handbook/appendix-b.html#en-47" aria-label="Endnote 47">47</a></sup></td><td>Agents built on Google Cloud</td><td>Registers them under the policy every other estate uses</td></tr><tr><td>Salesforce</td><td>Agentforce</td><td>Agents working in Salesforce data and processes</td><td>Registers and governs Agentforce agents</td></tr><tr><td>Across estates</td><td>No single native plane</td><td>Cross-vendor inventory, policy on calls into enterprise capabilities and data, orchestration, cost and audit</td><td>The vendor-neutral control plane<sup class="cite"><a href="../handbook/appendix-b.html#en-21" aria-label="Endnote 21">21</a></sup></td></tr></tbody></table></div>
+<p>A workable default:  each native plane stays authoritative for identity and runtime in its own estate. Agent Fabric is authoritative for the cross-estate inventory, policy on every call into enterprise capabilities and data, cross-vendor orchestration, and cost and audit. Federate identities and send all telemetry to one trace.</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-12">12</a>, <a href="../handbook/appendix-b.html#en-14">14</a>, <a href="../handbook/appendix-b.html#en-21">21</a>, <a href="../handbook/appendix-b.html#en-47">47</a>, <a href="../handbook/appendix-b.html#en-62">62</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Most enterprises already run more than one agent control plane, so &quot;why another one?&quot; is a fair question. Microsoft describes Agent 365 as &quot;the control-plane for AI agents&quot;, with Microsoft Entra Agent ID for agent identities [<a href="../handbook/appendix-b.html#en-12">12</a>]. AWS offers Amazon Bedrock AgentCore (Runtime, Memory, Gateway for MCP servers, Identity and OpenTelemetry-compatible Observability) [<a href="../handbook/appendix-b.html#en-62">62</a>]. Google&#x27;s Gemini Enterprise Agent Platform includes Agent Registry, Agent Gateway and Agent Identity [<a href="../handbook/appendix-b.html#en-47">47</a>]. Agentforce runs agents in Salesforce data and processes.</p>
+<p>Each governs its own estate well. The answer is a division of labor, agreed up front: which system is authoritative for inventory, identity, policy and telemetry. A workable default keeps each native plane authoritative for identity and runtime inside its estate. MuleSoft Agent Fabric is then authoritative for the cross-estate inventory, policy on every call into enterprise capabilities and data, orchestration across vendors, and cost and audit [<a href="../handbook/appendix-b.html#en-21">21</a>]. Microsoft&#x27;s own Cloud Adoption Framework takes the same approach inside its estate: it names Agent 365, or Entra Agent ID where Agent 365 is not in use at scale, as the authoritative inventory and asks for consistent policy across every agent platform [<a href="../handbook/appendix-b.html#en-14">14</a>].</p>
+</div>
+</section>
+<section class="slide" id="slide-26" aria-labelledby="slide-26-h">
+<h2 id="slide-26-h"><span class="slide-no">Slide 26</span> A 12- to 24-month plan with value in every phase</h2>
+<figure class="slide-img"><img src="img/slide-26.png" width="1601" height="900" alt="Slide 26: A 12- to 24-month plan with value in every phase" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Visibility and one policy point first, federation last, and a slice of a real use case live at every milestone.</p>
+<p>PHASE 01  •  MONTHS 1–3</p>
+<p>Inventory &amp; gateway</p>
+<p>Scan and register every agent, API and MCP server<br>Route LLM and MCP traffic through AI Gateway<br>Baseline token spend and data flows<br>Stand up a governance council and autonomy tiers</p>
+<p>Value: Spend and risk visible by use case, unused agents retired, first use-case slice live</p>
+<p>Exit: 80%+ of known agents registered, new LLM traffic via the gateway</p>
+<p>PHASE 02  •  MONTHS 4–8</p>
+<p>Unlock &amp; route</p>
+<p>Expose the top 10–20 capabilities as APIs and MCP tools<br>Enable intelligent model routing and token limits<br>Publish context-engineering standards<br>Report cost per resolved task</p>
+<p>Value: New agents reuse governed capabilities, and routine work moves to lower-cost models</p>
+<p>Exit: Top capabilities reusable by any agent, cost per outcome reported</p>
+<p>PHASE 03  •  MONTHS 9–14</p>
+<p>Autonomy &amp; trust</p>
+<p>Trusted Agent Identity with bounded delegation<br>Enforce tiers and bind approvals to actions<br>Evaluation in every release pipeline<br>Drill the kill switch and approvers, and red-team monthly</p>
+<p>Value: Agents act in systems of record under bound approvals. Use-case KPI targets met</p>
+<p>Exit: Every production agent has an identity, tier and eval baseline</p>
+<p>PHASE 04  •  MONTHS 15–24</p>
+<p>Federated control plane</p>
+<p>Multi-agent orchestration via Agent Broker and A2A<br>Post-quantum migration for control-plane traffic<br>Federate discovery and registries across domains<br>Swap models without app changes</p>
+<p>Value: All goals met. Use cases at full run rate, and new ones start on shared controls</p>
+<p>Exit: Federated discovery live, PQC plan on track for 2030</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-20">20</a>, <a href="../handbook/appendix-b.html#en-21">21</a>, <a href="../handbook/appendix-b.html#en-29">29</a>, <a href="../handbook/appendix-b.html#en-79">79</a>, <a href="../handbook/appendix-b.html#en-81">81</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Value comes first: this is a reference architecture adopted incrementally, and every phase delivers something the business can see. The research supports the approach: 56% of CEOs report no significant financial benefit from AI so far, yet strong AI foundations make meaningful returns three times more likely [<a href="../handbook/appendix-b.html#en-79">79</a>]. High performers build a repeatable capability instead of accumulating pilots [<a href="../handbook/appendix-b.html#en-80">80</a>], and successful deployments start in adjacent processes, prove clear value, then scale into core workflows, with top performers moving from pilot to full implementation in about 90 days [<a href="../handbook/appendix-b.html#en-81">81</a>]. Each phase is funded against the value the previous one proved.</p>
+<p>By Phase 4 the organization has an agile, model-agnostic control plane that can swap models without recoding applications, and each use case runs at its full run rate.</p>
+<p>Why this sequence:</p>
+<ul><li>Phase 1 is visibility plus a single policy point: Agent Scanners and Agent Registry for inventory, AI Gateway for LLM and MCP traffic, and a governance council and published autonomy tiers (the first 90 days of the CDO Magazine plan [<a href="../handbook/appendix-b.html#en-29">29</a>]). Start new policies in audit mode, then enforce, as Microsoft&#x27;s Cloud Adoption Framework recommends [<a href="../handbook/appendix-b.html#en-14">14</a>]. Value: spend and risk visible by use case, unused agents retired, and the first use-case slice live in assist mode.</li><li>Phase 2 opens up the enterprise: expose the highest-value capabilities through MuleSoft APIs and MCP Bridge, then turn on model routing and token-based rate limits so cost per outcome becomes measurable [<a href="../handbook/appendix-b.html#en-21">21</a>]. Value: every new agent reuses governed capabilities, and routine work moves to lower-cost models.</li><li>Phase 3 hardens trust: Trusted Agent Identity with bounded delegation, enforced tiers with approvals bound to the actions they authorize, kill-switch and approver drills, evaluation in release pipelines and monthly red-teaming. Value: agents can act in systems of record under bound approvals, which is where most of each use case&#x27;s business case sits.</li><li>Phase 4 federates: multi-agent orchestration across domains through Agent Broker and A2A, post-quantum migration for control-plane traffic ahead of the 2030–2031 federal deadlines, and discovery and registries federated across domains. Value: all goals met, with new use cases starting on shared controls.</li><li>Bain [<a href="../handbook/appendix-b.html#en-20">20</a>] supports doing federated discovery and cross-domain routing last, because they add complexity that is only justified once governance and orchestration are mature.</li></ul>
+</div>
+</section>
+<section class="slide" id="slide-27" aria-labelledby="slide-27-h">
+<h2 id="slide-27-h"><span class="slide-no">Slide 27</span> Value delivered at every milestone</h2>
+<figure class="slide-img"><img src="img/slide-27.png" width="1601" height="900" alt="Slide 27: Value delivered at every milestone" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Each phase adds a layer of the control plane and puts more of a real use case into production. Use-case values are illustrative run rates.</p>
+<p>56%</p>
+<p>of CEOs see no significant financial benefit from AI yet<sup class="cite"><a href="../handbook/appendix-b.html#en-79" aria-label="Endnote 79">79</a></sup></p>
+<p>3×</p>
+<p>more likely to see meaningful returns with strong AI foundations<sup class="cite"><a href="../handbook/appendix-b.html#en-79" aria-label="Endnote 79">79</a></sup></p>
+<p>37%</p>
+<p>of organizations attribute any EBIT impact to AI<sup class="cite"><a href="../handbook/appendix-b.html#en-80" aria-label="Endnote 80">80</a></sup></p>
+<p>90 days</p>
+<p>from pilot to full implementation for top performers<sup class="cite"><a href="../handbook/appendix-b.html#en-81" aria-label="Endnote 81">81</a></sup></p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table: Milestone, Use case 1: engagement launch, Use case 2: T+1 settlement, Use case 3: compressor "><table><thead><tr><th scope="col">Milestone</th><th scope="col">Use case 1: engagement launch</th><th scope="col">Use case 2: T+1 settlement</th><th scope="col">Use case 3: compressor reliability</th></tr></thead><tbody><tr><td>Month 3</td><td>Read-only entity resolution and independence agents for one service line: about $0.5M a year</td><td>Fail scoring and triage for one market and asset class: about $0.8M a year</td><td>Advice-only monitoring and diagnostics at 8 of 40 stations: about $0.4M a year</td></tr><tr><td>Month 8</td><td>Letters, budgets and staffing proposals for half of all launches: about $8M a year</td><td>All markets, SSI golden source and one-click fixes: about $5.5M a year</td><td>Planning, crew and permit agents at all 40 stations: about $1.8M a year</td></tr><tr><td>Month 12</td><td>Every launch, SAP setup gated on bound approval, KPI targets met: about $30M a year</td><td>Tier 3 fixes within limits and bound SSI approvals, ready for EU T+1: about $9.8M a year</td><td>Setpoint proposals under bound, 10-minute approvals: about $3M a year</td></tr><tr><td>Month 24: all goals met</td><td>Run rate sustained, adjacent processes added: about $33M cumulative</td><td>Run rate sustained, more asset classes added: about $12M cumulative</td><td>Run rate sustained, more asset types added: about $3.8M cumulative</td></tr></tbody></table></div>
+<p>Benchmark:  typical AI payback is two to four years, against seven to 12 months for other technology.<sup class="cite"><a href="../handbook/appendix-b.html#en-82" aria-label="Endnote 82">82</a></sup> Now 67% of CEOs expect AI returns within one to three years.<sup class="cite"><a href="../handbook/appendix-b.html#en-83" aria-label="Endnote 83">83</a></sup> Read-only first slices pay back sooner than both.</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-79">79</a>–<a href="../handbook/appendix-b.html#en-83">83</a>. Use cases are separate illustrations from different industries; values before platform, model and change costs.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Use this slide to answer the ROI question directly. The top row is the research. More than half of CEOs report no significant financial benefit from AI so far, but organizations with strong AI foundations are three times more likely to report meaningful returns [<a href="../handbook/appendix-b.html#en-79">79</a>]. Of the organizations surveyed, 37% attribute any EBIT impact to AI, and high performers redesign workflows and build a repeatable capability rather than accumulating pilots [<a href="../handbook/appendix-b.html#en-80">80</a>]. Top performers move from pilot to full implementation in about 90 days, starting in adjacent processes and scaling into core workflows once value is proven [<a href="../handbook/appendix-b.html#en-81">81</a>].</p>
+<p>The table shows how each reference use case is phased with the plan. Each column is a separate illustration from a different industry, not a sum. Values are illustrative annual run rates at each milestone, before platform, model and change costs, derived from each use case&#x27;s business case:</p>
+<ul><li>Use case 1 (10,000 launches a year): month 3 covers one service line in one region, about a tenth of launches, with effort down from 14 to 10 hours (about $0.5M). At month 8, half of all launches get letters, budgets and staffing proposals (about $8M: capacity $3.6M, utilization $4.5M). At month 12, every launch is covered, with SAP setup gated on the partner&#x27;s bound approval and all KPI targets met (about $30M). Cumulative value reaches about $33M by month 24.</li><li>Use case 2 (1,500 exceptions a day): month 3 covers one market and asset class, with handling time down from 18 to 13 minutes (about $0.8M). At month 8, all markets are covered, with the SSI golden source and one-click fixes (about $5.5M). At month 12, tier 3 automation runs within cross-session limits and bound SSI approvals, with 40% auto-resolved and 9-minute handling (about $9.8M), plus fewer fails and penalties. The cumulative total is about $12M by month 24.</li><li>Use case 3 (40 stations): month 3 gives advice only, at 8 stations (about $0.4M). At month 8, planning, crew and permit agents run at all stations with no changes to equipment (about $1.8M). At month 12, setpoint proposals run under bound, 10-minute approvals after stop drills pass (about $3M). By month 24 the cumulative value is about $3.8M.</li></ul>
+<p>The pattern: the early milestones release capacity from assembling, checking and drafting in read-only or propose-only modes, and the larger gains arrive once agents can act in systems of record under the approvals and limits that phase 3 puts in place.</p>
+<p>The benchmark band: finance will test the month-3 and month-8 run rates against published payback data. In Deloitte&#x27;s 2025 survey of 1,854 executives in Europe and the Middle East, most reached satisfactory ROI on a typical AI use case within two to four years, against the seven to 12 months expected of technology investments, while only 6% saw payback within a year, 10% see significant ROI from agentic AI today and 85% of the survey’s AI ROI leaders use different frameworks or timeframes for generative and agentic AI [<a href="../handbook/appendix-b.html#en-82">82</a>]. In KPMG&#x27;s 2025 Global CEO Outlook, 67% of 1,350 CEOs expected AI returns within one to three years, where a year earlier most expected three to five [<a href="../handbook/appendix-b.html#en-83">83</a>]. Google Cloud&#x27;s 2026 survey of 2,403 executives found 84% seeing increasing financial returns from AI and 26% seeing returns accelerate [<a href="../handbook/appendix-b.html#en-84">84</a>]. Phasing lets the program beat the benchmark, because read-only slices pay back within months and fund the controls the larger gains depend on.</p>
+</div>
+</section>
+<section class="slide" id="slide-28" aria-labelledby="slide-28-h">
+<h2 id="slide-28-h"><span class="slide-no">Slide 28</span> Owners, decision rights and skills</h2>
+<figure class="slide-img"><img src="img/slide-28.png" width="1601" height="900" alt="Slide 28: Owners, decision rights and skills" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Technology is the smaller part of the work: becoming AI-first “involves 30% technology and 70% people and organization.”<sup class="cite"><a href="../handbook/appendix-b.html#en-85" aria-label="Endnote 85">85</a></sup></p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Table: Role, Owns, Decides"><table><thead><tr><th scope="col">Role</th><th scope="col">Owns</th><th scope="col">Decides</th></tr></thead><tbody><tr><td>Accountable executive</td><td>The program, funding and business cases</td><td>Which phases and use cases proceed</td></tr><tr><td>AI governance council</td><td>Policy, tiers, standards, no-go zones</td><td>High-risk promotions and exceptions</td></tr><tr><td>Business owner (per use case)</td><td>Value, KPIs and the process</td><td>What stays human-led, AI-assisted or AI-led</td></tr><tr><td>Agent sponsor (per agent)</td><td>One agent, registration to retirement</td><td>Recertification, retirement, first incident call</td></tr><tr><td>Platform team</td><td>Registry, gateway, identity, evaluation, observability</td><td>Platform plan and shared policies</td></tr><tr><td>Security and risk</td><td>Threat model, red-teaming, incident response</td><td>Blocking a release, demoting or stopping an agent</td></tr><tr><td>Finance</td><td>Cost attribution and value tracking</td><td>Value reporting and budget thresholds</td></tr></tbody></table></div>
+<p>1 in 4</p>
+<p>AI users say leadership is clearly and consistently aligned on AI, and organizational factors drive more than twice the impact of individual ones<sup class="cite"><a href="../handbook/appendix-b.html#en-86" aria-label="Endnote 86">86</a></sup></p>
+<p>48%</p>
+<p>of the organizations whose AI returns are accelerating set extremely clear ownership and decision rights, and 38% build required AI training into roles<sup class="cite"><a href="../handbook/appendix-b.html#en-84" aria-label="Endnote 84">84</a></sup></p>
+<p>COULD AI?  SHOULD AI?</p>
+<p>Sort every step into human-led, AI-assisted or AI-led before any decision on roles. 57% of leaders who cut staff because of AI now question it.<sup class="cite"><a href="../handbook/appendix-b.html#en-85" aria-label="Endnote 85">85</a>,<a href="../handbook/appendix-b.html#en-87" aria-label="Endnote 87">87</a></sup></p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-84">84</a>–<a href="../handbook/appendix-b.html#en-87">87</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>The plan names one accountable executive and a governance council. This slide shows the day-to-day model beneath them.</p>
+<p>Why it matters: BCG estimates that becoming AI-first &quot;involves 30% technology and 70% people and organization&quot; [<a href="../handbook/appendix-b.html#en-85">85</a>]. In Microsoft&#x27;s 2026 Work Trend Index (20,000 people using AI at work in 10 countries), only one in four said their leadership is clearly and consistently aligned on AI, and organizational factors accounted for more than twice the reported impact of individual ones [<a href="../handbook/appendix-b.html#en-86">86</a>]. In Google Cloud&#x27;s 2026 survey, 48% of the organizations whose AI returns are accelerating had &quot;extremely clear&quot; ownership and decision rights for AI and agentic initiatives, and 38% built required AI training into roles [<a href="../handbook/appendix-b.html#en-84">84</a>].</p>
+<p>The roles: the accountable executive owns the program and decides which phases proceed. The AI governance council (architecture, security, risk, data, finance and the business) owns policy, tiers and no-go zones. The business owner is accountable for value and decides which steps stay human. Each agent has a sponsor who owns it from registration to retirement and recertifies it. The platform team runs the control plane as a product. Security and risk can block a release or demote an agent, and finance owns cost attribution and how value is reported.</p>
+<p>Could AI, should AI: BCG suggests sorting work into human-led, AI-assisted and AI-led by asking whether AI could do each step as well as or better than people, and whether it should, given regulatory risk, customer trust, ethics and safety [<a href="../handbook/appendix-b.html#en-85">85</a>]. Record the answer before any decision on roles: Deloitte&#x27;s 2026 Human Capital Trends found that 57% of leaders who cut staff because of AI have come to question that decision [<a href="../handbook/appendix-b.html#en-87">87</a>]. Build skills in step with the plan: approvers on what they approve, sponsors on the lifecycle, business teams on working alongside agents.</p>
+</div>
+</section>
+<section class="slide" id="slide-29" aria-labelledby="slide-29-h">
+<h2 id="slide-29-h"><span class="slide-no">Slide 29</span> Measure the control plane like a product</h2>
+<figure class="slide-img"><img src="img/slide-29.png" width="1601" height="900" alt="Slide 29: Measure the control plane like a product" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>A balanced scorecard, reported monthly to the executive committee and quarterly to the AI governance board.</p>
+<p>↑</p>
+<p>Agent coverage</p>
+<p>Known agents registered with an owner and a risk tier</p>
+<p>↑</p>
+<p>Governed traffic</p>
+<p>LLM and MCP calls routed through the AI gateway</p>
+<p>↓</p>
+<p>Cost per outcome</p>
+<p>Model spend per resolved task, by use case</p>
+<p>↑</p>
+<p>AI cost visibility</p>
+<p>Spend attributed to an owner and use case within a day</p>
+<p>↑</p>
+<p>Value realized</p>
+<p>Run-rate value of live slices against their business cases</p>
+<p>↑</p>
+<p>Policy enforcement</p>
+<p>Violations blocked before impact versus found afterward</p>
+<p>↓</p>
+<p>Time to contain</p>
+<p>Minutes to stop an agent and hand its work to people</p>
+<p>↑</p>
+<p>Eval pass rate</p>
+<p>Agents meeting quality thresholds before promotion</p>
+<p>↑</p>
+<p>Oversight coverage</p>
+<p>High-risk tier 3–4 actions with approval or audit</p>
+<p>↑</p>
+<p>Oversight effectiveness</p>
+<p>Actions executed exactly as approved, stop drills passed</p>
+<p>↑</p>
+<p>Crypto readiness</p>
+<p>Asymmetric-crypto inventory with a migration plan</p>
+<p>LEADING INDICATORS</p>
+<p>Each metric has an early signal that moves within weeks. Evaluate trajectories and answers, and measure value rather than adoption.<sup class="cite"><a href="../handbook/appendix-b.html#en-60" aria-label="Endnote 60">60</a>,<a href="../handbook/appendix-b.html#en-88" aria-label="Endnote 88">88</a></sup></p>
+<p>Scorecard cadence adapted from endnote <a href="../handbook/appendix-b.html#en-29">29</a>. Oversight metrics draw on endnotes <a href="../handbook/appendix-b.html#en-30">30</a>–<a href="../handbook/appendix-b.html#en-32">32</a>, cost visibility on endnote <a href="../handbook/appendix-b.html#en-8">8</a> and leading indicators on endnotes <a href="../handbook/appendix-b.html#en-60">60</a> and <a href="../handbook/appendix-b.html#en-88">88</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Treat the control plane as a product with an owner, a plan and a scorecard. Arrows show the desired direction. Reporting cadence follows the CDO Magazine plan [<a href="../handbook/appendix-b.html#en-29">29</a>].</p>
+<p>Stress AI cost visibility, because in KPMG&#x27;s Q2 2026 pulse only 26% of organizations had full, real-time visibility into AI operating costs [<a href="../handbook/appendix-b.html#en-8">8</a>]. Also stress time to contain, which includes handing the stopped agent&#x27;s open work to a named person, tested in takeover drills.</p>
+<p>Leading indicators, one per metric, so delivery teams see movement within weeks: unregistered agents found (coverage), new agents launched behind the gateway (governed traffic), cost per successful task (cost per outcome) [<a href="../handbook/appendix-b.html#en-60">60</a>], spend attributed within a day (cost visibility), acceptance rate counting undo and revert as rejections (value) [<a href="../handbook/appendix-b.html#en-60">60</a>], blocked calls per 1,000 (policy enforcement), drill time (time to contain), tool-selection accuracy and plan adherence on sampled traces (eval pass rate) [<a href="../handbook/appendix-b.html#en-60">60</a>], verification latency (oversight coverage), takeover rate (oversight effectiveness) [<a href="../handbook/appendix-b.html#en-60">60</a>], and algorithm agility (crypto readiness). Evaluate the trajectory as well as the answer [<a href="../handbook/appendix-b.html#en-60">60</a>], and measure value instead of adoption. In BCG&#x27;s 2026 survey of close to 12,000 employees and leaders, organizations with agents in their workflows rose from 13% to 30% in a year, yet half said governance for teams of people and AI is unclear [<a href="../handbook/appendix-b.html#en-88">88</a>].</p>
+<p>Questions the board should be able to ask, and management should be able to answer:</p>
+<ol><li>Which agents are running today, who owns and sponsors each one, what tier is it, and when was it last recertified?</li><li>What share of our model and tool traffic is governed by a single policy point?</li><li>Which system is the authoritative record for our agents&#x27; inventory, identity and policy across Microsoft, AWS, Google and Salesforce?</li><li>What do we spend per resolved task, by use case, and is it falling?</li><li>What share of our AI spend can we attribute to an owner and a use case today?</li><li>Which phase of the plan are we in, and what value has each live use-case slice delivered against its business case?</li><li>Before any decision on roles or headcount, have we agreed which work stays human-led, which is AI-assisted and which AI-led, and why?</li><li>How quickly can we stop an agent or revoke its credentials?</li><li>If we switched off our most important agent today, who would take over its work, and when did we last rehearse that?</li><li>Can we prove who, or what, authorized a given action, and on whose behalf?</li><li>Could the people who approve our riskiest agent actions actually stop one in time, and when did we last prove it?</li><li>What happens by default when an approval expires or monitoring goes quiet?</li><li>Which agents passed evaluation before promotion to production?</li><li>Which recognized agentic threats does our design cover, and who owns the gaps?</li><li>If a model provider changed its pricing or suffered an eight-hour outage tomorrow, would our business halt?</li><li>Where does asymmetric cryptography protect our most sensitive data, and what is the migration plan for the 2030–2031 horizon?</li><li>Where can an agent&#x27;s action reach physical equipment, and what independent layer stops it if the agent is wrong?</li></ol>
+<p>Data sources in Agent Fabric: Agent Registry (coverage, owners, tiers), AI Gateway and LLM Governance (traffic, tokens, cost, cost attribution, policy events), Agent Kill Switch and Trusted Agent Identity (containment and authorization records), Agent Visualizer and evaluation results (quality and risk signals). Oversight effectiveness comes from the approval-binding policy&#x27;s events and from kill-switch and approver drill records. Coverage counts who is assigned, while effectiveness shows they could intervene in time [<a href="../handbook/appendix-b.html#en-30">30</a>][<a href="../handbook/appendix-b.html#en-31">31</a>][<a href="../handbook/appendix-b.html#en-32">32</a>]. Value realized comes from business-case tracking agreed with finance: the run-rate value of each live use-case slice against its plan, reported at every milestone.</p>
+</div>
+</section>
+      <nav class="pager" aria-label="Previous and next"><a class="pn prev" href="part-2.html" rel="prev"><span class="pn-dir">Previous</span><span class="pn-title">Architecture, orchestration and trust</span></a><a class="pn next" href="use-case-1.html" rel="next"><span class="pn-dir">Next</span><span class="pn-title">Use case 1: Professional services engagement launch</span></a></nav>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 John Fisher · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> · <a href="notices.html">Notices</a> · <a href="https://github.com/johnfisher-ai/ai-control-plane-handbook">Source on GitHub</a> · <a href="https://www.linkedin.com/in/johnrfisher">LinkedIn</a></p>
+      <p class="small">John Fisher works for Salesforce. The views here are his own, not Salesforce’s, and are drawn from public information; this deck is not affiliated with or endorsed by Salesforce. Product names are trademarks of their owners; the notices list them. Set in Plus Jakarta Sans, licensed under the SIL Open Font License 1.1.</p>
+    </div>
+  </footer>
+  <script>
+    (function () { var d = document.getElementById('doc-nav'); var m = window.matchMedia('(min-width: 1000px)'); function s() { d.open = m.matches; } s(); m.addEventListener ? m.addEventListener('change', s) : m.addListener(s); var c = d.querySelector('[aria-current="page"]'); if (c && m.matches) { d.scrollTop = Math.max(0, c.offsetTop - d.clientHeight / 3); } })();
+  </script>
+</body>
+</html>

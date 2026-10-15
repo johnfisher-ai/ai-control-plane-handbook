@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why a control plane, and what it is · The AI Control Plane: executive deck</title>
+  <meta name="description" content="Slides 1 to 8 of the executive deck, with the slide text and speaker notes: The AI Control Plane; The control plane is the next infrastructure advantage;…">
+  <meta name="author" content="John Fisher">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0F172A">
+  <link rel="canonical" href="https://johnfisher-ai.github.io/ai-control-plane-handbook/deck/part-1.html">
+  <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The AI Control Plane Handbook">
+  <meta property="og:title" content="Why a control plane, and what it is">
+  <meta property="og:description" content="Slides 1 to 8 of the executive deck, with the slide text and speaker notes: The AI Control Plane; The control plane is the next infrastructure advantage;…">
+  <meta property="og:url" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/deck/part-1.html">
+  <meta property="og:image" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/assets/img/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The AI Control Plane Handbook, by John Fisher, 2026 edition">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="doc-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#1E293B"/><g stroke="#64748B" stroke-width="1.6"><line x1="9" y1="9" x2="19" y2="15"/><line x1="8" y1="23" x2="19" y2="15"/><line x1="25" y1="25" x2="19" y2="15"/><line x1="24" y1="7" x2="19" y2="15"/></g><g fill="#0F172A" stroke="#94A3B8" stroke-width="1.4"><circle cx="9" cy="9" r="2.6"/><circle cx="8" cy="23" r="2.6"/><circle cx="25" cy="25" r="2.6"/><circle cx="24" cy="7" r="2.6"/></g><circle cx="19" cy="15" r="4.6" fill="#38BDF8"/></svg>
+        <span>The AI Control Plane Handbook</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../handbook/index.html">Handbook</a></li><li><a href="../deck/index.html" aria-current="true">Executive deck</a></li><li><a href="../toolkit/index.html">Toolkit</a></li><li><a href="../quantum/index.html">Quantum briefing</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap doc-layout">
+    <details class="doc-nav" id="doc-nav">
+      <summary>Deck contents</summary>
+      <nav aria-label="Executive deck contents">
+        <ol class="doc-toc"><li><a href="index.html"><span class="n" aria-hidden="true">•</span><span>About this deck</span></a></li><li><a href="part-1.html" aria-current="page"><span class="n" aria-hidden="true">•</span><span>Why a control plane, and what it is</span></a><ol class="onpage"><li><a href="#slide-1">1. The AI Control Plane</a></li><li><a href="#slide-2">2. The control plane is the next infrastructure advantage</a></li><li><a href="#slide-3">3. The infrastructure inflection point</a></li><li><a href="#slide-4">4. Adoption is outrunning governance</a></li><li><a href="#slide-5">5. Design for a range of possible futures</a></li><li><a href="#slide-6">6. From fragmented AI plumbing to a governed control plane</a></li><li><a href="#slide-7">7. What an enterprise AI control plane does</a></li><li><a href="#slide-8">8. Manage every agent through a lifecycle</a></li></ol></li><li><a href="part-2.html"><span class="n" aria-hidden="true">•</span><span>Architecture, orchestration and trust</span></a></li><li><a href="part-3.html"><span class="n" aria-hidden="true">•</span><span>From north star to plan</span></a></li><li><a href="use-case-1.html"><span class="n" aria-hidden="true">•</span><span>Use case 1: Professional services engagement launch</span></a></li><li><a href="use-case-2.html"><span class="n" aria-hidden="true">•</span><span>Use case 2: Capital markets T+1 settlement exceptions</span></a></li><li><a href="use-case-3.html"><span class="n" aria-hidden="true">•</span><span>Use case 3: Energy pipeline compressor reliability</span></a></li><li><a href="closing.html"><span class="n" aria-hidden="true">•</span><span>Closing and standards dates</span></a></li><li><a href="notices.html"><span class="n" aria-hidden="true">•</span><span>Notices and about the author</span></a></li></ol>
+      </nav>
+    </details>
+    <main id="main" class="doc-main">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Executive deck</a></li><li><span aria-current="page">Why a control plane, and what it is</span></li></ol></nav>
+      <p class="doc-kicker">Slides 1–8</p>
+      <h1>Why a control plane, and what it is</h1>
+<section class="slide" id="slide-1" aria-labelledby="slide-1-h">
+<h2 id="slide-1-h"><span class="slide-no">Slide 1</span> The AI Control Plane</h2>
+<figure class="slide-img"><img src="img/slide-01.png" width="1601" height="900" alt="Slide 1: The AI Control Plane" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Orchestrating intelligence across the agentic enterprise</p>
+<p>Architecture</p>
+<p>Orchestration</p>
+<p>Trust &amp; resilience</p>
+<p>John Fisher   |   2026</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Welcome executive leadership. Today we examine why standard cloud and application architectures are buckling under agentic AI. As enterprises transition from passive chatbots to autonomous, multi-agent systems, models alone will no longer provide competitive advantage, which will come instead from the intelligence control plane that orchestrates them.</p>
+<p>Framing for this audience: this briefing explains what an enterprise AI control plane is and turns it into a north-star architecture and a 12- to 24-month plan that delivers value in every phase. Along the way we show where MuleSoft’s API-led connectivity (exposing enterprise applications as governed APIs and MCP tools) and MuleSoft Agent Fabric (the control plane for agents built on any platform) fit.</p>
+<p>We then walk through three reference use cases, in professional services, capital markets and energy, and close with three decisions for the next 90 days.</p>
+<p>Bracketed numbers in these notes refer to the endnotes in the handbook&#x27;s Appendix B.</p>
+<p>John Fisher works for Salesforce. The views here are his own, not Salesforce’s, and are drawn from public information; this deck is not affiliated with or endorsed by Salesforce. Product names are trademarks of their owners. Illustrative figures are not results from any customer.</p>
+</div>
+</section>
+<section class="slide" id="slide-2" aria-labelledby="slide-2-h">
+<h2 id="slide-2-h"><span class="slide-no">Slide 2</span> The control plane is the next infrastructure advantage</h2>
+<figure class="slide-img"><img src="img/slide-02.png" width="1601" height="900" alt="Slide 2: The control plane is the next infrastructure advantage" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>1. AI is outgrowing point-to-point integration.</p>
+<p>Agents, models and workloads now span cloud, edge, SaaS and devices. Wiring each pair by hand multiplies cost, risk and lock-in.</p>
+<p>2. A control plane governs who acts, and how.</p>
+<p>It rests on architecture, orchestration, and trust, security and resilience.<sup class="cite"><a href="../handbook/appendix-b.html#en-1" aria-label="Endnote 1">1</a></sup></p>
+<p>3. MuleSoft can realize both halves.</p>
+<p>Its API-led connectivity exposes enterprise applications as governed APIs and MCP tools. Agent Fabric discovers, governs, routes and meters agents from any vendor.</p>
+<p>4. Build in phases, with value in every phase.</p>
+<p>Foundations first (inventory, one gateway, tiers, identity), with a slice of a real use case live at every milestone.</p>
+<p>DECISIONS REQUESTED</p>
+<p>Moves for the next 90 days</p>
+<p>01. Name one accountable owner and a governance council for agents, models and AI spend.</p>
+<p>02. Fund Phase 1: inventory every agent, route LLM and MCP traffic through one AI gateway, and put the first use-case slice live.</p>
+<p>03. Make API-led connectivity, MCP and A2A the enterprise standard for agent access.</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-21">21</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Talk track (two minutes):</p>
+<ol><li>AI is spreading across clouds, applications, devices and the edge. Infrastructure now has to coordinate models, agents, workloads and decisions as well as host applications.</li><li>The answer is an enterprise control plane: a governed layer that decides who can act, what data can be accessed, how workloads run, and within which cost, latency and regulatory limits [<a href="../handbook/appendix-b.html#en-1">1</a>]. It rests on three capabilities: architecture, orchestration, and trust/security/resilience.</li><li>MuleSoft can realize both halves of that problem. Its API-led connectivity turns systems of record into governed APIs and MCP tools so agents can act. Agent Fabric is the control plane that discovers, governs, orchestrates and meters agents built on any platform [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>The priority for the next 12 to 24 months is to architect a stronger foundation, not to complete the agentic transition [<a href="../handbook/appendix-b.html#en-1">1</a>]. That does not mean waiting for returns: each phase also puts a slice of a real use case into production, so value arrives from the first milestone and each phase is funded against the value the previous one proved [<a href="../handbook/appendix-b.html#en-79">79</a>][<a href="../handbook/appendix-b.html#en-81">81</a>].</li></ol>
+<p>Close this slide with the three asks on the right. We return to them at the end.</p>
+</div>
+</section>
+<section class="slide" id="slide-3" aria-labelledby="slide-3-h">
+<h2 id="slide-3-h"><span class="slide-no">Slide 3</span> The infrastructure inflection point</h2>
+<figure class="slide-img"><img src="img/slide-03.png" width="1601" height="900" alt="Slide 3: The infrastructure inflection point" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Agent adoption is outpacing the integration and governance needed to run it safely.</p>
+<p>96%</p>
+<p>of IT leaders say AI agent success depends on integration across systems<sup class="cite"><a href="../handbook/appendix-b.html#en-2" aria-label="Endnote 2">2</a></sup></p>
+<p>12. agents in use at the average enterprise, projected to grow 67% within two years<sup class="cite"><a href="../handbook/appendix-b.html#en-2" aria-label="Endnote 2">2</a></sup></p>
+<p>50%</p>
+<p>of agents still run in silos, outside any coordinated multi-agent system<sup class="cite"><a href="../handbook/appendix-b.html#en-2" aria-label="Endnote 2">2</a></sup></p>
+<p>40%+</p>
+<p>of agentic AI projects are expected to be canceled by end-2027 over cost, value or risk controls<sup class="cite"><a href="../handbook/appendix-b.html#en-6" aria-label="Endnote 6">6</a></sup></p>
+<p>2–5 yrs</p>
+<p>Horizon architecture</p>
+<p>Replace a point-in-time target state with a two- to five-year architecture vision tied to business priorities and maturity gaps.<sup class="cite"><a href="../handbook/appendix-b.html#en-15" aria-label="Endnote 15">15</a></sup></p>
+<p>12–24 mo</p>
+<p>Execution window</p>
+<p>Spend the next 12 to 24 months building the controls that keep options open as the agentic transition unfolds.<sup class="cite"><a href="../handbook/appendix-b.html#en-1" aria-label="Endnote 1">1</a></sup></p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-2">2</a>, <a href="../handbook/appendix-b.html#en-5">5</a>, <a href="../handbook/appendix-b.html#en-6">6</a>, <a href="../handbook/appendix-b.html#en-15">15</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Emphasize the urgency: organizations that wait 24 months to address agent orchestration risk severe technical debt. Industry evidence shows point-to-point LLM integrations are already straining under production cost and compliance pressures, so leaders must establish an enterprise control layer now.</p>
+<p>Supporting data:</p>
+<ul><li>2026 Connectivity Benchmark (Salesforce/MuleSoft, 1,050 IT leaders surveyed late 2025) [<a href="../handbook/appendix-b.html#en-2">2</a>][<a href="../handbook/appendix-b.html#en-5">5</a>]: 96% say agent success depends on integration across systems. Organizations use an average of 12 agents, a number projected to climb 67% within two years, and 50% of agents operate in isolated silos. Of those surveyed, 86% agree that without proper integration agents add complexity rather than value, and 82% cite data integration as one of their biggest AI challenges.</li><li>Gartner predicts that more than 40% of agentic AI projects will be canceled by the end of 2027 because of escalating costs, unclear business value or inadequate risk controls [<a href="../handbook/appendix-b.html#en-6">6</a>].</li><li>Agentic enterprises need a &quot;horizon architecture&quot;: a two- to five-year vision tied to business priorities and maturity gaps [<a href="../handbook/appendix-b.html#en-15">15</a>]. The 12- to 24-month priority is architecting the controls [<a href="../handbook/appendix-b.html#en-1">1</a>].</li><li>The next slide adds four large 2026 studies that point the same way, and the size of the prize for orchestrating well.</li></ul>
+</div>
+</section>
+<section class="slide" id="slide-4" aria-labelledby="slide-4-h">
+<h2 id="slide-4-h"><span class="slide-no">Slide 4</span> Adoption is outrunning governance</h2>
+<figure class="slide-img"><img src="img/slide-04.png" width="1601" height="900" alt="Slide 4: Adoption is outrunning governance" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Four large studies find agents spreading faster than the controls around them. Each measures something different, so read each on its own terms.</p>
+<p>21%</p>
+<p>of companies planning agentic AI report a mature model for agent governance, and close to three-quarters plan to deploy agents within two years<sup class="cite"><a href="../handbook/appendix-b.html#en-7" aria-label="Endnote 7">7</a></sup></p>
+<p>Deloitte, State of AI in the Enterprise 2026: 3,235 leaders</p>
+<p>62%</p>
+<p>of large US organizations are building, deploying or developing AI agents, and 49% have set boundaries where agents may not decide on their own<sup class="cite"><a href="../handbook/appendix-b.html#en-8" aria-label="Endnote 8">8</a></sup></p>
+<p>KPMG AI Quarterly Pulse, Q3 2026: 314 leaders</p>
+<p>80%+</p>
+<p>of Fortune 500 companies use active agents built with low-code tools, and 29% of employees have turned to unsanctioned agents<sup class="cite"><a href="../handbook/appendix-b.html#en-9" aria-label="Endnote 9">9</a></sup></p>
+<p>Microsoft Cyber Pulse, February 2026: telemetry and a commissioned survey</p>
+<p>5%</p>
+<p>of companies are “future-built” for AI while 60% see hardly any material value. Agents’ share of AI value rises from 17% to 29% by 2028<sup class="cite"><a href="../handbook/appendix-b.html#en-10" aria-label="Endnote 10">10</a></sup></p>
+<p>BCG, The Widening AI Value Gap, September 2025</p>
+<p>ORCHESTRATION IS THE PRIZE</p>
+<p>US$45B</p>
+<p>autonomous-agent market by 2030 if enterprises orchestrate agents well, 15% to 30% above the US$35B baseline<sup class="cite"><a href="../handbook/appendix-b.html#en-4" aria-label="Endnote 4">4</a></sup></p>
+<p>The maturity gap:  80% of organizations call their basic automation mature, but only 28% say so once AI agents are included.<sup class="cite"><a href="../handbook/appendix-b.html#en-4" aria-label="Endnote 4">4</a></sup></p>
+<p>What it means:  put inventory, one policy point and autonomy tiers in place before scaling. The surveys define adoption differently, so do not read them as one trend.</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-4">4</a>, <a href="../handbook/appendix-b.html#en-7">7</a>–<a href="../handbook/appendix-b.html#en-10">10</a>. Survey samples, dates and definitions differ.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Use this slide to show that the gap is not a vendor talking point. Four large 2026 studies, each with its own definition of adoption:</p>
+<ul><li>Deloitte, State of AI in the Enterprise 2026 (3,235 business and IT leaders in 24 countries, surveyed August–September 2025): close to three-quarters of companies plan to deploy agentic AI within two years, but only 21% of them report a mature model for agent governance [<a href="../handbook/appendix-b.html#en-7">7</a>].</li><li>KPMG AI Quarterly Pulse, Q3 2026 (314 US leaders at companies with revenue of $1 billion or more): 62% are building, deploying or developing AI agents, and 49% have set boundaries where agents may not make decisions on their own [<a href="../handbook/appendix-b.html#en-8">8</a>].</li><li>Microsoft Cyber Pulse (February 2026): by Microsoft&#x27;s own telemetry, more than 80% of Fortune 500 companies use active agents built with low-code or no-code tools, and a Microsoft-commissioned survey of more than 1,700 data security professionals found that 29% of employees have turned to unsanctioned AI agents [<a href="../handbook/appendix-b.html#en-9">9</a>].</li><li>BCG, The Widening AI Value Gap (September 2025): 5% of companies are &quot;future-built&quot; for AI, 60% report hardly any material value, and AI agents&#x27; share of AI value is expected to rise from about 17% in 2025 to 29% by 2028 [<a href="../handbook/appendix-b.html#en-10">10</a>].</li></ul>
+<p>Do not chart these as one trend: they measure plans, building and active use, with different samples and dates.</p>
+<p>The prize: Deloitte&#x27;s 2026 technology predictions put the autonomous-agent market at about US$8.5 billion in 2026 and US$35 billion by 2030, and estimate that better orchestration and risk management could lift the 2030 figure by 15% to 30%, to as much as US$45 billion, and the same research found 80% call their basic automation mature, but only 28% once AI agents are included [<a href="../handbook/appendix-b.html#en-4">4</a>].</p>
+</div>
+</section>
+<section class="slide" id="slide-5" aria-labelledby="slide-5-h">
+<h2 id="slide-5-h"><span class="slide-no">Slide 5</span> Design for a range of possible futures</h2>
+<figure class="slide-img"><img src="img/slide-05.png" width="1601" height="900" alt="Slide 5: Design for a range of possible futures" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Whether platforms concentrate or federate, and whether people or agents mediate the interface, are likely to shape the next five years.</p>
+<p>CONCENTRATED  •  AGENT-MEDIATED</p>
+<p>Hyperscaler-led control</p>
+<p>A handful of hyperscalers and AI platform providers run the control plane. Agents are the main consumers of enterprise services.</p>
+<p>FEDERATED  •  AGENT-MEDIATED</p>
+<p>Open agent ecosystems</p>
+<p>Agents from many vendors discover each other and transact through open protocols, with shared standards for trust, cost and payments.</p>
+<p>CONCENTRATED  •  HUMAN-MEDIATED</p>
+<p>Suite-centric enterprise</p>
+<p>AI is embedded inside a few large SaaS suites, and people still drive most work through familiar applications.</p>
+<p>FEDERATED  •  HUMAN-MEDIATED</p>
+<p>Constraint-anchored estates</p>
+<p>Sovereignty, latency or resilience requirements keep execution distributed across regions, domains and edge sites.</p>
+<p>NO-REGRET MOVES</p>
+<p>What holds in every quadrant</p>
+<p>Capabilities as governed services, independent of channel</p>
+<p>One identity, policy and audit model across vendors</p>
+<p>Models and platforms designed to be replaced</p>
+<p>Verification of every actor, human or machine</p>
+<p>A vendor-neutral control plane hedges across all four.</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-19">19</a>. Quadrant names are illustrative shorthand.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Two major uncertainties are likely to shape the next five years [<a href="../handbook/appendix-b.html#en-1">1</a>]: whether platforms become more concentrated or more federated, and whether interfaces remain human-mediated or become agent-mediated. Each combination implies different organizing logic, so optimizing for a single expected end state is risky.</p>
+<p>Evidence from executive interviews [<a href="../handbook/appendix-b.html#en-1">1</a>] (paraphrased): a banking leader expects a handful of hyperscalers plus a few AI platform providers to dominate the control plane. A defense technology executive notes that sovereign AI may need a separate environment because data must stay pinned to a country. A pharma architecture director argues that multi-cloud only makes sense with a strong operational or resilience rationale, because every data movement adds cost and complexity.</p>
+<p>The point for this room is that the control plane is how you hedge: if identity, policy, audit and routing live in a vendor-neutral layer, you can move between quadrants without re-platforming. This is &quot;planned impermanence&quot; [<a href="../handbook/appendix-b.html#en-19">19</a>]: replaceable components, explicit re-evaluation, and an architecture built to change.</p>
+<p>Note: the quadrant names on the slide are illustrative shorthand.</p>
+</div>
+</section>
+<section class="slide" id="slide-6" aria-labelledby="slide-6-h">
+<h2 id="slide-6-h"><span class="slide-no">Slide 6</span> From fragmented AI plumbing to a governed control plane</h2>
+<figure class="slide-img"><img src="img/slide-06.png" width="1601" height="900" alt="Slide 6: From fragmented AI plumbing to a governed control plane" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Without a control plane</p>
+<p>With an enterprise control plane</p>
+<p>Agents &amp; apps</p>
+<p>Frontier</p>
+<p>RAG layer</p>
+<p>Open-source</p>
+<p>Gateways</p>
+<p>Specialized</p>
+<p>MLOps &amp; data</p>
+<p>Self-hosted &amp; SaaS</p>
+<p>Agents &amp; apps</p>
+<p>Frontier</p>
+<p>RAG layer</p>
+<p>Open-source</p>
+<p>Gateways</p>
+<p>Specialized</p>
+<p>MLOps &amp; data</p>
+<p>Self-hosted &amp; SaaS</p>
+<p>Control plane<br>routing • policy • audit</p>
+<p>Siloed policies<br>guardrails differ by team<br>No cost visibility<br>tokens untracked and unlimited<br>No governance<br>no owner, no audit trail</p>
+<p>Vendor lock-in<br>each app wired to one model<br>Duplicated code<br>every team rebuilds connectors<br>No fallback<br>an outage stops the business</p>
+<p>One API<br>Dynamic routing<br>Failover visibility<br>Automatic fallback</p>
+<p>Credential guarding<br>Common policy<br>No vendor lock-in<br>Enterprise governance</p>
+<p>Adapted from endnote <a href="../handbook/appendix-b.html#en-1">1</a>; see also endnotes <a href="../handbook/appendix-b.html#en-3">3</a> and <a href="../handbook/appendix-b.html#en-21">21</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Highlight the contrast depicted here [<a href="../handbook/appendix-b.html#en-1">1</a>]. On the left is the default path: every team purchases separate subscriptions, writes bespoke API wrappers, and stores API keys in plaintext environment variables. On the right, the control plane normalizes ingestion, decouples models from applications, and enforces uniform compliance.</p>
+<p>Additional talking points:</p>
+<ul><li>The right-hand panel lists the target outcomes (the author&#x27;s synthesis): one API, dynamic routing, failover visibility, automatic fallback, credential guarding, common policy, no vendor lock-in and enterprise governance. The principles behind them come from [<a href="../handbook/appendix-b.html#en-1">1</a>]: dynamic routing, common policy, governed model choice per task within cost, latency and regulatory limits, and avoiding lock-in. The gateway features map to MuleSoft Agent Fabric [<a href="../handbook/appendix-b.html#en-21">21</a>].</li><li>The Forbes article [<a href="../handbook/appendix-b.html#en-3">3</a>] (a Nutanix-sponsored BrandVoice piece, July 2026) explains why the left side breaks at scale: agents generate thousands of small, context-heavy calls across models and tools, so token costs become unpredictable and governance has to be designed in rather than patched later.</li><li>MuleSoft mapping: AI Gateway is the &quot;one API&quot; on the right, Agent Registry and Scanners fix &quot;no governance&quot;, Trusted Agent Identity addresses credential guarding, and cost controls and model routing address cost blindness [<a href="../handbook/appendix-b.html#en-21">21</a>].</li></ul>
+</div>
+</section>
+<section class="slide" id="slide-7" aria-labelledby="slide-7-h">
+<h2 id="slide-7-h"><span class="slide-no">Slide 7</span> What an enterprise AI control plane does</h2>
+<figure class="slide-img"><img src="img/slide-07.png" width="1601" height="900" alt="Slide 7: What an enterprise AI control plane does" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>A governed, intelligent layer that decides who can act, what data they can reach, how work executes, and within which cost, latency and regulatory limits.</p>
+<p>Architecture</p>
+<p>FOUNDATION</p>
+<p>Exposes enterprise capabilities securely and flexibly across channels, agents, clouds, edge and on-premises systems.</p>
+<p>Can agents safely reach what the business can do?</p>
+<p>Orchestration</p>
+<p>DECISION LAYER</p>
+<p>Coordinates models, agents, workloads and decisions enterprise-wide: who acts, where, and under which constraints.</p>
+<p>Which model and agent should handle this task, and where?</p>
+<p>Trust &amp; resilience</p>
+<p>TRUST LAYER</p>
+<p>Establishes identity, authority, integrity and control across every human and machine interaction, continuously.</p>
+<p>Can we prove who acted, on whose authority, and why?</p>
+<p>Not SOA 2.0. The control plane is event-driven: it exposes reusable services and coordinates workflows as conditions change.</p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-1">1</a>, <a href="../handbook/appendix-b.html#en-11">11</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Definition: the enterprise control plane is a governed, intelligent layer that mediates decisions across systems: who can act, what data can be accessed, how workloads execute, and how agents operate within defined cost, latency and regulatory boundaries [<a href="../handbook/appendix-b.html#en-1">1</a>]. It resembles service-oriented architecture but is more event-driven: it coordinates workflows as conditions evolve rather than simply exposing reusable services.</p>
+<p>The control plane rests on architecture (the foundation), orchestration (the decision layer) and trust, security and resilience (the trust layer).</p>
+<p>Deeper research (HCLTech [<a href="../handbook/appendix-b.html#en-11">11</a>]): evaluate platforms by what they govern as well as by what they do. Control planes compete for authority, and once embedded they shape how every other system connects. HCLTech names identity (authority), work orchestration (coordination), developer value chains (execution), data governance (intelligence) and hybrid infrastructure (resilience and sovereignty) as the consequential planes, and warns that an agent without identity constraints is automation without accountability [<a href="../handbook/appendix-b.html#en-11">11</a>]. Fragmented control planes raise integration cost, risk exposure and inconsistency. Most enterprises span several ecosystems, so the real challenge is orchestrating control planes across them, which opens the way for a vendor-neutral agent control plane.</p>
+</div>
+</section>
+<section class="slide" id="slide-8" aria-labelledby="slide-8-h">
+<h2 id="slide-8-h"><span class="slide-no">Slide 8</span> Manage every agent through a lifecycle</h2>
+<figure class="slide-img"><img src="img/slide-08.png" width="1601" height="900" alt="Slide 8: Manage every agent through a lifecycle" loading="lazy" decoding="async"></figure>
+<details class="slide-text"><summary>Slide text</summary>
+<div class="slide-text-body">
+<p>Agents need the discipline applied to people and systems: onboarding, identity, supervision, review and, eventually, retirement. The control plane enforces each stage.</p>
+<p>01. Propose</p>
+<p>A business owner names the use case, the value expected and the tier requested.</p>
+<p>Registry intake</p>
+<p>02. Register &amp; onboard</p>
+<p>Owner and sponsor, risk tier, system card and its own identity.</p>
+<p>Registry and identity service</p>
+<p>03. Evaluate</p>
+<p>Tested against success criteria and a red-team suite before it acts.</p>
+<p>Evaluation service</p>
+<p>04. Promote</p>
+<p>Moves up a tier only on evidence.</p>
+<p>Registry tier and gateway policy</p>
+<p>05. Operate &amp; monitor</p>
+<p>Traffic, cost and behavior observed and limited.</p>
+<p>Gateway, observability, cost controls</p>
+<p>06. Recertify</p>
+<p>On a schedule, the sponsor confirms it is still needed, in the right tier, with the right permissions.</p>
+<p>Registry review workflow</p>
+<p>07. Retire</p>
+<p>Credentials revoked, tools unbound, records kept.</p>
+<p>Identity revocation and audit logs</p>
+<p>Agents without an owner are the ones that linger.  Assign a sponsor at registration and move sponsorship when people change roles. Microsoft Entra Agent ID does this automatically to prevent orphaned agents.<sup class="cite"><a href="../handbook/appendix-b.html#en-12" aria-label="Endnote 12">12</a></sup></p>
+<p>Research signal:  manage agents much like a workforce, with onboarding, digital identity, immutable logs, human supervisors and retirement planning.<sup class="cite"><a href="../handbook/appendix-b.html#en-13" aria-label="Endnote 13">13</a></sup> Put identity, ownership, access and monitoring under one governance layer.<sup class="cite"><a href="../handbook/appendix-b.html#en-14" aria-label="Endnote 14">14</a></sup></p>
+<p>Sources: endnotes <a href="../handbook/appendix-b.html#en-12">12</a>–<a href="../handbook/appendix-b.html#en-14">14</a>.</p>
+</div>
+</details>
+<h3 class="notes-h">Speaker notes</h3>
+<div class="notes">
+<p>Recertification and retirement are the stages most programs skip. The registry and the kill switch are already in the design. This slide makes the whole lifecycle explicit, with the control-plane capability that enforces each stage.</p>
+<ol><li>Propose: a business owner names the use case, the expected value and the autonomy tier requested. Intake happens in the agent registry.</li><li>Register and onboard: the agent gets an owner and a sponsor, a risk tier, a system card and its own identity.</li><li>Evaluate: it is tested against its success criteria and a red-team suite before it acts.</li><li>Promote: it moves up a tier only on evidence (see the tier slides).</li><li>Operate and monitor: its traffic, cost and behavior are observed and limited by the gateway and observability.</li><li>Recertify: on a schedule, its sponsor confirms it is still needed, in the right tier and with the right permissions.</li><li>Retire: credentials revoked, tools unbound, records kept.</li></ol>
+<p>Research: Deloitte&#x27;s Tech Trends 2026 recommends managing agents much like a workforce, with onboarding, digital identities, immutable logs of every action, human supervisors at key decision points and, eventually, retirement planning [<a href="../handbook/appendix-b.html#en-13">13</a>]. Microsoft&#x27;s Cloud Adoption Framework calls for a centralized agent governance layer that enforces consistent identity, ownership, access control and continuous monitoring for all agents [<a href="../handbook/appendix-b.html#en-14">14</a>]. Microsoft Entra Agent ID moves sponsorship automatically when a sponsor changes roles or leaves, to prevent orphaned agents [<a href="../handbook/appendix-b.html#en-12">12</a>].</p>
+</div>
+</section>
+      <nav class="pager" aria-label="Previous and next"><a class="pn prev" href="index.html" rel="prev"><span class="pn-dir">Previous</span><span class="pn-title">Executive deck</span></a><a class="pn next" href="part-2.html" rel="next"><span class="pn-dir">Next</span><span class="pn-title">Architecture, orchestration and trust</span></a></nav>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 John Fisher · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> · <a href="notices.html">Notices</a> · <a href="https://github.com/johnfisher-ai/ai-control-plane-handbook">Source on GitHub</a> · <a href="https://www.linkedin.com/in/johnrfisher">LinkedIn</a></p>
+      <p class="small">John Fisher works for Salesforce. The views here are his own, not Salesforce’s, and are drawn from public information; this deck is not affiliated with or endorsed by Salesforce. Product names are trademarks of their owners; the notices list them. Set in Plus Jakarta Sans, licensed under the SIL Open Font License 1.1.</p>
+    </div>
+  </footer>
+  <script>
+    (function () { var d = document.getElementById('doc-nav'); var m = window.matchMedia('(min-width: 1000px)'); function s() { d.open = m.matches; } s(); m.addEventListener ? m.addEventListener('change', s) : m.addListener(s); var c = d.querySelector('[aria-current="page"]'); if (c && m.matches) { d.scrollTop = Math.max(0, c.offsetTop - d.clientHeight / 3); } })();
+  </script>
+</body>
+</html>
