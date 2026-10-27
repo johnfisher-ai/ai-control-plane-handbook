@@ -42,9 +42,13 @@ The site is plain HTML and CSS with no build step. GitHub Pages publishes it fro
 
 The pages in this repository are the master copy of the handbook and its companions. Edit them directly. The Word and PowerPoint editions the site was first converted from are no longer maintained, and no PDF files are kept here. There are two kinds of download. The executive deck's one-slide PowerPoint files in `deck/slides/`, one per slide, each carry the slide's speaker notes and a credit and license note; the slide images are renders of those slides, so a change to what a slide shows needs a new image and a new download as well as a change to its slide text. The toolkit's templates are in one Word document, `toolkit/downloads/ai-control-plane-assessment-templates.docx`: Part 1 is the blank templates of Section 7 and Part 2 the filled-in templates of Section 8. It is the only Word file in the repository, and it is generated from those pages, so a change to a template on the site needs a new download too.
 
+## How changes are published
+
+Changes are committed to the `main` branch, one commit for each change or round of edits, and GitHub Pages publishes `main` within a few minutes. The commit history records what changed and when, and any change can be undone with a single revert. A change that touches a slide, a template or the text of a page updates its downloads and the search index in the same commit.
+
 ## Editions
 
-Each edition is a Git tag. Edition 2026.1 (`v2026.1`, October 2026) is the first public edition. Between editions, corrections and additions are made on the pages and listed with their dates on [`whats-new.html`](whats-new.html).
+Each edition is a Git tag with a matching GitHub release. Edition 2026.1 (`v2026.1`, October 2026) is the first public edition. Between editions, corrections and additions are made on the pages and listed with their dates on [`whats-new.html`](whats-new.html).
 
 ## License
 
