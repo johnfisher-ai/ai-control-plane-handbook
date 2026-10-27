@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>From north star to plan · The AI Control Plane: executive deck</title>
-  <meta name="description" content="Slides 21 to 29 of the executive deck, with the slide text and speaker notes: The target reference architecture; The north star, realized with MuleSoft…">
+  <meta name="description" content="Slides 21 to 29 of the executive deck, with the slide text and speaker notes: The target reference architecture; How MuleSoft Agent Fabric and Informatica…">
   <meta name="author" content="John Fisher">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#0F172A">
@@ -18,7 +18,7 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="The AI Control Plane Handbook">
   <meta property="og:title" content="From north star to plan">
-  <meta property="og:description" content="Slides 21 to 29 of the executive deck, with the slide text and speaker notes: The target reference architecture; The north star, realized with MuleSoft…">
+  <meta property="og:description" content="Slides 21 to 29 of the executive deck, with the slide text and speaker notes: The target reference architecture; How MuleSoft Agent Fabric and Informatica…">
   <meta property="og:url" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/deck/part-3.html">
   <meta property="og:image" content="https://johnfisher-ai.github.io/ai-control-plane-handbook/assets/img/social-card.png">
   <meta property="og:image:width" content="1200">
@@ -46,7 +46,7 @@
     <details class="doc-nav" id="doc-nav">
       <summary>Deck contents</summary>
       <nav aria-label="Executive deck contents">
-        <ol class="doc-toc"><li><a href="index.html"><span class="n" aria-hidden="true">•</span><span>About this deck</span></a></li><li><a href="part-1.html"><span class="n" aria-hidden="true">•</span><span>Why a control plane, and what it is</span></a></li><li><a href="part-2.html"><span class="n" aria-hidden="true">•</span><span>Architecture, orchestration and trust</span></a></li><li><a href="part-3.html" aria-current="page"><span class="n" aria-hidden="true">•</span><span>From north star to plan</span></a><ol class="onpage"><li><a href="#slide-21">21. The target reference architecture</a></li><li><a href="#slide-22">22. The north star, realized with MuleSoft Agent Fabric and Informatica</a></li><li><a href="#slide-23">23. Agent Fabric as the control plane for every agent</a></li><li><a href="#slide-24">24. How MuleSoft and Informatica cover the control-plane requirements</a></li><li><a href="#slide-25">25. Coexisting with the hyperscalers’ agent control planes</a></li><li><a href="#slide-26">26. A 12- to 24-month plan with value in every phase</a></li><li><a href="#slide-27">27. Value delivered at every milestone</a></li><li><a href="#slide-28">28. Owners, decision rights and skills</a></li><li><a href="#slide-29">29. Measure the control plane like a product</a></li></ol></li><li><a href="use-case-1.html"><span class="n" aria-hidden="true">•</span><span>Use case 1: Professional services engagement launch</span></a></li><li><a href="use-case-2.html"><span class="n" aria-hidden="true">•</span><span>Use case 2: Capital markets T+1 settlement exceptions</span></a></li><li><a href="use-case-3.html"><span class="n" aria-hidden="true">•</span><span>Use case 3: Energy pipeline compressor reliability</span></a></li><li><a href="closing.html"><span class="n" aria-hidden="true">•</span><span>Closing and standards dates</span></a></li><li><a href="notices.html"><span class="n" aria-hidden="true">•</span><span>Notices and about the author</span></a></li></ol>
+        <ol class="doc-toc"><li><a href="index.html"><span class="n" aria-hidden="true">•</span><span>About this deck</span></a></li><li><a href="part-1.html"><span class="n" aria-hidden="true">•</span><span>Why a control plane and what it is</span></a></li><li><a href="part-2.html"><span class="n" aria-hidden="true">•</span><span>Architecture, orchestration and trust</span></a></li><li><a href="part-3.html" aria-current="page"><span class="n" aria-hidden="true">•</span><span>From north star to plan</span></a><ol class="onpage"><li><a href="#slide-21">21. The target reference architecture</a></li><li><a href="#slide-22">22. How MuleSoft Agent Fabric and Informatica realize the north star</a></li><li><a href="#slide-23">23. Agent Fabric as the control plane for every agent</a></li><li><a href="#slide-24">24. How MuleSoft and Informatica cover the control-plane requirements</a></li><li><a href="#slide-25">25. Coexisting with the hyperscalers’ agent control planes</a></li><li><a href="#slide-26">26. A 12- to 24-month plan with value in every phase</a></li><li><a href="#slide-27">27. Value delivered at every milestone</a></li><li><a href="#slide-28">28. Owners, decision rights and skills</a></li><li><a href="#slide-29">29. Measure the control plane like a product</a></li></ol></li><li><a href="use-case-1.html"><span class="n" aria-hidden="true">•</span><span>Use case 1: Professional services engagement launch</span></a></li><li><a href="use-case-2.html"><span class="n" aria-hidden="true">•</span><span>Use case 2: Capital markets T+1 settlement exceptions</span></a></li><li><a href="use-case-3.html"><span class="n" aria-hidden="true">•</span><span>Use case 3: Energy pipeline compressor reliability</span></a></li><li><a href="closing.html"><span class="n" aria-hidden="true">•</span><span>Closing and standards dates</span></a></li><li><a href="notices.html"><span class="n" aria-hidden="true">•</span><span>Notices and about the author</span></a></li></ol>
       </nav>
     </details>
     <main id="main" class="doc-main" data-pagefind-body data-pagefind-filter="Publication:Executive deck">
@@ -108,8 +108,8 @@
 </div>
 </section>
 <section class="slide" id="slide-22" aria-labelledby="slide-22-h">
-<h2 id="slide-22-h"><span class="slide-no">Slide 22</span> The north star, realized with MuleSoft Agent Fabric and Informatica</h2>
-<figure class="slide-img"><img src="img/slide-22.png" width="1601" height="900" alt="Slide 22: The north star, realized with MuleSoft Agent Fabric and Informatica" loading="lazy" decoding="async"></figure>
+<h2 id="slide-22-h"><span class="slide-no">Slide 22</span> How MuleSoft Agent Fabric and Informatica realize the north star</h2>
+<figure class="slide-img"><img src="img/slide-22.png" width="1601" height="900" alt="Slide 22: How MuleSoft Agent Fabric and Informatica realize the north star" loading="lazy" decoding="async"></figure>
 <p class="slide-dl" data-pagefind-ignore><a href="slides/the-ai-control-plane-slide-22.pptx" download>Download slide 22 as a PowerPoint file</a> <span class="dl-meta">(.pptx, 64 KB, with speaker notes)</span></p>
 <details class="slide-text"><summary>Slide text</summary>
 <div class="slide-text-body">
